@@ -42,9 +42,20 @@ En Vercel: **Project → Settings → Environment Variables**, agrega estas dos 
 
 ## Actualizar los datos
 
-1. Ingresa al dashboard, ve a **Cargar datos** y sube la plantilla como siempre.
-2. El dashboard se actualiza al momento **en tu navegador** y descarga los CSV nuevos (por ejemplo `ventas.csv`).
-3. Para que todos vean los datos nuevos, sube esos CSV a la carpeta `data/` del repositorio en GitHub, reemplazando los anteriores (**Add file → Upload files**, luego **Commit changes**). Vercel vuelve a publicar solo en uno o dos minutos.
+1. Ingresa con tu usuario (editor), ve a **Cargar datos**, elige el tipo y sube la plantilla.
+2. Pulsa **Subir y actualizar**. El dashboard guarda los datos en la carpeta `data/` del repositorio de GitHub (un solo cambio por carga) y Vercel publica solo: en 1 a 2 minutos todos ven los datos nuevos.
+
+Para que se guarde solo hacen falta estas variables en Vercel (y un **Redeploy** después de agregarlas):
+
+| Variable | Valor |
+|---|---|
+| `GITHUB_TOKEN` | Un token de GitHub con permiso **Contents: Read and write** solo sobre este repositorio (ver abajo). |
+| `GITHUB_REPO` | `usuario/repositorio`, por ejemplo `marodriguez-crear/Febeca` |
+| `GITHUB_BRANCH` (opcional) | La rama, `main` por defecto. |
+
+**Crear el token:** en GitHub, tu foto (arriba a la derecha) → **Settings** → **Developer settings** → **Personal access tokens** → **Fine-grained tokens** → **Generate new token**. Nombre: `ventas-febeca`; Expiration: la que prefieras (por ejemplo 1 año); Repository access: **Only select repositories** → el repositorio del dashboard; Permissions → Repository permissions → **Contents: Read and write**. Pulsa **Generate token** y copia el texto (empieza con `github_pat_`). Cuando venza, crea otro y reemplaza `GITHUB_TOKEN`.
+
+Sin `GITHUB_TOKEN`, el dashboard descarga los CSV nuevos para que los subas a mano a la carpeta `data/`.
 
 ## Importante
 

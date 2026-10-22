@@ -158,23 +158,58 @@
     a.click();
     setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 2000);
   };
+  // ---------- guardado en GitHub (para que todos vean los datos nuevos) ----------
   const descargados = [];
+  const enGithub = [];          // {ruta, sha} subidos en esta carga, aún sin confirmar
+  let modoDescarga = false;     // si GitHub no está configurado, se descargan los CSV
+  let confirmarT = null;
+  function cajaAviso() {
+    let box = document.querySelector('.fb-aviso-local');
+    if (!box) { box = document.createElement('div'); box.className = 'fb-aviso-local'; box.setAttribute('role', 'status'); document.body.append(box); }
+    return box;
+  }
+  function mostrar(texto, extra, cerrable) {
+    const box = cajaAviso();
+    const p1 = document.createElement('div');
+    p1.textContent = texto;
+    const partes = [p1];
+    if (extra) { const p2 = document.createElement('b'); p2.textContent = extra; partes.push(p2); }
+    if (cerrable) {
+      const c = document.createElement('button');
+      c.type = 'button'; c.textContent = 'Cerrar';
+      c.addEventListener('click', () => box.remove());
+      partes.push(c);
+    }
+    box.replaceChildren(...partes);
+  }
   let avisoT = null;
-  function aviso() {
+  function avisoDescarga() {
     clearTimeout(avisoT);
-    avisoT = setTimeout(() => {
-      let box = document.querySelector('.fb-aviso-local');
-      if (!box) { box = document.createElement('div'); box.className = 'fb-aviso-local'; box.setAttribute('role', 'status'); document.body.append(box); }
-      const p1 = document.createElement('div');
-      p1.textContent = 'El dashboard ya muestra los datos nuevos en este navegador. Para que queden guardados para todos, sube estos archivos descargados a la carpeta data/ del repositorio en GitHub (reemplazando los anteriores):';
-      const p2 = document.createElement('b');
-      p2.textContent = descargados.join(', ');
-      const cerrar = document.createElement('button');
-      cerrar.type = 'button';
-      cerrar.textContent = 'Cerrar';
-      cerrar.addEventListener('click', () => { box.remove(); descargados.length = 0; });
-      box.replaceChildren(p1, p2, cerrar);
-    }, 300);
+    avisoT = setTimeout(() => mostrar('El dashboard ya muestra los datos nuevos en este navegador. Para que los vean todos, sube estos archivos descargados a la carpeta data/ del repositorio en GitHub (reemplazando los anteriores). Para que se guarde solo, configura GITHUB_TOKEN y GITHUB_REPO en Vercel.', descargados.join(', '), true), 300);
+  }
+  const MSG_ERR = { token: 'GitHub rechazó el token: revisa GITHUB_TOKEN (permiso Contents: Read and write sobre el repositorio) y GITHUB_REPO.', github: 'GitHub no respondió bien. Inténtalo de nuevo en unos minutos.' };
+  async function subirGithub(id, txt) {
+    const gz = await new Response(new Blob([txt]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer();
+    const r = await fetch('/api/guardar?id=' + encodeURIComponent(id), { method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: gz });
+    const d = await r.json().catch(() => ({}));
+    if (r.status === 501 || r.status === 404) return 'sin_github';
+    if (!r.ok) throw new Error(MSG_ERR[d.error] || d.error || ('Error ' + r.status));
+    return d;
+  }
+  function programarConfirmar() {
+    clearTimeout(confirmarT);
+    mostrar('Guardando los datos nuevos en GitHub…', enGithub.map((a) => a.ruta.slice(5)).join(', '));
+    confirmarT = setTimeout(async () => {
+      const lote = enGithub.splice(0);
+      try {
+        const r = await fetch('/api/confirmar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ archivos: lote }) });
+        const d = await r.json().catch(() => ({}));
+        if (!r.ok) throw new Error(MSG_ERR[d.error] || d.error || ('Error ' + r.status));
+        mostrar('Listo: los datos quedaron guardados. En 1 a 2 minutos todos los verán al abrir el dashboard (Vercel lo publica solo).', lote.map((a) => a.ruta.slice(5)).join(', '), true);
+      } catch (e) {
+        mostrar('No se pudieron guardar en GitHub: ' + e.message + ' En este navegador ya se ven los datos nuevos.', '', true);
+      }
+    }, 2500);
   }
 
   const LS = 'fb-cargas';
@@ -189,11 +224,20 @@
           const blob = url && blobs.get(url.split('/').pop());
           if (!DATASETS[id] || !blob) return;
           const txt = await blob.text();
-          dash._reemplazar(id, txt);
           const nombre = DATASETS[id].split('/').pop();
+          if (!modoDescarga) {
+            let r;
+            try { r = await subirGithub(id, txt); } catch (e) {
+              mostrar('No se pudo guardar en GitHub: ' + e.message, '', true);
+              throw e; // la carga queda como Rechazado y no cambia lo que se ve
+            }
+            if (r === 'sin_github') modoDescarga = true;
+            else { dash._reemplazar(id, txt); enGithub.push(r); programarConfirmar(); return; }
+          }
+          dash._reemplazar(id, txt);
           guardar(nombre, new Blob([txt], { type: 'text/csv' }));
           if (!descargados.includes(nombre)) descargados.push(nombre);
-          aviso();
+          avisoDescarga();
         },
       };
     },

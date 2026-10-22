@@ -2595,7 +2595,7 @@ dash.calc('inv_quiebres', {
       }
       fill.style.width = '100%';
       if (!mal.length) {
-        setMsg(msg, 'Listo: el dashboard ya usa los datos nuevos' + (completa ? ' (' + ok.join(', ') + ')' : '') + ' en este navegador. Sube los CSV descargados a la carpeta data/ de GitHub para que queden guardados.', 'fb-pos');
+        setMsg(msg, 'Listo: el dashboard ya usa los datos nuevos' + (completa ? ' (' + ok.join(', ') + ')' : '') + '. En 1 a 2 minutos lo verán todos (Vercel lo publica solo).', 'fb-pos');
         $('#cg-archivo').value = '';
         $('#cg-checks').replaceChildren();
         analisis = null;
