@@ -2182,6 +2182,9 @@ dash.calc('inv_quiebres', {
     $('#cg-checks').append(li);
   };
   const esNota = (r) => { const t = norm(r.find((c) => c !== '' && c != null)); return t === '' || t.startsWith('filtros aplicados') || t.startsWith('exported data') || r.some((c) => typeof c === 'string' && norm(c).startsWith('ejemplo')); };
+  // el sistema a veces exporta las columnas semanales con otro nombre: se aceptan ambos
+  const ALIAS_SEM = { 'venta neta dolares': 'Venta Neta', 'inventario dolares': 'Inventario' };
+  const conAlias = (filas) => filas.map((r, i) => (i < 30 ? r.map((c) => (typeof c === 'string' && ALIAS_SEM[norm(c)]) || c) : r));
   const buscarEncabezado = (filas, req) => {
     const rn = req.map(norm);
     for (let i = 0; i < Math.min(filas.length, 30); i++) { const s = new Set(filas[i].map(norm)); if (rn.every((c) => s.has(c))) return i; }
@@ -2202,9 +2205,10 @@ dash.calc('inv_quiebres', {
     try {
       if (tipo === 'semanal') {
         if (/\.csv$/i.test(file.name)) { setMsg(msg, 'Las ventas semanales se suben en Excel (.xlsx), con sus hojas.', 'fb-neg'); return; }
-        libro = await leerXlsx(await file.arrayBuffer(), true);
+        const crudo = await leerXlsx(await file.arrayBuffer(), true);
+        libro = crudo.map((h) => ({ nombre: h.nombre, filas: conAlias(h.filas) }));
         const s1 = libro.find((x) => buscarEncabezado(x.filas, TIPOS.semanal.req) >= 0);
-        if (!s1 && libro.some((x) => ['ventas', 'tubrica', 'peso', 'infocompras', 'clientes'].some((k) => buscarEncabezado(x.filas, TIPOS[k].req) >= 0))) {
+        if (!s1 && crudo.some((x) => ['ventas', 'tubrica', 'peso', 'infocompras', 'clientes'].some((k) => buscarEncabezado(x.filas, TIPOS[k].req) >= 0))) {
           $('#cg-tipo').value = 'completa';
           return analizarCompleta(file, msg);
         }
@@ -2254,6 +2258,16 @@ dash.calc('inv_quiebres', {
       venta = 1000 * datos.reduce((a, r) => a + (Number(r[iv]) || 0), 0);
       meses = [...new Set(datos.map((r) => String(r[is])).filter(Boolean))].sort();
       check('Venta neta ' + usd(venta) + ' · semanas ' + (meses.length ? meses[0] + ' a ' + meses[meses.length - 1] : 'sin dato') + '.');
+      { // filas de otras regiones (no Venezuela) o sin región: solo repiten inventario y rotación por marca
+        const ir = idx('Región');
+        if (ir >= 0) {
+          const VE = new Set(Object.values(REG));
+          const fuera = datos.filter((r) => !VE.has(region(r[ir])));
+          const otras = [...new Set(fuera.map((r) => String(r[ir] ?? '').trim()).filter(Boolean))];
+          if (fuera.length) check('Se omiten ' + nEnt.format(fuera.length) + ' filas de otras regiones' + (otras.length ? ' (' + otras.slice(0, 3).join(', ') + (otras.length > 3 ? '…' : '') + ')' : '') + ' o sin región: solo repiten el inventario y la rotación de cada marca.', 'cg-w');
+        }
+        if (idx('Presupuesto de contribución') < 0) check('Sin la columna «Presupuesto de contribución»' + (enc.some((c) => /presupuesto/i.test(c)) ? ' (la columna «' + enc.find((c) => /presupuesto/i.test(c)) + '» no se usa porque es otro dato)' : '') + ': el presupuesto de contribución queda vacío.', 'cg-w');
+      }
       { const act = totalDataset('semanal', 'venta_usd'); if (act != null) check('Hoy el dashboard tiene ' + usd(act) + ' en ventas semanales. Al actualizar se reemplaza por completo.', 'cg-w'); }
       for (const [clave, nombre] of [['presupuesto', 'Presupuesto'], ['acciones', 'Acciones'], ['sheet2', 'Sheet2']]) {
         const hj = libro.slice(1).find((x) => norm(x.nombre) === norm(nombre));
@@ -2311,7 +2325,7 @@ dash.calc('inv_quiebres', {
     let hojas;
     try { hojas = await leerXlsx(await file.arrayBuffer(), true); } catch (e) { setMsg(msg, 'No se pudo leer el archivo. Guárdalo como Excel (.xlsx) e inténtalo de nuevo.', 'fb-neg'); return; }
     const esMensual = hojas.some((x) => ['ventas', 'tubrica', 'peso', 'infocompras', 'clientes'].some((k) => buscarEncabezado(x.filas, TIPOS[k].req) >= 0));
-    if (!esMensual && hojas.some((x) => buscarEncabezado(x.filas, TIPOS.semanal.req) >= 0)) {
+    if (!esMensual && hojas.some((x) => buscarEncabezado(conAlias(x.filas), TIPOS.semanal.req) >= 0)) {
       $('#cg-tipo').value = 'semanal';
       await analizar();
       check('Este archivo es la plantilla de ventas semanales: se cambió el tipo de reporte automáticamente.', 'cg-w');
@@ -2492,9 +2506,10 @@ dash.calc('inv_quiebres', {
     if (a.tipo === 'semanal') {
       const out = [];
       const ix = Object.fromEntries(['Grupo Compra', 'Marca', 'Región', 'Semana', 'Clientes activados', 'Contribución', 'Inventario', 'Presupuesto de contribución', 'Rotación', 'Venta Neta'].map((c) => [c, col(E, c)]));
-      const sem = R.filter((r) => String(r[ix.Marca] ?? '').trim() && String(r[ix.Semana] ?? '').trim()).map((r) => {
+      const VE = new Set(Object.values(REG)), conRegion = ix['Región'] >= 0;
+      const sem = R.filter((r) => String(r[ix.Marca] ?? '').trim() && String(r[ix.Semana] ?? '').trim() && (!conRegion || VE.has(region(r[ix['Región']])))).map((r) => {
         const k = (v) => (v === '' || v == null || !isFinite(Number(v)) ? '' : r2(Number(v) * 1000));
-        return { grupo: String(r[ix['Grupo Compra']] ?? '').trim(), marca: String(r[ix.Marca]).trim(), region: ix['Región'] >= 0 && String(r[ix['Región']] ?? '').trim() ? String(r[ix['Región']]).trim() : 'N/A', semana: String(r[ix.Semana]).trim(), clientes: nN(r[ix['Clientes activados']]), contribucion_usd: k(r[ix['Contribución']]), inventario_usd: ix.Inventario >= 0 ? k(r[ix.Inventario]) : '', ppto_contrib_usd: ix['Presupuesto de contribución'] >= 0 ? k(r[ix['Presupuesto de contribución']]) : '', rotacion: nN(r[ix['Rotación']]), venta_usd: k(r[ix['Venta Neta']]) };
+        return { grupo: String(r[ix['Grupo Compra']] ?? '').trim(), marca: String(r[ix.Marca]).trim(), region: conRegion ? region(r[ix['Región']]) : 'N/A', semana: String(r[ix.Semana]).trim(), clientes: nN(r[ix['Clientes activados']]), contribucion_usd: k(r[ix['Contribución']]), inventario_usd: ix.Inventario >= 0 ? k(r[ix.Inventario]) : '', ppto_contrib_usd: ix['Presupuesto de contribución'] >= 0 ? k(r[ix['Presupuesto de contribución']]) : '', rotacion: nN(r[ix['Rotación']]), venta_usd: k(r[ix['Venta Neta']]) };
       });
       out.push({ id: 'semanal', nombre: 'semanal_' + hoyTxt() + '.csv', csv: aCsvObj(['grupo', 'marca', 'region', 'semana', 'clientes', 'contribucion_usd', 'inventario_usd', 'ppto_contrib_usd', 'rotacion', 'venta_usd'], sem), filas: sem.length });
       for (const x of a.extra) {
