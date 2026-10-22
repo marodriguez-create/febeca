@@ -22,7 +22,7 @@
 .fb-filters { justify-content: center; }
 @media (max-width: 40rem) { .fb-top { grid-template-columns: 1fr; justify-items: center; } .fb-top .fb-logobox { justify-self: center; } .fb-modo-box { justify-self: center !important; justify-items: center; } }
 .fb-modo-box { justify-self: end; display: grid; justify-items: end; gap: var(--cds-gap-xs); }
-#fb-medida[hidden], #ton-vacio[hidden], #tubrica-toneladas[hidden] { display: none; }
+#fb-medida[hidden], #ton-vacio[hidden], #tubrica-toneladas[hidden], #ton-marca[hidden] { display: none; }
 .fb-med-b { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); background: none; border: 0; border-radius: 999px; padding: 2px var(--cds-pad-sm); cursor: pointer; }
 .fb-med-b[aria-pressed="true"] { background: var(--color-fg); color: var(--color-bg); font-weight: var(--cds-font-weight-medium); }
 .fb-med-b:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
@@ -372,13 +372,14 @@
   </div>
 
   <div class="fb-page" id="pag-toneladas" hidden>
-  <p class="fb-card fb-note" id="ton-vacio" hidden>Las toneladas solo aplican a las marcas que se miden por peso (hoy Tubrica). Con el grupo o la marca elegidos no hay toneladas: cambia el filtro a «Todos» o a Tubrica, o elige «Ventas USD».</p>
+  <p class="fb-card fb-note" id="ton-vacio" hidden>Las toneladas solo aplican a las marcas que tienen códigos en la tabla de peso. Con el grupo o la marca elegidos no hay toneladas: cambia el filtro a «Todos» o a Tubrica, o elige «Ventas USD».</p>
   <section class="fb-card" id="tubrica-toneladas">
     <h2 class="fb-h2">Ventas en toneladas</h2>
     <div class="fb-grid">
       <div class="fb-sub" id="ton-mes"><h3 class="fb-h3">Toneladas por mes</h3><div class="fb-chart fb-tall dash-skeleton" id="c-ton-mes" data-source="toneladas"></div><div class="fb-leyenda" aria-label="Leyenda"><span><i style="background: var(--color-ok)"></i>Venta mes más alto</span><span><i style="background: var(--color-bad)"></i>Venta mes más bajo</span><span><i style="background: var(--color-panel); border: 1px solid var(--color-border-line)"></i>Mes en curso, no cuenta</span></div></div>
       <div class="fb-sub" id="ton-precio"><h3 class="fb-h3">Dólares por tonelada</h3><div class="fb-chart fb-tall dash-skeleton" id="c-ton-precio" data-source="toneladas"></div></div>
     </div>
+    <div class="fb-sub" id="ton-marca" hidden><h3 class="fb-h3">Por marca</h3><div class="fb-chart" id="c-ton-marca" data-source="toneladas"></div></div>
     <div class="fb-grid">
       <div class="fb-sub" id="ton-region"><h3 class="fb-h3">Por región</h3><div class="fb-chart dash-skeleton" id="c-ton-region" data-source="toneladas"></div></div>
       <div class="fb-sub" id="ton-sup"><h3 class="fb-h3">Por supervisor</h3><div class="fb-chart dash-skeleton" id="c-ton-sup" data-source="toneladas"></div></div>
@@ -586,8 +587,8 @@
       <p class="fb-note">Trae las columnas exactas de cada reporte y una fila de ejemplo. También puedes subir el Excel tal como sale del sistema, siempre que tenga esas columnas.</p>
       <div class="cg-types">
         <div class="cg-type"><b>Ventas</b>Todas las marcas, sin Cliente ni Artículo. Venta, unidades y clientes activados.</div>
-        <div class="cg-type"><b>Tubrica por código</b>Solo Tubrica, con Artículo y sin Cliente. Para las toneladas.</div>
-        <div class="cg-type"><b>Tabla de peso</b>Código, Kg y Ton por unidad de Tubrica.</div>
+        <div class="cg-type"><b>Venta por código con peso</b>Códigos que están en la tabla de peso, con Artículo y sin Cliente. Para las toneladas.</div>
+        <div class="cg-type"><b>Tabla de peso</b>Código, Kg y Ton por unidad.</div>
         <div class="cg-type"><b>Infocompras</b>G03 y G10. Inventario, cobertura y días sin inventario.</div>
         <div class="cg-type"><b>Plantilla llena</b>Sube el mismo archivo una vez por cada tipo: el dashboard toma la hoja que corresponde e ignora la fila de EJEMPLO.</div>
         <div class="cg-type"><b>Clientes</b>Región, Estado, Supervisor, Asesor, Marca, Cliente y Mes, con Venta Neta. Sin artículo. Para clientes únicos.</div>
@@ -609,7 +610,7 @@
             </optgroup>
             <optgroup label="Un solo reporte">
               <option value="ventas">Ventas (todas las marcas)</option>
-              <option value="tubrica">Tubrica por código</option>
+              <option value="tubrica">Venta por código con peso</option>
               <option value="peso">Tabla de peso</option>
               <option value="infocompras">Infocompras</option>
               <option value="clientes">Clientes (venta por cliente y marca)</option>
@@ -717,12 +718,14 @@ dash.calc('cubo', {
 });
 
 dash.calc('toneladas', {
-  title: 'Toneladas de Tubrica',
-  description: 'Multiplica las unidades de cada código de Tubrica por su columna Ton de la tabla de peso (si un código se repite, usa su primera fila) y suma toneladas y venta por mes y región para cada corte, con la variación y los dólares por tonelada.',
-  inputs: ['tubrica', 'pesos'],
-  fn: (tubrica, pesos) => {
+  title: 'Toneladas de las marcas con peso',
+  description: 'Multiplica las unidades de cada código por su columna Ton de la tabla de peso (si un código se repite, usa su primera fila) y suma toneladas y venta por mes, región y marca (o grupo de compra) para cada corte, con la variación y los dólares por tonelada. Solo cuentan las marcas con códigos en la tabla de peso.',
+  inputs: ['tubrica', 'pesos', 'ventas'],
+  fn: (tubrica, pesos, ventas) => {
     const TODAS = 'Todas';
     const CORTES = ['region', 'estado', 'supervisor', 'asesor'];
+    const grupoDe = new Map();
+    for (const v of ventas) if (!grupoDe.has(v.marca)) grupoDe.set(v.marca, v.grupo);
     const num = (x) => Number(x) || 0;
     const clave = (...p) => p.join('|');
     const tonPorUnidad = new Map();
@@ -730,10 +733,10 @@ dash.calc('toneladas', {
       if (!tonPorUnidad.has(p.codigo)) tonPorUnidad.set(p.codigo, num(p.ton));
     }
     const grupos = new Map();
-    const sumar = (dim, item, mes, region, r, tu) => {
-      const k = clave(dim, item, mes, region);
+    const sumar = (dim, item, mes, region, marca, r, tu) => {
+      const k = clave(dim, item, mes, region, marca);
       let g = grupos.get(k);
-      if (!g) grupos.set(k, (g = { dim, item, mes, region, ton: 0, venta_usd: 0, venta_con_peso: 0, usd_sin_peso: 0, unidades_sin_peso: 0 }));
+      if (!g) grupos.set(k, (g = { dim, item, mes, region, marca, ton: 0, venta_usd: 0, venta_con_peso: 0, usd_sin_peso: 0, unidades_sin_peso: 0 }));
       const usd = num(r.venta_usd);
       g.venta_usd += usd;
       if (tu > 0) { g.ton += num(r.unidades) * tu; g.venta_con_peso += usd; }
@@ -741,16 +744,22 @@ dash.calc('toneladas', {
     };
     for (const r of tubrica) {
       const tu = tonPorUnidad.get(r.codigo) || 0;
+      const mk = r.marca || 'Tubrica';
+      const slots = [mk, TODAS];
+      if (grupoDe.has(mk)) slots.push('Grupo ' + grupoDe.get(mk));
       for (const region of [r.region, TODAS]) {
-        sumar('total', TODAS, r.mes, region, r, tu);
-        for (const d of CORTES) sumar(d, r[d], r.mes, region, r, tu);
+        for (const marca of slots) {
+          sumar('total', TODAS, r.mes, region, marca, r, tu);
+          sumar('marca', mk, r.mes, region, marca, r, tu);
+          for (const d of CORTES) sumar(d, r[d], r.mes, region, marca, r, tu);
+        }
       }
     }
     const meses = [...new Set(tubrica.map((r) => r.mes))].sort();
     const anterior = new Map(meses.map((m, i) => [m, meses[i - 1]]));
     const totalCorte = new Map();
     for (const g of grupos.values()) {
-      const k = clave(g.dim, g.mes, g.region);
+      const k = clave(g.dim, g.mes, g.region, g.marca);
       totalCorte.set(k, (totalCorte.get(k) || 0) + g.ton);
     }
     const r2 = (x) => Math.round(x * 100) / 100;
@@ -759,10 +768,10 @@ dash.calc('toneladas', {
     const precio = (g) => (g && g.ton > 0 ? r2(g.venta_con_peso / g.ton) : null);
     const salida = [];
     for (const g of grupos.values()) {
-      const p = grupos.get(clave(g.dim, g.item, anterior.get(g.mes), g.region));
-      const t = totalCorte.get(clave(g.dim, g.mes, g.region));
+      const p = grupos.get(clave(g.dim, g.item, anterior.get(g.mes), g.region, g.marca));
+      const t = totalCorte.get(clave(g.dim, g.mes, g.region, g.marca));
       salida.push({
-        dim: g.dim, item: g.item, mes: g.mes, region: g.region,
+        dim: g.dim, item: g.item, mes: g.mes, region: g.region, marca: g.marca,
         ton: Math.round(g.ton * 1000) / 1000,
         venta_usd: r2(g.venta_usd),
         usd_por_ton: precio(g),
@@ -780,7 +789,7 @@ dash.calc('toneladas', {
 
 dash.calc('pesos_revision', {
   title: 'Revisión de la tabla de peso',
-  description: 'Cuenta los códigos de Tubrica vendidos que no tienen peso en la tabla, y los códigos que aparecen repetidos en la tabla con toneladas distintas.',
+  description: 'Cuenta los códigos vendidos de las marcas con peso que no tienen peso en la tabla, y los códigos que aparecen repetidos en la tabla con toneladas distintas.',
   inputs: ['tubrica', 'pesos'],
   fn: (tubrica, pesos) => {
     const num = (x) => Number(x) || 0;
@@ -1295,14 +1304,15 @@ dash.calc('inv_quiebres', {
     for (const f of pendM) f();
   }
 
-  // ---------- toneladas Tubrica ----------
+  // ---------- toneladas (marcas con peso) ----------
   let TSRC = null, TIDX = null;
   function tindex(rows) {
     if (rows === TSRC) return TIDX;
     const by = new Map(), grp = new Map();
     for (const r of rows) {
-      by.set([r.dim, r.item, r.mes, r.region].join('|'), r);
-      const k = [r.dim, r.mes, r.region].join('|');
+      const mk = r.marca === undefined ? 'Todas' : r.marca;
+      by.set([r.dim, r.item, r.mes, r.region, mk].join('|'), r);
+      const k = [r.dim, r.mes, r.region, mk].join('|');
       if (!grp.has(k)) grp.set(k, []);
       grp.get(k).push(r);
     }
@@ -1310,8 +1320,10 @@ dash.calc('inv_quiebres', {
     TIDX = { by, grp };
     return TIDX;
   }
-  const tget = (T, dim, item, mes, region) => T.by.get([dim, item, mes, region].join('|'));
-  const tgroup = (T, dim, mes, region) => T.grp.get([dim, mes, region].join('|')) || [];
+  // marca: el corte elegido arriba (Todas, «Grupo G03» o una marca); las toneladas siguen el mismo filtro
+  const tget = (T, dim, item, mes, region, marca = sel.slot) => T.by.get([dim, item, mes, region, marca].join('|'));
+  const tgroup = (T, dim, mes, region, marca = sel.slot) => T.grp.get([dim, mes, region, marca].join('|')) || [];
+  const tieneToneladas = (slot) => { const tb = dash.data('toneladas'); if (tb.status !== 'ok') return null; const T = tindex(tb.data); for (const k of T.grp.keys()) if (k.startsWith('total|') && k.endsWith('|Todas|' + slot)) return true; return false; };
   function toneladas(I) {
     const tb = dash.data('toneladas');
     const boxes = ['#c-ton-mes', '#c-ton-precio', '#c-ton-region', '#c-ton-estado', '#c-ton-sup', '#c-ton-asesor'].map($);
@@ -1342,6 +1354,9 @@ dash.calc('inv_quiebres', {
     mapaEstados($('#c-ton-estado'), I, tgroup(T, 'estado', sel.mes, sel.region).slice().sort(byTon), tipC, { ...oTon, todos: true });
     hbars($('#c-ton-sup'), tgroup(T, 'supervisor', sel.mes, sel.region).slice().sort(byTon), opt);
     hbars($('#c-ton-asesor'), tgroup(T, 'asesor', sel.mes, sel.region).slice().sort(byTon).slice(0, 15), opt);
+    const porMarca = tgroup(T, 'marca', sel.mes, sel.region).filter((r) => r.ton > 0).sort(byTon);
+    $('#ton-marca').hidden = porMarca.length < 2;
+    if (porMarca.length > 1) hbars($('#c-ton-marca'), porMarca, opt);
     // aviso de códigos sin peso
     const rv = dash.data('pesos_revision');
     const nota = document.createElement('p');
@@ -1863,7 +1878,7 @@ dash.calc('inv_quiebres', {
   // ---------- indicadores ----------
   function markEl(el, r, field, src) {
     if (!r) { el.removeAttribute('data-source'); el.removeAttribute('data-field'); el.removeAttribute('data-where'); return; }
-    el.setAttribute('data-source', src || (r.marca === undefined ? 'toneladas' : 'cubo'));
+    el.setAttribute('data-source', src || (r.marca === undefined || r.ton !== undefined ? 'toneladas' : 'cubo'));
     el.setAttribute('data-field', field);
     el.setAttribute('data-where', whereOf(r));
   }
@@ -1902,9 +1917,9 @@ dash.calc('inv_quiebres', {
     fillSelect($('#f-grupo'), [[TODAS, 'Todos'], ...I.grupos.map((g) => [g, g])], sel.grupo);
     fillSelect($('#f-marca'), [[TODAS, sel.grupo === TODAS ? 'Todas las marcas' : 'Todas las de ' + sel.grupo], ...I.marcas.filter((m) => sel.grupo === TODAS || I.grupoDe.get(m) === sel.grupo).map((m) => [m, m])], sel.marca);
 
-    // toneladas solo aplica cuando Tubrica está dentro del filtro
-    const grupoTubrica = I.grupoDe.get('Tubrica');
-    const conTubrica = sel.marca === 'Tubrica' || (sel.marca === TODAS && (sel.grupo === TODAS || sel.grupo === grupoTubrica));
+    // toneladas solo aplica cuando el filtro incluye alguna marca con peso
+    const tt = tieneToneladas(sel.slot);
+    const conTubrica = tt !== false; // mientras se calculan las toneladas no se oculta nada
     $('#tab-toneladas').hidden = !conTubrica && medida !== 'ton';
     if (!conTubrica && pagina === 'toneladas' && medida !== 'ton') { pagina = 'resumen'; mostrarPagina(); dash.setLink('resumen'); }
     $('#ton-vacio').hidden = conTubrica;

@@ -3,7 +3,7 @@
   const PLANTILLA_SEM_B64 = () => window.FB_PLANTILLAS && window.FB_PLANTILLAS.semanal;
   const TIPOS = {
     ventas: { nombre: 'Ventas', req: ['Región', 'Estado', 'Supervisor', 'Asesor', 'BDF', 'Grupo Compra', 'Marca', 'Mes', 'Clientes activados', 'Venta Neta Dólares', 'Venta Neta Cantidad'] },
-    tubrica: { nombre: 'Tubrica por código', req: ['Región', 'Estado', 'Supervisor', 'Asesor', 'Marca', 'Articulo', 'Mes', 'Venta Neta Dólares', 'Venta Neta Cantidad'] },
+    tubrica: { nombre: 'Venta por código con peso', req: ['Región', 'Estado', 'Supervisor', 'Asesor', 'Marca', 'Articulo', 'Mes', 'Venta Neta Dólares', 'Venta Neta Cantidad'] },
     peso: { nombre: 'Tabla de peso', req: ['Codigo', 'Kg', 'Ton'] },
     infocompras: { nombre: 'Infocompras', req: ['ARTICULO', 'DESCRIPCION', 'MARCA', 'INVENTARIO', 'VALORACION', 'COSTO PROMEDIO', 'AVG VTAS MES', 'COBERTURA', 'GRUPO COMPRA'] },
     clientes: { nombre: 'Clientes', req: ['Región', 'Estado', 'Supervisor', 'Asesor', 'Marca', 'Cliente', 'Mes', 'Venta Neta Dólares'] },
@@ -244,9 +244,9 @@
       check('Venta neta ' + usd(venta) + ' · meses ' + (meses.length ? meses[0] + ' a ' + meses[meses.length - 1] : 'sin dato') + '.');
       { const act = totalDataset(tipo === 'tubrica' ? 'tubrica' : 'ventas', 'venta_usd'); if (act != null) check(tipo === 'clientes' ? 'Las ventas del dashboard suman ' + usd(act) + '. Solo se usarán las filas que coincidan con ellas (empresa Febeca).' : 'Hoy el dashboard tiene ' + usd(act) + '. Al actualizar se reemplaza por completo.', 'cg-w'); }
       if (tipo === 'tubrica') {
-        const ik = idx('Marca');
-        const otras = new Set(datos.map((r) => r[ik]).filter((m) => m && norm(m) !== 'tubrica'));
-        if (otras.size) check('Trae otras marcas además de Tubrica (' + [...otras].slice(0, 4).join(', ') + '). Solo se usará Tubrica.', 'cg-w');
+        const ik = idx('Marca'), ia = idx('Articulo');
+        const r = marcasConPeso(datos.map((x) => ({ marca: String(x[ik] ?? '').trim(), codigo: codigoDe(x[ia]) })), null);
+        if (r) check('Marcas con peso: ' + (r.con.join(', ') || 'ninguna') + '.' + (r.sin.length ? ' Se omiten las que no tienen códigos en la tabla de peso: ' + r.sin.slice(0, 5).join(', ') + (r.sin.length > 5 ? '…' : '') + '.' : ''), r.con.length ? (r.sin.length ? 'cg-w' : '') : 'cg-x');
       }
     }
     if (tipo === 'infocompras') {
@@ -288,7 +288,7 @@
       return;
     }
     const items = [];
-    for (const k of ['ventas', 'tubrica', 'peso', 'infocompras', 'clientes']) {
+    for (const k of ['ventas', 'peso', 'tubrica', 'infocompras', 'clientes']) {
       const T = TIPOS[k];
       const hoja = hojas.find((x) => buscarEncabezado(x.filas, T.req) >= 0);
       if (!hoja) { check(T.nombre + ': no está en el archivo, se conserva lo actual.', 'cg-w'); continue; }
@@ -378,6 +378,17 @@
   const REG = { capital: 'Capital', centro: 'Centro', occidente: 'Occidente', oriente: 'Oriente' };
   const region = (s) => REG[norm(s)] || titulo(s);
 
+  // código del artículo: el primer bloque del texto «22-10-029 Codo 90°…» → «22-10-029»
+  const codigoDe = (v) => (String(v ?? '').trim().match(/^([A-Za-z0-9][\w.\-/]*)/) || [])[1] || '';
+  // marcas que tienen al menos un código con peso (Ton > 0) en la tabla: esas son las que suman toneladas
+  function marcasConPeso(filas, pesosNuevos) {
+    const pd = pesosNuevos || (dash.data('pesos').status === 'ok' ? dash.data('pesos').data : null);
+    if (!pd) return null;
+    const codigos = new Set(pd.filter((p) => Number(p.ton) > 0).map((p) => String(p.codigo).trim())); // solo códigos con peso mayor a 0
+    const todas = [...new Set(filas.map((r) => r.marca).filter(Boolean))];
+    const con = new Set(filas.filter((r) => codigos.has(r.codigo)).map((r) => r.marca));
+    return { con: todas.filter((m) => con.has(m)).sort(), sin: todas.filter((m) => !con.has(m)).sort(), set: con };
+  }
   function transformar(a) {
     const E = a.enc, R = a.datos;
     if (a.tipo === 'ventas') {
@@ -388,14 +399,18 @@
     }
     if (a.tipo === 'tubrica') {
       const ix = Object.fromEntries(['Región', 'Estado', 'Supervisor', 'Asesor', 'Marca', 'Articulo', 'Mes', 'Venta Neta Dólares', 'Venta Neta Cantidad'].map((c) => [c, col(E, c)]));
-      const rows = R.filter((r) => norm(r[ix.Marca]) === 'tubrica').map((r) => ({ mes: mesIso(r[ix.Mes]), region: region(r[ix['Región']]), estado: titulo(r[ix.Estado]), supervisor: titulo(r[ix.Supervisor]), asesor: titulo(r[ix.Asesor]), codigo: (String(r[ix.Articulo] ?? '').match(/^\s*(\d{2}-\d{2}-\d{3})/) || [])[1] || '', venta_usd: n0(r[ix['Venta Neta Dólares']]) * 1000, unidades: n0(r[ix['Venta Neta Cantidad']]) })).filter((r) => r.mes && r.codigo);
-      const g = agrupar(rows, ['mes', 'region', 'estado', 'supervisor', 'asesor', 'codigo'], ['venta_usd', 'unidades']);
-      return [{ id: 'tubrica', nombre: 'tubrica_codigos_' + hoyTxt() + '.csv', csv: aCsvObj(['mes', 'region', 'estado', 'supervisor', 'asesor', 'codigo', 'venta_usd', 'unidades'], g), filas: g.length }];
+      const todas = R.map((r) => ({ mes: mesIso(r[ix.Mes]), region: region(r[ix['Región']]), estado: titulo(r[ix.Estado]), supervisor: titulo(r[ix.Supervisor]), asesor: titulo(r[ix.Asesor]), marca: String(r[ix.Marca] ?? '').trim(), codigo: codigoDe(r[ix.Articulo]), venta_usd: n0(r[ix['Venta Neta Dólares']]) * 1000, unidades: n0(r[ix['Venta Neta Cantidad']]) })).filter((r) => r.mes && r.codigo);
+      // solo las marcas con códigos en la tabla de peso (si la tabla no está, quedan todas)
+      const mp = marcasConPeso(todas, a.pesosNuevos);
+      const rows = mp ? todas.filter((r) => mp.set.has(r.marca)) : todas;
+      const g = agrupar(rows, ['mes', 'region', 'estado', 'supervisor', 'asesor', 'marca', 'codigo'], ['venta_usd', 'unidades']);
+      const nota = mp ? 'Marcas con peso: ' + (mp.con.join(', ') || 'ninguna') + '.' + (mp.sin.length ? ' Sin códigos en la tabla de peso (no se usan): ' + mp.sin.length + ' marcas.' : '') : '';
+      return [{ id: 'tubrica', nombre: 'ventas_por_codigo_' + hoyTxt() + '.csv', csv: aCsvObj(['mes', 'region', 'estado', 'supervisor', 'asesor', 'marca', 'codigo', 'venta_usd', 'unidades'], g), filas: g.length, nota }];
     }
     if (a.tipo === 'peso') {
       const ix = Object.fromEntries(['Codigo', 'Línea', 'Categoria', 'Nombre', 'Kg', 'Ton'].map((c) => [c, col(E, c)]));
       const rows = R.filter((r) => String(r[ix.Codigo] ?? '').trim()).map((r, i) => ({ orden: i + 1, codigo: String(r[ix.Codigo]).trim(), linea: ix['Línea'] >= 0 ? r[ix['Línea']] : '', categoria: ix.Categoria >= 0 ? r[ix.Categoria] : '', nombre: ix.Nombre >= 0 ? String(r[ix.Nombre] ?? '').trim() : '', kg: nN(r[ix.Kg]), ton: nN(r[ix.Ton]) }));
-      return [{ id: 'pesos', nombre: 'tabla_peso_' + hoyTxt() + '.csv', csv: aCsvObj(['orden', 'codigo', 'linea', 'categoria', 'nombre', 'kg', 'ton'], rows), filas: rows.length }];
+      return [{ id: 'pesos', nombre: 'tabla_peso_' + hoyTxt() + '.csv', csv: aCsvObj(['orden', 'codigo', 'linea', 'categoria', 'nombre', 'kg', 'ton'], rows), filas: rows.length, rows }];
     }
     if (a.tipo === 'infocompras') {
       const ix = (c) => col(E, c);
@@ -526,7 +541,7 @@
     const quien = u && u.id ? await u.id().catch(() => null) : null;
     const nombre = u && u.name ? await u.name().catch(() => '') : '';
     const ok = [], mal = [], pendientes = [];
-    let ventasNuevas = null;
+    let ventasNuevas = null, pesosNuevos = null;
     try {
       for (let j = 0; j < lista.length; j++) {
         const it = lista[j], nomT = TIPOS[it.tipo].nombre;
@@ -535,7 +550,7 @@
         const rechazo = async (nota) => { try { await db.collection('cargas').add({ tipo: it.tipo, tipo_nombre: nomT, archivo: it.archivo, filas: it.datos.length, venta_usd: it.venta, subido_por: quien, fecha: new Date().toISOString(), estado: 'Rechazado', nota }); } catch (e2) { /* sin registro */ } };
         setMsg(msg, pre + 'Preparando ' + nomT + '…');
         let salidas;
-        try { if (it.tipo === 'clientes' && ventasNuevas) it.ventasNuevas = ventasNuevas; salidas = transformar(it); } catch (e) { salidas = null; }
+        try { if (it.tipo === 'clientes' && ventasNuevas) it.ventasNuevas = ventasNuevas; if (it.tipo === 'tubrica' && pesosNuevos) it.pesosNuevos = pesosNuevos; salidas = transformar(it); } catch (e) { salidas = null; }
         if (!salidas || !salidas.length || salidas.some((s) => !s.filas)) {
           mal.push(nomT + ': no se pudieron leer filas válidas debajo del encabezado');
           pendientes.push(it);
@@ -564,6 +579,7 @@
           });
           ok.push(nomT);
           if (it.tipo === 'ventas') ventasNuevas = salidas[0].rows;
+          if (it.tipo === 'peso') pesosNuevos = salidas[0].rows;
         } catch (e) {
           const c = e && e.code;
           mal.push(nomT + ': ' + motivo(c));
