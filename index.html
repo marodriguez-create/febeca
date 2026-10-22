@@ -589,7 +589,7 @@
         <div class="cg-type"><b>Ventas</b>Todas las marcas, sin Cliente ni Artículo. Venta, unidades y clientes activados.</div>
         <div class="cg-type"><b>Venta por código con peso</b>Códigos que están en la tabla de peso, con Artículo y sin Cliente. Para las toneladas.</div>
         <div class="cg-type"><b>Tabla de peso</b>Código, Kg y Ton por unidad.</div>
-        <div class="cg-type"><b>Infocompras</b>G03 y G10. Inventario, cobertura y días sin inventario.</div>
+        <div class="cg-type"><b>Infocompras</b>Todos los grupos de compra. Inventario, cobertura y días sin inventario.</div>
         <div class="cg-type"><b>Plantilla llena</b>Sube el mismo archivo una vez por cada tipo: el dashboard toma la hoja que corresponde e ignora la fila de EJEMPLO.</div>
         <div class="cg-type"><b>Clientes</b>Región, Estado, Supervisor, Asesor, Marca, Cliente y Mes, con Venta Neta. Sin artículo. Para clientes únicos.</div>
         <div class="cg-type"><b>Ventas semanales</b>Hojas Sheet1, Presupuesto, Acciones y Sheet2. Para Presupuesto, KPI semanal y KPI por Región.</div>
@@ -1490,7 +1490,7 @@ dash.calc('inv_quiebres', {
     resumen.replaceChildren();
     if (tot) {
       const bb = (text, r, field, src) => { const e = document.createElement('b'); e.textContent = text; markEl(e, r, field, src); return e; };
-      const quien = slot === TODAS ? 'G03 y G10' : slot.replace('Grupo ', '');
+      const quien = slot === TODAS ? 'todos los grupos' : slot.replace('Grupo ', '');
       resumen.append(document.createTextNode('Al 21 de octubre hay '), bb(usd(tot.inventario_usd), tot, 'inventario_usd', 'inv_resumen'),
         document.createTextNode(' en inventario de ' + quien + ', para '), bb(mesesF(tot.cobertura_meses), tot, 'cobertura_meses', 'inv_resumen'),
         document.createTextNode(' de venta. '), bb(ent(tot.poca_cobertura), tot, 'poca_cobertura', 'inv_resumen'),

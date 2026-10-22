@@ -252,7 +252,7 @@
     if (tipo === 'infocompras') {
       const ig = idx('GRUPO COMPRA');
       const gs = [...new Set(datos.map((r) => r[ig]).filter(Boolean))];
-      check('Grupos de compra: ' + (gs.join(', ') || 'sin dato') + '.' + (gs.length < 2 ? ' Recuerda subir también el otro grupo.' : ''), gs.length < 2 ? 'cg-w' : '');
+      check('Grupos de compra en el archivo: ' + (gs.join(', ') || 'sin dato') + '. Los artículos de los demás grupos que ya estaban se conservan.');
       const ia = idx('ARTICULO'), cods = datos.map((r) => String(r[ia] ?? '').trim()).filter(Boolean), rep = cods.length - new Set(cods).size;
       if (rep) check('Hay ' + nEnt.format(rep) + ' artículos repetidos en el archivo (¿se pegó el reporte dos veces?). Se usará una sola fila por artículo: la última.', 'cg-w');
     }
