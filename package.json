@@ -1,0 +1,6 @@
+{
+  "name": "ventas-febeca",
+  "private": true,
+  "type": "module",
+  "description": "Dashboard Ventas Febeca (By MARS) con ingreso por usuario"
+}

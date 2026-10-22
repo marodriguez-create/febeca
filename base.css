@@ -1,0 +1,26 @@
+/* Base: lo que el dashboard de Claude pone alrededor de la página. */
+*, ::before, ::after { box-sizing: border-box; border: 0 solid; margin: 0; padding: 0; }
+html { -webkit-text-size-adjust: 100%; line-height: 1.5; font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+body { background: var(--color-bg); color: var(--color-fg); min-height: 100vh; }
+h1, h2, h3, h4, h5, h6 { font-size: inherit; font-weight: inherit; }
+ol, ul, menu { list-style: none; }
+img, svg, video, canvas { display: block; vertical-align: middle; }
+img, video { max-width: 100%; height: auto; }
+button, input, select, optgroup, textarea, ::file-selector-button { font: inherit; letter-spacing: inherit; color: inherit; border-radius: 0; background-color: transparent; opacity: 1; }
+button, input:where([type="button"], [type="reset"], [type="submit"]), ::file-selector-button { appearance: button; }
+a { color: inherit; text-decoration: inherit; }
+table { text-indent: 0; border-color: inherit; border-collapse: collapse; }
+[hidden]:where(:not([hidden="until-found"])) { display: none !important; }
+#dash-root { color: var(--color-fg); font-size: 14px; line-height: 1.45; padding: var(--dash-gutter, clamp(var(--cds-pad-md), 4%, var(--cds-pad-xl))); font-family: var(--font-anthropic-sans); }
+#dash-root :is(b, strong) { font-weight: 700; }
+/* marcador de carga */
+.dash-skeleton { -webkit-text-fill-color: transparent !important; }
+.dash-skeleton, .dash-skeleton::before { background-image: linear-gradient(color-mix(in srgb, currentColor 13%, transparent) 0 0) !important; }
+.dash-skeleton > * { visibility: hidden !important; }
+.dash-skeleton:empty::before { content: ""; width: 3ch; display: inline-block; }
+.dash-skeleton:not(:empty, :has(> :not(span, small, b, strong, em, i, sup, sub))) { background-image: none !important; }
+.dash-skeleton:not(:empty, :has(> :not(span, small, b, strong, em, i, sup, sub)))::before { vertical-align: -.1em; border-radius: .3em; width: 5ch; height: .9em; margin-inline-end: -1em; content: "" !important; display: inline-block !important; }
+@media (prefers-reduced-motion: no-preference) { .dash-skeleton { animation: dash-pulso 1.6s ease-in-out infinite; } }
+@keyframes dash-pulso { 50% { opacity: .55; } }
+.fb-aviso-local { position: fixed; inset: auto 16px 16px auto; max-width: min(26rem, calc(100vw - 32px)); z-index: 1000; background: var(--cds-surface-popover); color: var(--color-fg); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-md) var(--cds-pad-lg); font-size: var(--cds-font-size-body); display: grid; gap: var(--cds-gap-xs); }
+.fb-aviso-local button { justify-self: end; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); cursor: pointer; text-decoration: underline; }
