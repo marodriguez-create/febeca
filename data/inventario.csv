@@ -512,6 +512,519 @@ articulo,descripcion,marca,grupo,bdf,categoria,subcategoria,costo_promedio,preci
 22-64-055,Canal de lluvia blanco 3 m Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,2500,0,,15,0,,0,0,0,0,6,20,0,0,0,0,0,0
 22-64-056,Canal con bajante blanco Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,350,0,,15,0,,0,0,0,0,6,20,0,0,0,0,0,0
 22-64-057,Tapa para canal de lluvia blanco Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,640,0,,15,0,,0,0,0,0,6,20,0,0,0,0,0,0
+17-03-004,Multipalustra plástica 22 x 34 cm negro,CHL,G10,F,Herramientas manuales,Albañilería,2.2,3.9,0,0,1520,70,2026-09-29,7,555,0,15,15,19,14,27,21,560,590,560,1170,450,0
+18-25-062,"Tee rápida plástica 25 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.12,2.03,161,180.32,750,300,2026-10-05,20,345,0.4666666666666667,0,0,0,0,0,0,360,380,270,480,270,310
+18-25-063,Tee rápida plástica 32 mm Faplast,Faplast,G10,H,Exteriores,Conexiones,1.72,3.19,345,593.4,250,325,2026-10-16,20,259.16666666,1.3311897106451753,0,0,0,0,0,0,315,155,235,230,305,315
+18-25-064,Tee rápida plástica 50 mm Faplast,Faplast,G10,H,Exteriores,Conexiones,4.18,8.28,11,45.98,210,60,2026-10-05,20,63.5,0.1732283464566929,0,0,0,0,0,0,45,45,87,63,60,81
+18-25-065,Tapon rápido 32 mm Faplast,Faplast,G10,K,Exteriores,Conexiones,0.6061,1.07,95,57.5795,100,100,2026-08-20,20,65,1.4615384615384615,0,0,0,0,0,0,50,40,100,50,130,20
+18-25-066,Tapon rápido 50 mm Faplast,Faplast,G10,K,Exteriores,Conexiones,1.47,2.92,54,79.38,50,50,2026-10-16,20,25.83333333,2.09032258091488,0,0,0,0,0,0,30,30,35,10,50,0
+18-25-067,Tapon rápido 63 mm Faplast,Faplast,G10,H,Exteriores,Conexiones,2.34,4.77,62,145.08,0,50,2026-08-11,20,23.33333333,2.657142857522449,0,0,0,0,0,0,40,20,40,5,30,5
+23-01-002,Saco para escombros 40 x 70 cm 30 kg Gdeseo,Gdeseo,G10,H,Limpieza,Bolsas para basura,0.31,0.5,1000,310,0,800,2026-10-06,20,783.33333333,1.2765957446862835,9,9,0,0,0,0,900,1200,1000,600,200,800
+23-01-003,Saco para escombros 50 x 90 cm 40 kg Gdeseo,Gdeseo,G10,F,Limpieza,Bolsas para basura,0.42,0.68,1200,504,0,300,2026-10-06,20,1166.66666666,1.0285714285773062,8,8,0,0,0,0,200,1600,1900,1100,800,1400
+16-40-001,Caja apilable plástica extra-grande 36 x 20.50 x 18 cm negro,CHL,G10,F,Ferretería,Organización,4,7.08,25,100,500,300,2026-09-29,7,429.66666666,0.058184639256139405,0,0,0,5,21,0,785,345,400,513,265,270
+16-40-002,Caja apilable plástica mediana 26.50 x 13.50 x 12.50 cm negro,CHL,G10,F,Ferretería,Organización,1.32,2.57,939,1239.48,0,376,2026-10-09,7,460,2.041304347826087,0,0,0,0,0,0,450,90,420,516,654,630
+16-40-003,Caja apilable plástica pequeña 18 x 11 x 7.50 cm negro,CHL,G10,H,Ferretería,Organización,0.95,1.92,636,604.2,0,200,2026-10-09,7,246.66666666,2.5783783784480643,0,0,0,0,0,0,210,230,320,360,210,150
+16-40-004,Caja apilable plástica mediana 26.50 x 12.50 x 13.50 cm gris,CHL,G10,H,Ferretería,Organización,1.43,2.86,161,230.23,0,120,2026-09-29,7,75,2.1466666666666665,0,0,0,0,0,0,90,36,60,84,162,18
+16-40-005,Caja apilable plástica mediana 26.50 x 12.50 x 13.50 cm azul,CHL,G10,H,Ferretería,Organización,1.43,2.65,228,326.04,0,258,2026-10-09,7,277,0.8231046931407943,0,0,0,0,8,0,210,162,324,438,198,330
+30-34-019,Lentes de seguridad tono transparente Wayu,Produsca,G10,F,Seguridad,Protección ocular y facial,1.5656,3.15,498,779.6688,588,144,2026-09-29,15,506,0.9841897233201581,0,0,0,0,0,0,252,558,1050,720,324,132
+20-04-001,Calentador eléctrico 80 litros 110 V Record,Record,G10,F,Baños,Calentadores eléctricos de acumulación,156.0237,287.08,11,1716.2607,0,5,2026-10-10,15,5.5,2,0,0,5,0,0,0,5,7,5,7,6,3
+20-04-002,Calentador eléctrico 27 litros 110 V Record,Record,G10,F,Baños,Calentadores eléctricos de acumulación,99.7577,168.69,195,19452.7515,0,90,2026-10-10,15,70.5,2.765957446808511,8,8,7,0,3,0,74,51,81,110,92,15
+20-04-003,Calentador eléctrico 35 litros 110 V Record,Record,G10,F,Baños,Calentadores eléctricos de acumulación,108.8072,180.54,217,23611.1624,0,125,2026-10-10,15,65.33333333,3.321428571598032,8,8,5,0,2,0,60,48,61,105,102,16
+20-04-004,Calentador eléctrico 50 litros 110 V Record,Record,G10,F,Baños,Calentadores eléctricos de acumulación,123.3082,204.52,111,13687.2102,0,25,2026-10-10,15,29,3.8275862068965516,0,0,17,6,8,0,24,20,44,39,40,7
+20-04-005,Resistencia para calentador 1200 W Record,Record,G10,H,Baños,Calentadores eléctricos de acumulación,17.224,29.69,43,740.632,0,25,2026-10-10,15,21.16666666,2.0314960636319674,0,0,12,0,3,0,10,23,22,4,33,35
+20-04-006,Termostato de seguridad para calentador 27-35-50-80 Record,Record,G10,F,Baños,Calentadores eléctricos de acumulación,13.6023,23.55,83,1128.9909,0,20,2026-10-10,15,43.33333333,1.9153846155319527,0,0,0,29,10,0,40,35,97,1,54,33
+30-22-039,"Guante de nitrilo verde 18"" Intools",Intools,G10,K,Seguridad,Guantes,3.26,5.83,24,78.24,120,120,2026-08-07,15,30,0.8,0,0,4,6,0,0,0,24,60,48,48,0
+16-25-103,Regulador de gas clip-on lengas Gdeseo,Gdeseo,G10,F,Ferretería,Gas,8.26,11.98,555,4584.3,0,160,2026-10-06,20,141.66666666,3.9176470590078893,0,0,0,0,0,0,244,152,166,122,134,32
+22-64-058,Gancho soporte para canal Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,550,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+22-76-016,"Boya plástica para flotante 1/2"" Splaca",Splaca,G10,H,Plomería,Válvulas reguladoras,1.5035,2.1,1195,1796.6825,0,1200,2026-10-14,15,326.66666666,3.6581632653807787,0,0,0,0,0,0,250,150,450,280,620,210
+22-76-017,"Boya plástica para flotante 3/4"" Splaca",Splaca,G10,F,Plomería,Válvulas reguladoras,2.1245,3.1,1790,3802.855,0,1500,2026-10-14,15,457.33333333,3.9139941691247375,7,7,0,0,0,0,450,444,410,420,850,170
+10-61-007,"Spud bronce 1 1/2"" Fp",FP,G10,Z,Construcción,Tanques,15.5934,22.8,0,0,0,12,2026-02-10,15,0.33333333,0,30,30,31,31,30,21,2,0,0,0,0,0
+22-22-009,"Desagüe para lavamanos plástico 1 1/4"" Splaca",Splaca,G10,F,Plomería,Desagües,1.3524,2.59,2561,3463.4964,0,2500,2026-10-14,15,582.83333333,4.394052044634796,10,10,0,0,0,0,208,130,389,1330,1130,310
+22-22-010,"Desagüe para batea-fregadero plástico 1 1/2"" gris Splaca",Splaca,G10,H,Plomería,Desagües,1.562,2.78,1090,1702.58,0,900,2026-10-14,15,323.83333333,3.365928975845249,0,0,0,4,0,0,220,270,230,713,250,260
+22-22-011,Cesta con desagüe para fregadero gris Splaca,Splaca,G10,H,Plomería,Desagües,1.9773,3.42,236,466.6428,0,200,2026-10-14,15,60.66666666,3.8901098905373748,0,0,0,20,0,0,20,60,20,140,84,40
+20-13-003,Cabezal ducha telefono legend cromada Fp,FP,G10,E,Baños,Grifería de ducha,27,35.22,5,135,0,20,2025-12-06,15,2.16666666,2.3076923147928996,0,0,0,0,0,0,4,0,2,0,7,0
+22-52-000,"Sifón extensible para lavamanos blanco 1 1/4"" Gdeseo",Gdeseo,G10,F,Plomería,Sifones,1.4117,2.23,940,1326.998,0,500,2026-10-06,20,414.66666666,2.2668810289753516,0,0,4,10,0,0,235,388,335,695,575,260
+22-52-001,"Sifón extensible para fregadero blanco 1 1/2"" Gdeseo",Gdeseo,G10,F,Plomería,Sifones,1.5976,2.52,921,1471.3896,0,400,2026-10-21,20,334.83333333,2.750622200126935,0,0,0,0,0,0,215,294,240,455,515,290
+22-52-010,"Sifón para lavamano plástico 1 1/4"" blanco Splaca",Splaca,G10,H,Plomería,Sifones,2.283,3.71,195,445.185,0,75,2026-10-14,15,228.33333333,0.8540145985526133,0,0,0,21,0,0,115,120,525,30,185,395
+22-22-012,"Tubo extensible para lavamanos 1 1/4x7"" Splaca",Splaca,G10,H,Plomería,Desagües,0.3626,0.73,1437,521.0562,0,1600,2026-10-14,15,440,3.265909090909091,0,0,0,0,0,0,240,360,520,360,880,280
+22-22-013,"Tubo extensible para fregadero 1 1/2 x 9"" Splaca",Splaca,G10,H,Plomería,Desagües,0.5234,1.01,1106,578.8804,0,800,2026-10-14,15,386.66666666,2.8603448276355232,0,0,0,0,0,0,300,420,540,340,400,320
+22-67-002,"Válvula check 3/4"" Fp",FP,G10,H,Plomería,Válvulas check,17.55,21.23,88,1544.4,0,180,2026-02-10,15,11.16666666,7.8805970196302075,0,0,0,0,0,0,17,6,2,6,7,29
+22-67-009,"Filtro maraca para válvula check 1"" Fp",FP,G10,Z,Plomería,Válvulas check,2.28,2.93,2,4.56,0,10,2026-06-18,15,1.33333333,1.50000000375,17,17,0,0,0,0,0,0,8,0,0,0
+22-67-010,"Filtro maraca para válvula check 2"" Fp",FP,G10,Z,Plomería,Válvulas check,3.71,4.76,0,0,0,10,2026-06-18,15,1.66666666,0,17,17,29,31,30,21,0,0,10,0,0,0
+22-64-020,Canal de lluvia wal-2 blanco 3 m,Walven,G10,D,Plomería,Tubería PVC residual,16.7,23.35,1972,32932.4,800,440,2026-10-10,30,1216.33333333,1.6212661003058955,0,0,1,0,0,0,1487,1529,1261,1375,1106,540
+22-64-022,Canal con bajante wal-2 blanco 25 cm Walven,Walven,G10,F,Plomería,Tubería PVC residual,4,6.84,1372,5488,330,130,2026-10-10,30,581.33333333,2.3600917431327986,3,3,0,0,0,0,505,790,715,692,526,260
+22-64-024,Curva esquinero wal-2 blanco 90° Walven,Walven,G10,H,Plomería,Tubería PVC residual,4.5,7.74,185,832.5,0,120,2026-10-10,30,80.83333333,2.2886597939088107,0,0,0,0,0,0,75,100,130,75,80,25
+22-64-026,Tapa para canal de lluvia wal-2 blanco Walven,Walven,G10,F,Plomería,Tubería PVC residual,1.8,3.52,1478,2660.4,510,110,2026-10-10,30,937,1.577374599786553,7,7,0,0,0,0,600,1110,1250,1252,1020,390
+22-64-028,Gancho soporte para canal PVC wal-2 blanco Walven,Walven,G10,F,Plomería,Tubería PVC residual,2,3.91,1700,3400,30,1000,2026-10-10,30,875,1.9428571428571428,11,11,8,0,0,0,710,1100,960,1010,910,560
+07-07-039,Fregadero Acero inoxidable 1 ponchera 100x50 izquierda Fanainox,Fanainox,G10,N,Cocina,Fregaderos sobreponer,19.3604,32.64,70,1355.228,0,102,2026-08-20,15,5.33333333,13.125000008203125,0,0,19,19,0,0,0,0,0,3,30,-1
+02-19-054,Bombillo LED recargable portátil 20W Gdeseo,Gdeseo,G10,Z,Iluminación,Bombillos LED,2.909,5.36,0,0,0,50,2025-09-15,7,3.5,0,30,30,31,31,30,21,21,0,0,0,0,0
+18-49-072,Anzuelo para pescar N° 7 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,7.074,11.57,1,7.074,100,1,2026-05-23,20,1.33333333,0.750000001875,0,0,0,0,0,0,2,2,4,0,0,0
+18-49-060,"Nylon transparente 0,40 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,0.67,1.06,370,247.9,0,200,2026-09-01,20,56.66666666,6.529411765474048,0,0,0,22,0,0,60,100,0,150,30,0
+18-49-061,"Nylon transparente 0,50 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,0.72,1.15,250,180,0,100,2026-10-06,20,48.33333333,5.172413793460167,2,2,6,21,0,0,50,60,40,100,30,10
+22-04-053,"Anillo PVC agua fría para roscar 1"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios galvanizados,0.4,0.63,840,336,105,1200,2026-10-06,20,632.5,1.3280632411067195,0,0,0,0,7,0,525,825,645,615,645,540
+22-04-057,"Codo 90° PVC agua fría para roscar 1/2"" Gdeseo",Gdeseo,G10,F,Plomería,Accesorios galvanizados,0.22,0.34,8551,1881.22,0,7000,2026-10-06,20,4841.5,1.766188164824951,0,0,0,0,0,0,4150,5300,6400,3725,5100,4374
+22-04-058,"Codo 90° PVC agua fría para roscar 3/4"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios galvanizados,0.3398,0.54,1380,468.924,0,2300,2026-10-06,20,1320,1.0454545454545454,6,6,0,0,0,0,1120,860,1360,1700,1460,1420
+22-04-059,"Codo 90° PVC agua fría para roscar 1"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios galvanizados,0.5273,0.85,1208,636.9784,0,700,2026-10-06,20,620.83333333,1.945771812090984,0,0,0,0,0,0,125,975,800,825,400,600
+22-07-168,"Tapa PVC agua fría hembra para roscar 1/2"" Gdeseo",Gdeseo,G10,F,Plomería,Accesorios PVC agua fría,0.1099,0.17,7828,860.2972,700,4000,2026-10-06,20,4125,1.8976969696969697,0,0,0,0,0,0,3900,3800,6000,3100,5050,2900
+22-07-169,"Tapa PVC agua fría hembra para roscar 3/4"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios PVC agua fría,0.1798,0.29,2150,386.57,0,1000,2026-10-21,20,1058.33333333,2.0314960629985244,0,0,0,0,0,0,750,1150,900,850,2000,700
+22-07-170,"Tapa PVC agua fría hembra para roscar 1"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios PVC agua fría,0.3285,0.52,450,147.825,0,300,2026-10-06,20,283.66666666,1.586368977710608,0,0,2,21,0,0,100,275,577,100,400,250
+22-07-171,"Tapón PVC agua fría macho roscado 1/2"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios PVC agua fría,0.0498,0.08,2298,114.4404,300,400,2026-10-21,20,1666.66666666,1.3788000000055152,0,0,0,0,0,0,1600,1400,2000,1500,2100,1400
+22-07-172,"Tapón PVC agua fría macho roscado 3/4"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios PVC agua fría,0.0898,0.14,968,86.9264,0,800,2026-10-06,20,650,1.4892307692307691,0,0,0,0,0,0,500,700,500,800,800,600
+22-07-173,"Tapón PVC agua fría macho roscado 1"" Gdeseo",Gdeseo,G10,K,Plomería,Accesorios PVC agua fría,0.14,0.23,603,84.42,0,600,2026-10-06,20,225,2.68,0,0,0,0,0,0,50,250,200,250,400,200
+22-07-174,"Tee PVC agua fría para roscar 1/2"" Gdeseo",Gdeseo,G10,F,Plomería,Accesorios PVC agua fría,0.3095,0.5,4525,1400.4875,0,4100,2026-10-06,20,2416.66666666,1.8724137931086136,0,0,4,0,0,0,1800,2525,2125,3550,2050,2450
+22-07-175,"Tee PVC agua fría para roscar 3/4"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios PVC agua fría,0.45,0.72,600,270,0,600,2026-10-21,20,555.33333333,1.0804321728756328,1,1,6,0,0,6,450,582,450,250,800,800
+22-07-176,"Tee PVC agua fría para roscar 1"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios PVC agua fría,0.72,1.14,320,230.4,100,200,2026-10-21,20,193.33333333,1.6551724138216408,22,22,6,0,0,0,250,30,140,130,330,280
+22-04-054,"Anillo reductor PVC agua fría para roscar 3/4 x 1/2"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios galvanizados,0.23,0.37,1475,339.25,0,1200,2026-10-06,20,929.16666666,1.5874439461997305,5,5,4,0,0,0,1000,875,900,900,925,975
+22-04-055,"Anillo PVC reductor agua fría para roscar 3/4 x 1"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios galvanizados,0.42,0.66,764,320.88,100,200,2026-10-06,20,680,1.1235294117647059,0,0,0,0,0,0,360,720,1000,580,620,800
+22-04-056,"Anillo PVC reductor agua fría para roscar 1 x 1/2"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios galvanizados,0.34,0.55,904,307.36,0,1000,2026-09-01,20,716.66666666,1.261395348848943,0,0,0,0,0,0,150,1050,1200,625,475,800
+22-31-024,"Niple PVC blanco rosca corrido 1/2"" Gdeseo",Gdeseo,G10,H,Plomería,Niples,0.1,0.16,4170,417,300,200,2026-10-21,20,3232,1.2902227722772277,0,0,0,0,0,0,2400,3550,4100,3492,3550,2300
+22-31-025,"Niple PVC blanco rosca corrido 3/4"" Gdeseo",Gdeseo,G10,H,Plomería,Niples,0.14,0.23,1424,199.36,0,1900,2026-10-06,20,991.66666666,1.4359663865642753,0,0,0,0,0,0,450,850,1450,1450,850,900
+22-31-026,"Niple PVC blanco rosca corrido 1"" Gdeseo",Gdeseo,G10,H,Plomería,Niples,0.29,0.47,900,261,0,400,2026-10-06,20,700,1.2857142857142858,0,0,0,0,0,0,775,550,900,950,425,600
+20-13-031,Vastago universal para fregadero,Uyustools,G10,E,Baños,Grifería de ducha,2.3959,4.05,2,4.7918,0,20,2025-11-29,7,4.16666666,0.480000000768,0,0,0,0,0,0,0,5,10,10,0,0
+20-13-032,"Vastago universal para lavamano 4""",Uyustools,G10,E,Baños,Grifería de ducha,1.4056,3.06,1,1.4056,0,80,2024-09-23,7,5.83333333,0.1714285715265306,0,0,0,0,0,0,0,5,5,15,10,0
+03-22-012,Pistola de gravedad envase plastico 1.8 mm Vinko,Uyustools,G10,E,Herramientas eléctricas,Equipos aplicación de pinturas,9.8601,10.82,20,197.202,0,20,2025-07-10,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+17-29-025,Juego de destornillador 6 unidades Vinko,Uyustools,G10,E,Herramientas manuales,Juegos de destornillador,2.61,6.92,4,10.44,0,300,2024-08-22,7,14.66666666,0.27272727285123965,0,0,0,0,0,0,6,6,18,34,20,4
+01-10-048,Enchufe con abrazadera sin tierra 15 A 125 V Tania Wiring,Tania Wiring,G10,E,Electricidad,Enchufes  y conectores,1.69,2.32,470,794.3,0,800,2025-09-19,15,31.66666666,14.842105266282548,0,0,0,0,0,0,10,30,10,40,40,60
+01-10-047,Enchufe blindado sin tierra 15 A 125 V amarillo Tania Wiring,Tania Wiring,G10,E,Electricidad,Enchufes  y conectores,2.17,2.97,410,889.7,0,800,2025-09-19,15,43.33333333,9.461538462266272,0,0,0,0,0,0,50,20,30,20,60,80
+30-16-146,Bota de seguridad negra con puntera talla 45 Saga,Saga,G10,H,Seguridad,Calzado de seguridad,15.5,24.94,38,589,0,36,2026-07-17,15,4.16666666,9.120000014592,0,0,0,0,0,0,12,3,3,4,3,0
+30-16-137,Bota de seguridad negra con puntera talla 36 Saga,Saga,G10,K,Seguridad,Calzado de seguridad,15.0833,24.94,14,211.1662,0,25,2026-08-07,15,5.16666666,2.709677422851197,0,0,0,0,0,0,5,3,6,5,9,3
+30-16-138,Bota de seguridad negra con puntera talla 37 Saga,Saga,G10,K,Seguridad,Calzado de seguridad,15,24.94,18,270,0,25,2026-09-14,15,6.5,2.769230769230769,0,0,0,8,13,0,4,4,9,15,0,7
+30-16-139,Bota de seguridad negra con puntera talla 38 Saga,Saga,G10,H,Seguridad,Calzado de seguridad,15.5,24.94,3,46.5,25,30,2026-07-17,15,8.16666666,0.36734693907538524,0,0,9,0,0,0,11,9,5,10,6,8
+30-16-140,Bota de seguridad negra con puntera talla 39 Saga,Saga,G10,H,Seguridad,Calzado de seguridad,15.5,24.94,6,93,50,28,2026-07-17,15,18,0.3333333333333333,0,0,0,0,0,0,33,18,19,21,8,9
+30-16-141,Bota de seguridad negra con puntera talla 40 Saga,Saga,G10,H,Seguridad,Calzado de seguridad,15.1914,24.94,20,303.828,50,50,2026-08-07,15,29.5,0.6779661016949152,0,0,0,0,0,0,33,36,34,42,13,19
+30-16-142,Bota de seguridad negra con puntera talla 41 Saga,Saga,G10,H,Seguridad,Calzado de seguridad,15,24.94,0,0,125,50,2026-08-07,15,22.83333333,0,16,16,0,0,6,21,26,12,36,49,14,0
+30-16-143,Bota de seguridad negra con puntera talla 42 Saga,Saga,G10,F,Seguridad,Calzado de seguridad,15,24.94,0,0,150,25,2026-09-14,15,44.5,0,9,9,0,15,13,16,88,35,59,60,21,4
+30-16-144,Bota de seguridad negra con puntera talla 43 Saga,Saga,G10,H,Seguridad,Calzado de seguridad,15.1324,24.94,19,287.5156,50,25,2026-09-14,15,27.33333333,0.6951219513042831,0,0,0,0,0,0,49,23,28,44,12,8
+30-16-145,Bota de seguridad negra con puntera talla 44 Saga,Saga,G10,H,Seguridad,Calzado de seguridad,15.5,24.94,14,217,25,36,2026-07-17,15,12.83333333,1.090909091192444,0,0,0,0,0,0,15,15,11,21,8,7
+18-49-073,"Nylon color azul 0,20 mm 100 m Gdeseo",Gdeseo,G10,N,Exteriores,Pesca,0.58,0.93,20,11.6,100,20,2026-08-07,20,10,2,30,30,6,0,0,0,0,0,30,30,0,0
+30-31-011,Casco de seguridad blanco Intools,Intools,G10,N,Seguridad,Protección contra impactos,3.06,5.67,355,1086.3,0,35,2026-09-14,15,5,71,0,0,0,8,13,0,0,0,0,0,0,30
+18-49-074,"Nylon color azul 0,30 mm 100 m Gdeseo",Gdeseo,G10,N,Exteriores,Pesca,0.65,1.03,0,0,100,20,2026-08-07,20,23.33333333,0,0,0,0,3,30,21,30,20,40,50,0,0
+01-10-059,Enchufe de potencia tripolar 30a 125/250v. Tania Wiring,Tania Wiring,G10,E,Electricidad,Enchufes  y conectores,4.609,7.79,0,0,0,100,2026-04-15,0,13.83333333,0,0,0,0,0,0,17,10,0,26,29,8,10
+01-28-264,Toma aerea polarizada 2 x 15A 250v  amarillo blindado. Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,1.331,2.25,100,133.1,0,200,2026-04-15,0,16.66666666,6.0000000024,0,0,0,0,0,0,20,30,40,10,0,0
+18-25-190,Tee rápida plástica 63 mm Faplast,Faplast,G10,N,Exteriores,Conexiones,6.9,11.85,53,365.7,84,72,2026-10-05,20,27.66666666,1.9156626510640151,16,16,12,0,0,0,0,27,7,58,41,33
+03-02-038,Capacitor con terminal 20 uf Semilic,Semilic,G10,K,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,2.6294,4.74,16,42.0704,0,10,2026-08-27,20,2.5,6.4,0,0,0,0,0,0,0,0,10,5,0,0
+03-02-041,Capacitor con terminal 25 uf Semilic,Semilic,G10,Z,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,3.0122,5.19,2,6.0244,0,10,2026-04-22,7,2,1,0,0,0,0,0,0,3,0,8,1,0,0
+03-02-042,Impeler para bomba periférica de 3/4 HP y 1 HP Semilic,Semilic,G10,Z,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,3.2462,5.91,0,0,0,30,2025-09-15,7,4.66666666,0,0,0,10,31,30,21,0,22,6,0,0,0
+03-02-043,Manómetro 5 cm 0 - 90 psi Semilic,Semilic,G10,H,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,3.58,5.41,28,100.24,0,20,2026-10-06,20,10.66666666,2.625000001640625,0,0,0,1,0,0,20,2,16,14,6,6
+03-02-044,Presostato para hidroneumático 20 - 40 psi Semilic,Semilic,G10,H,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,5.62,8.56,74,415.88,0,30,2026-10-21,20,29.33333333,2.5227272730139463,0,0,0,0,0,0,18,32,30,16,54,26
+03-02-045,Rolinera mecánica 6201 para bomba 1/2 HP Semilic,Semilic,G10,H,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,1.15,1.75,45,51.75,0,50,2026-10-06,20,51.66666666,0.8709677420478668,0,0,0,0,0,0,60,30,100,70,20,30
+03-02-046,Rolinera mecánica 6202 para bomba 3/4 HP y 1 HP Semilic,Semilic,G10,H,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,1.62,2.48,66,106.92,100,30,2026-10-21,20,35,1.8857142857142857,0,0,0,0,0,0,50,10,80,10,50,10
+03-02-047,Sello mecánico para bomba de 1/2 HP Semilic,Semilic,G10,H,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,0.68,1.04,480,326.4,0,100,2026-10-21,20,206.66666666,2.3225806452362123,0,0,0,1,10,5,260,190,280,190,290,30
+03-02-048,Sello mecánico para bomba de 3/4 HP y 1 HP Semilic,Semilic,G10,H,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,1.1,1.67,250,275,0,200,2026-10-06,20,81.66666666,3.0612244900458143,0,0,0,0,7,0,150,50,80,150,50,10
+03-02-049,Impeler para bomba periférica de 1/2 HP Semilic,Semilic,G10,H,Herramientas eléctricas,Accesorios bombas e hidroneumáticos,3.37,5.1,66,222.42,20,20,2026-10-21,20,30,2.2,22,22,14,12,0,1,74,12,16,4,56,18
+08-07-004,Regulador para gas cuerpo aluminio azul Gdeseo,Gdeseo,G10,H,Electrodomésticos,Cocinas,3.89,5.65,554,2155.06,0,95,2026-10-06,20,117.5,4.714893617021277,0,0,0,0,0,0,120,90,190,115,145,45
+23-22-010,Limpiador de griferia 400 ml Fp,FP,G10,Z,Limpieza,Productos químicos,3.38,5.68,0,0,0,12,2026-06-18,15,2,0,17,17,31,31,30,21,0,12,0,0,0,0
+30-22-002,"Guante de carnaza fósil 10"" Produsca",Produsca,G10,Z,Seguridad,Guantes,3.93,6.74,300,1179,0,60,2026-08-05,7,140,2.142857142857143,5,5,7,0,0,0,108,192,336,96,60,48
+30-22-003,"Guante de nitrilo verde 9 L 13"" Safe work",Produsca,G10,H,Seguridad,Guantes,1.3966,2.61,72,100.5552,60,240,2026-08-26,15,106,0.6792452830188679,0,0,0,0,0,0,24,72,216,120,72,132
+30-22-004,"Guante de nitrilo 18"" Safe work",Produsca,G10,H,Seguridad,Guantes,8.25,15.11,36,297,0,48,2026-07-28,15,8,4.5,0,0,15,0,0,0,0,0,36,0,12,0
+30-22-005,Guante de latex litgh flex Produsca,Produsca,G10,H,Seguridad,Guantes,0.9596,1.79,912,875.1552,120,840,2026-09-29,15,430,2.1209302325581394,0,0,8,0,0,0,192,432,612,768,468,108
+30-22-007,"Guante gorilon 10"" Produsca",Produsca,G10,H,Seguridad,Guantes,1.0194,1.93,216,220.1904,168,240,2026-08-26,15,176,1.2272727272727273,10,10,7,0,0,0,84,240,300,216,84,132
+30-22-008,"Guante de carnaza para soldador welders 15"" Produsca",Produsca,G10,F,Seguridad,Guantes,8.2303,15.81,288,2370.3264,0,72,2026-09-29,15,50,5.76,0,0,0,0,0,0,72,36,72,48,60,12
+30-22-009,"Guante de carnaza con refuerzo tipo pistola elite 10"" Produsca",Produsca,G10,H,Seguridad,Guantes,4.3379,9.13,132,572.6028,0,24,2026-09-29,15,34,3.8823529411764706,2,2,16,0,0,0,48,96,0,48,12,0
+30-22-010,Guante revestido de nitrilo klean flex Produsca,Produsca,G10,F,Seguridad,Guantes,0.8898,1.76,1500,1334.7,0,264,2026-09-29,15,384,3.90625,0,0,4,0,0,0,168,384,708,696,276,72
+30-22-011,"Guante de nitrilo verde 10 XL 13"" Safe work",Produsca,G10,H,Seguridad,Guantes,1.3546,2.6,120,162.552,48,132,2026-09-29,15,66,1.8181818181818181,0,0,4,0,0,0,24,0,96,120,84,72
+30-22-012,"Guante PVC rojo para ácidos petro red 14"" Produsca",Produsca,G10,H,Seguridad,Guantes,3.0855,5.36,192,592.416,72,144,2026-09-29,15,106,1.8113207547169812,0,0,4,0,0,0,72,120,168,96,72,108
+30-22-014,"Guante tejido con latex azul rayo flex 10"" Produsca",Produsca,G10,H,Seguridad,Guantes,1.3833,2.86,324,448.1892,180,252,2026-09-29,15,152,2.1315789473684212,0,0,4,4,0,0,48,60,192,300,132,180
+30-22-015,Guante de latex modelo alaska Safe work,Produsca,G10,H,Seguridad,Guantes,1.7523,3.81,72,126.1656,48,84,2026-09-29,15,38,1.894736842105263,0,0,10,0,0,0,24,36,48,24,60,36
+30-22-016,Guante tejido gris clase A Produsca,Produsca,G10,H,Seguridad,Guantes,0.2121,0.46,1692,358.8732,372,240,2026-09-29,15,442,3.828054298642534,0,0,0,0,0,0,420,840,672,480,240,0
+30-22-017,"Guante tejido con latex anticorrosivo resister 10"" Produsca",Produsca,G10,H,Seguridad,Guantes,1.5262,3.32,168,256.4016,0,144,2026-09-29,15,110,1.5272727272727273,0,0,11,0,0,0,72,108,180,144,84,72
+30-22-021,"Guante hot mill con refuerzos 14"" Produsca",Produsca,G10,E,Seguridad,Guantes,2.97,3.53,2142,6361.74,0,2689,2023-08-05,0,38,56.36842105263158,0,0,0,0,0,0,6,108,18,18,12,66
+30-22-020,"Guante hot mill 14"" Produsca",Produsca,G10,E,Seguridad,Guantes,1.87,2.23,684,1279.08,0,1800,2023-08-05,0,127,5.3858267716535435,0,0,0,0,0,0,6,732,-12,12,12,12
+37-16-065,Fórmula marina 440cc 70-5 Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.694,6.12,52,192.088,96,96,2026-09-30,15,42,1.2380952380952381,0,0,0,0,0,0,45,39,12,63,30,63
+37-16-067,Champú para carro galón (3.78l) schaum Sq,SQ,G10,K,Automotriz,Limpieza de autos,9.3829,15.11,16,150.1264,0,8,2026-09-30,15,6.83333333,2.3414634157763237,0,0,0,0,0,0,7,2,9,9,6,8
+37-16-068,Desmoldante banda roja 354cc aluminio Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.479,5.42,9,31.311,312,144,2026-09-09,15,175,0.05142857142857143,29,29,28,11,3,0,75,72,288,360,249,6
+37-01-011,Ambientador superconcentrado 40cc fresa Sq,SQ,G10,K,Automotriz,Accesorios interior,2.1323,3.3,57,121.5411,0,36,2026-09-30,15,16.5,3.4545454545454546,0,0,0,0,0,0,9,0,27,45,18,0
+37-01-013,Ambientador superconcentrado 40cc cereza Sq,SQ,G10,K,Automotriz,Accesorios interior,2.1305,3.31,55,117.1775,0,36,2026-09-09,15,5.33333333,10.312500006445312,0,0,0,0,0,0,8,0,8,16,0,0
+37-16-069,Limpia motor galón (3.78l) Sq,SQ,G10,K,Automotriz,Limpieza de autos,11.0681,17.5,4,44.2724,0,12,2026-06-24,15,2.66666666,1.50000000375,13,13,0,0,0,0,2,8,0,2,4,0
+37-01-014,Ambientador superconcentrado 40cc manzana Sq,SQ,G10,K,Automotriz,Accesorios interior,2.1331,3.3,72,153.5832,0,36,2026-09-30,15,7.5,9.6,0,0,0,0,0,0,9,0,9,18,9,0
+37-16-070,Limpia carburador 440cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,5.5471,9.28,142,787.6882,24,12,2026-10-15,15,63.66666666,2.230366492380143,0,0,0,0,20,0,24,36,120,58,88,56
+23-04-004,Ambientador frescaroma 300cc fresa Sq,SQ,G10,E,Limpieza,Control de plagas,3.4404,5.42,1,3.4404,0,12,2026-01-29,7,0.66666666,1.5000000150000001,0,0,0,0,0,0,0,4,0,0,0,0
+37-16-071,Desengrasante industrial galón (3.78l) Sq,SQ,G10,H,Automotriz,Limpieza de autos,7.7549,12.34,22,170.6078,4,2,2026-10-15,15,12,1.8333333333333333,10,10,18,0,0,0,6,0,14,18,26,8
+37-19-054,Aceite lubricante 5x1 115cc Sq,SQ,G10,F,Automotriz,Lubricantes y aditivos,2.4293,3.91,682,1656.7826,0,264,2026-09-30,15,210,3.2476190476190476,0,0,0,0,0,0,168,138,222,372,228,132
+37-19-055,Aceite lubricante 5x1 235cc Sq,SQ,G10,F,Automotriz,Lubricantes y aditivos,3.3579,5.53,526,1766.2554,72,96,2026-10-15,15,150.33333333,3.49889135262747,15,15,19,31,2,0,114,118,58,0,398,214
+37-16-072,Spray metalico alu-ring 440cc Sq,SQ,G10,K,Automotriz,Limpieza de autos,5.4923,8.76,0,0,24,72,2026-05-29,15,12,0,0,0,0,0,21,21,0,18,18,26,10,0
+37-16-074,Fórmula electrica 354cc 70-7 Sq,SQ,G10,K,Automotriz,Limpieza de autos,4.0718,6.66,19,77.3642,24,48,2026-09-30,15,32.33333333,0.5876288660399618,0,0,0,0,0,0,39,29,27,21,48,30
+37-16-075,Fórmula marina galón (3.78l) 70-5 Sq,SQ,G10,H,Automotriz,Limpieza de autos,12.1647,19.15,62,754.2114,8,68,2026-09-30,15,15.83333333,3.9157894745085873,0,0,0,0,7,0,24,23,8,25,9,6
+37-16-076,Fórmula marina 1l 70-5 Sq,SQ,G10,H,Automotriz,Limpieza de autos,6.1595,9.45,40,246.38,12,36,2026-10-15,15,34.66666666,1.1538461540680474,0,0,0,0,2,0,10,74,6,48,50,20
+37-16-078,Limpia motor 354cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.105,5.18,0,0,72,24,2026-03-30,15,12.66666666,0,0,0,0,7,30,21,4,24,28,20,0,0
+37-16-079,Lustrador abrillantador 120cc limón Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.0428,4.63,49,149.0972,0,24,2026-10-15,15,19,2.5789473684210527,0,0,0,0,0,0,9,42,30,3,12,18
+37-16-080,Lustrador abrillantador 360cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,6.2009,9.8,79,489.8711,24,48,2026-09-30,15,15.66666666,5.042553193635129,0,0,0,0,0,0,10,14,24,16,12,18
+37-16-081,Porcelana líquida 360cc Sq,SQ,G10,K,Automotriz,Limpieza de autos,3.2515,5.29,29,94.2935,0,24,2026-09-30,15,13,2.230769230769231,0,0,0,0,0,0,6,36,3,24,9,0
+37-16-082,Protector contra óxido 354cc 70-3 Sq,SQ,G10,K,Automotriz,Limpieza de autos,5.5691,8.88,16,89.1056,12,24,2026-09-09,15,14.33333333,1.1162790700270417,0,0,0,8,2,0,18,-10,26,20,32,0
+37-16-083,Pule fácil 400cc sin abrasivo Sq,SQ,G10,K,Automotriz,Limpieza de autos,3.4798,5.93,26,90.4748,0,12,2026-05-15,15,1,26,0,0,0,0,0,0,2,0,0,0,4,0
+37-16-084,Pulitura liquida 360cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,4.74,8.01,0,0,48,24,2026-01-29,15,0,,30,30,31,31,30,21,0,0,0,0,0,0
+37-16-085,Champú para carro 1l schaum Sq,SQ,G10,K,Automotriz,Limpieza de autos,4.7248,7.92,24,113.3952,0,6,2026-07-31,15,0,,0,0,0,0,0,0,0,0,0,0,0,0
+37-16-086,Silicon abrillantador 354cc carro nuevo Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.4631,5.1,1,3.4631,96,48,2026-09-03,15,54.33333333,0.01840490797658926,0,0,0,0,0,0,39,89,66,83,47,2
+37-16-087,Silicon abrillantador 354cc fresa Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.4622,5.1,78,270.0516,48,96,2026-10-15,15,71.5,1.0909090909090908,0,0,0,6,2,0,51,51,87,102,93,45
+37-16-088,Silicon abrillantador 354cc limón Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.4638,5.38,232,803.6016,96,192,2026-10-15,15,123.5,1.8785425101214575,0,0,0,0,0,0,192,105,102,111,141,90
+37-16-089,Silicon abrillantador 354cc uva Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.4718,5.31,92,319.4056,24,72,2026-09-30,15,60.5,1.5206611570247934,0,0,0,0,0,0,66,45,63,81,69,39
+37-19-058,Aceite anticorrosivo sonax 354cc Sq,SQ,G10,H,Automotriz,Lubricantes y aditivos,4.1279,6.22,1,4.1279,120,48,2026-07-31,15,47.83333333,0.020905923346404592,0,0,0,0,0,0,42,78,57,78,32,0
+13-88-016,Tumba pintura 354cc 70-4 Sq,SQ,G10,H,Pintura,Spray uso especial,3.861,6.39,17,65.637,96,48,2026-09-30,15,90,0.18888888888888888,0,0,0,0,0,0,90,72,98,78,94,108
+37-16-092,Limpia carburador 354cc aluminio Sq,SQ,G10,Z,Automotriz,Limpieza de autos,2.4308,6.03,140,340.312,0,312,2024-07-11,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+37-16-093,Limpiador de cauchos 440cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,4.2588,6.92,54,229.9752,0,24,2026-10-15,15,27.33333333,1.975609756338489,0,0,0,0,0,0,10,26,46,26,44,12
+37-16-094,Velour de tapicerias 354cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.1474,4.95,25,78.685,72,48,2026-09-30,15,40,0.625,30,30,17,0,0,0,0,1,24,93,60,62
+37-01-019,Ambientador frescaroma 300cc brisa marina Sq,SQ,G10,E,Automotriz,Accesorios interior,3.1032,5.03,2,6.2064,0,12,2025-12-20,7,0.66666666,3.0000000300000003,0,0,0,0,0,0,0,0,0,4,0,0
+37-01-020,Ambientador frescaroma 300cc lavanda Sq,SQ,G10,E,Automotriz,Accesorios interior,3.1017,5.03,2,6.2034,0,12,2025-09-09,7,0,,0,0,0,0,0,0,0,0,0,0,0,0
+37-01-021,Ambientador frescaroma 300cc manzana Sq,SQ,G10,E,Automotriz,Accesorios interior,3.1175,5.03,1,3.1175,0,12,2025-05-28,7,0.66666666,1.5000000150000001,0,0,0,0,0,0,0,4,0,0,0,0
+37-16-098,Limpiador de cuero 360cc Sq,SQ,G10,K,Automotriz,Limpieza de autos,3.0032,4.94,0,0,24,24,2025-12-06,15,1.5,0,30,30,31,31,30,21,9,0,0,0,0,0
+37-19-059,Lubricante seco mos2 puro Sq,SQ,G10,K,Automotriz,Lubricantes y aditivos,4.5554,7.15,12,54.6648,24,24,2026-07-23,15,2,6,24,24,22,0,0,0,0,0,0,0,10,2
+37-16-100,Pulitura líquida 120cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,2.2319,3.57,0,0,96,48,2026-03-12,15,3.16666666,0,23,23,31,31,30,21,18,1,0,0,0,0
+37-16-101,Pulitura líquida 1l Sq,SQ,G10,K,Automotriz,Limpieza de autos,12.5033,20.09,0,0,6,12,2026-03-21,15,2.33333333,0,0,0,0,11,30,21,1,5,5,3,0,0
+12-04-016,"Bisagra para puerta zincada 3 x 3"" (76 x 76 mm) HA",Herrajes Alfa,G10,H,Cerrajería,Bisagras para madera,2.5667,5.02,0,0,288,288,2026-09-29,15,168.83333333,0,0,0,0,11,28,2,120,144,312,149,0,288
+12-04-017,"Bisagra para puerta zincada 2 x 2"" (50 x 50 mm) HA Herrajes Alfa",Herrajes Alfa,G10,H,Cerrajería,Bisagras para madera,1.4817,2.9,228,337.8276,0,288,2026-09-29,15,146,1.5616438356164384,0,0,0,1,4,0,72,96,180,252,228,48
+12-04-018,"Bisagra para puerta zincada 2 1/2 x 2 1/2"" (63 x 63 mm) HA",Herrajes Alfa,G10,H,Cerrajería,Bisagras para madera,1.9708,3.7,69,135.9852,144,144,2026-09-29,15,120,0.575,0,0,0,0,0,0,72,120,132,168,144,84
+12-07-000,"Bisagra armillar 2"" x 1,5 mm HA",Herrajes Alfa,G10,H,Cerrajería,Bisagras para metal,0.4557,0.83,66,30.0762,960,480,2026-09-29,15,596,0.11073825503355705,6,6,0,0,0,0,276,456,1032,732,720,360
+12-07-001,"Bisagra armillar 3"" x 2 mm HA",Herrajes Alfa,G10,F,Cerrajería,Bisagras para metal,0.8939,1.56,2067,1847.6913,3744,1584,2026-09-29,15,2398,0.8619683069224353,0,0,0,0,0,0,2772,2064,2724,2880,2136,1812
+12-07-002,"Bisagra armillar 4"" x 3 mm HA",Herrajes Alfa,G10,F,Cerrajería,Bisagras para metal,2.1671,3.57,1080,2340.468,2880,1512,2026-09-29,15,1352,0.7988165680473372,4,4,0,0,0,0,1680,612,1884,1956,1152,828
+12-07-003,"Bisagra armillar 5"" x 4 mm HA",Herrajes Alfa,G10,F,Cerrajería,Bisagras para metal,4.1322,6.82,468,1933.8696,288,288,2026-09-29,15,220,2.1272727272727274,0,0,0,0,0,0,228,132,348,288,132,192
+12-46-000,Blanco de llave tipo cisa derecha,CHL,G10,F,Cerrajería,Llaves para cerraduras domésticas,0.214,0.35,100,21.4,9900,2000,2026-09-29,7,4575,0.02185792349726776,1,1,0,0,5,7,6350,4400,6700,4750,3200,2050
+12-46-001,Blanco de llave tipo cisa izquierda,CHL,G10,F,Cerrajería,Llaves para cerraduras domésticas,0.214,0.39,2520,539.28,0,2000,2026-09-29,7,3041.66666666,0.8284931506867473,0,0,0,0,0,0,3150,2800,3250,3500,3450,2100
+12-46-002,Blanco de llave tipo kwikset derecha,CHL,G10,H,Cerrajería,Llaves para cerraduras domésticas,0.251,0.48,520,130.52,0,150,2026-10-09,7,541.66666666,0.9600000000118154,0,0,0,0,0,0,1000,250,150,1050,450,350
+12-46-004,Blanco de llave de aluminio izquierda,CHL,G10,E,Cerrajería,Llaves para cerraduras domésticas,0.1451,0.25,30,4.353,0,100,2024-07-24,0,8.33333333,3.60000000144,6,6,0,0,0,0,0,0,0,50,0,0
+12-49-005,"Pasador porta candado 4"" acero inoxidable Gdeseo",Gdeseo,G10,K,Cerrajería,Pasadores y aldabas,1.88,3.03,31,58.28,0,30,2026-10-06,20,15.83333333,1.9578947372542936,0,0,0,0,0,0,15,30,10,25,15,0
+12-49-006,"Pasador de cadena 4 1/2"" acero inoxidable Gdeseo",Gdeseo,G10,E,Cerrajería,Pasadores y aldabas,1.66,2.74,70,116.2,0,200,2024-10-23,7,11.66666666,6.000000003428571,0,0,0,0,0,0,20,0,10,10,30,0
+12-01-012,"Oreja para candado 1 1/4 x 3/16"" HA",Herrajes Alfa,G10,F,Cerrajería,Accesorios para cerrajería,0.3,0.5,2854,856.2,500,1500,2026-09-29,15,1579.16666666,1.807282321907366,0,0,0,0,0,0,1300,1175,1775,2450,1500,1275
+12-49-007,"Pasador porta candado galvanizado 6"" HA",Herrajes Alfa,G10,H,Cerrajería,Pasadores y aldabas,3.7264,6.6,72,268.3008,0,60,2026-09-29,15,24,3,0,0,0,0,0,0,0,60,36,12,12,24
+12-49-008,"Pasador porta candado galvanizado 8"" HA",Herrajes Alfa,G10,K,Cerrajería,Pasadores y aldabas,4.9767,8.08,36,179.1612,0,48,2026-08-12,15,20,1.8,0,0,0,0,0,0,0,36,60,0,12,12
+12-49-009,"Aldaba galvanizada de 2"" HA",Herrajes Alfa,G10,K,Cerrajería,Pasadores y aldabas,0.8915,1.59,96,85.584,0,120,2026-08-12,15,36,2.6666666666666665,0,0,0,0,0,0,24,36,84,48,24,0
+12-49-010,"Aldaba galvanizada de 2 1/2"" HA",Herrajes Alfa,G10,K,Cerrajería,Pasadores y aldabas,1.07,1.73,108,115.56,0,120,2026-08-12,15,18,6,0,0,12,11,0,0,0,36,60,12,0,0
+12-49-011,"Aldaba galvanizada de 3"" HA",Herrajes Alfa,G10,K,Cerrajería,Pasadores y aldabas,1.7286,3.11,26,44.9436,120,120,2026-05-23,15,26,1,0,0,0,0,0,0,24,48,36,24,24,0
+12-49-012,"Aldaba galvanizada de 4"" HA",Herrajes Alfa,G10,K,Cerrajería,Pasadores y aldabas,2.053,4.58,43,88.279,0,60,2026-02-14,15,4,10.75,0,0,0,0,0,0,0,0,12,12,0,0
+12-49-013,"Aldaba galvanizada de 5"" HA",Herrajes Alfa,G10,K,Cerrajería,Pasadores y aldabas,3.4792,5.94,48,167.0016,0,60,2026-02-14,15,2,24,0,0,0,0,0,0,0,0,0,12,0,0
+12-49-014,"Aldaba galvanizada de 6"" HA",Herrajes Alfa,G10,E,Cerrajería,Pasadores y aldabas,2.94,4.01,833,2449.02,0,1007,2023-08-05,0,4,208.25,0,0,0,0,0,0,0,0,0,12,12,0
+12-49-015,"Aldaba galvanizada de 1 1/2"" HA",Herrajes Alfa,G10,K,Cerrajería,Pasadores y aldabas,0.6077,1.61,24,14.5848,60,120,2026-08-12,15,44,0.5454545454545454,0,0,0,0,0,0,0,72,84,96,12,0
+12-49-016,"Pasador porta candado galvanizado 3"" HA",Herrajes Alfa,G10,H,Cerrajería,Pasadores y aldabas,1.413,2.49,209,295.317,168,168,2026-09-29,15,72,2.9027777777777777,0,0,0,0,0,0,12,48,72,120,96,84
+12-49-017,"Pasador porta candado galvanizado 4"" HA",Herrajes Alfa,G10,H,Cerrajería,Pasadores y aldabas,1.5611,2.77,0,0,120,120,2026-09-29,15,92,0,0,0,0,0,0,2,36,36,72,132,120,156
+12-49-018,"Pasador porta candado galvanizado 5"" HA",Herrajes Alfa,G10,H,Cerrajería,Pasadores y aldabas,1.7997,3.02,112,201.5664,0,120,2026-08-26,15,42,2.6666666666666665,0,0,0,0,0,0,36,60,48,48,36,24
+01-19-008,Grapa para cable chata con clavo 2 x 12 Semilic,Semilic,G10,H,Electricidad,Organización de cables,0.46,0.79,579,266.34,100,400,2026-10-21,20,290,1.9965517241379311,0,0,0,0,0,0,260,240,300,260,380,300
+01-19-009,Grapa para cable chata con clavo 2 x 10 Semilic,Semilic,G10,H,Electricidad,Organización de cables,0.58,1,648,375.84,100,500,2026-10-21,20,250,2.592,0,0,0,0,0,0,180,200,280,220,360,260
+01-19-010,Grapa para cable chata con clavo 2 x 14 Semilic,Semilic,G10,H,Electricidad,Organización de cables,0.44,0.78,302,132.88,0,300,2026-10-21,20,149.66666666,2.01781737202752,4,4,1,0,0,0,160,100,220,39,279,100
+01-13-005,Conector para cable RG6 Semilic,Semilic,G10,H,Electricidad,Extensiones,0.1102,0.17,900,99.18,0,400,2026-10-06,20,183.33333333,4.909090909180165,0,0,0,0,0,0,0,600,0,300,200,0
+17-06-025,"Alicate corta cables 10"" Uyustools",Uyustools,G10,E,Herramientas manuales,Alicates especializados,4.271,9.96,26,111.046,0,120,2024-08-29,7,1.66666666,15.6000000624,0,0,0,0,0,0,0,4,2,2,0,2
+07-07-038,Fregadero Acero inoxidable 1 ponchera 100x50 derecha Fanainox,Fanainox,G10,N,Cocina,Fregaderos sobreponer,19.3604,32.64,79,1529.4716,0,114,2026-08-20,15,5.83333333,13.542857150595918,0,0,19,19,0,0,0,0,0,3,30,2
+02-19-004,Bombillo LED recargable bulbo 9W Gdeseo,Gdeseo,G10,H,Iluminación,Bombillos LED,2.2357,3.53,2,4.4714,200,150,2025-09-15,20,48.33333333,0.04137931034768133,0,0,0,0,0,0,35,55,35,90,75,0
+04-43-013,"Cajetin metálico cuadrado 4 x 4"" x 1/2"" y 3/4"" combinado generico HA Herrajes Alfa",Herrajes Alfa,G10,Z,Materiales eléctricos,Cajas,1.42,2.44,0,0,0,90,2023-08-05,0,0,,30,30,31,31,30,21,0,0,0,0,0,0
+04-43-014,"Cajetin metálico cuadrado 4 x 2"" x 1/2"" y 3/4"" combinado generico HA Herrajes Alfa",Herrajes Alfa,G10,Z,Materiales eléctricos,Cajas,1.08,2.11,0,0,0,9,2023-08-05,0,0,,30,30,31,31,30,21,0,0,0,0,0,0
+04-43-015,"Cajetin octogonal con pintura electrostática y aforación de 3/4"" HA Herrajes Alfa",Herrajes Alfa,G10,Z,Materiales eléctricos,Cajas,1.11,1.47,0,0,0,394,2023-08-05,0,1,0,0,0,9,31,30,21,0,0,6,0,0,0
+04-43-016,"Cajetin metálico cuadrado 4 x 4"" con pintura electrostática y aforación de 3/4"" HA Herrajes Alfa",Herrajes Alfa,G10,Z,Materiales eléctricos,Cajas,1.37,2.39,0,0,0,282,2023-08-05,0,0.66666666,0,15,15,31,31,30,21,0,4,0,0,0,0
+04-43-017,"Cajetin metálico rectangular 2 x 4"" con pintura electrost+atica y aforación de 3/4"" HA Herrajes Alfa",Herrajes Alfa,G10,Z,Materiales eléctricos,Cajas,1.03,2,0,0,0,252,2023-08-05,0,0,,24,24,31,31,30,21,0,0,0,0,0,0
+22-34-025,"Niple galvanizado 4"" x 6""",Conexiones Galv,G10,E,Plomería,Niples,14.7345,28.95,2,29.469,0,12,2025-04-29,20,0.33333333,6.0000000600000005,0,0,0,0,0,0,0,0,0,0,2,0
+22-04-005,"Anillo 1/2"" cromado Fp",FP,G10,K,Plomería,Accesorios galvanizados,2.8326,4.67,5,14.163,0,10,2026-09-30,15,3,1.6666666666666667,0,0,0,0,0,0,0,0,0,0,12,6
+22-04-008,"Unión universal bronce 3/4"" Fp",FP,G10,E,Plomería,Accesorios galvanizados,10.45,13.79,20,209,0,47,2023-08-05,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-009,"Junta dresser bronce 1/2"" Fp",FP,G10,E,Plomería,Accesorios galvanizados,14.25,21.36,4,57,0,17,2023-08-05,15,1.5,2.6666666666666665,0,0,0,0,0,0,0,0,0,3,6,0
+22-04-011,"Junta dresser bronce 1"" Fp",FP,G10,E,Plomería,Accesorios galvanizados,19.95,26,13,259.35,0,15,2023-08-05,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-34-028,"Niple combinado a manguera galvanizada 1"" x 78 mm",Conexiones Galv,G10,E,Plomería,Niples,1.741,3.26,0,0,0,240,2025-12-12,20,0,,30,30,31,31,30,21,0,0,0,0,0,0
+22-04-020,"Codo reducido galvanizado 3"" x 1""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,8.29,13.44,25,207.25,0,36,2023-08-05,0,1,25,0,0,0,0,0,0,0,6,0,0,0,0
+22-04-021,"Codo reducido galvanizado 3"" x 1 1/2""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,6.9,11.19,15,103.5,0,36,2023-08-05,0,1,15,0,0,0,0,0,0,0,6,0,0,0,0
+22-04-023,"Codo galvanizado 45° 2 1/2""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,6.57,10.64,23,151.11,0,36,2023-08-05,0,1.5,15.333333333333334,0,0,0,0,0,0,0,6,3,0,0,0
+22-04-025,"Tee reducida galvanizada 1 1/2"" x 1/2""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,3.285,4.5,9,29.565,0,12,2025-04-03,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-026,"Tee reducida galvanizada 1 1/2"" x 3/4""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,3.5633,6.17,4,14.2532,0,3,2025-12-12,10,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-027,"Tee reducida galvanizada 2 1/2"" x 1""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,6.69,10.82,23,153.87,0,30,2023-08-05,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-028,"Tee reducida galvanizada 3"" x 1""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,10.72,17.37,23,246.56,0,30,2023-08-05,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-030,"Tee galvanizada 3/4""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,0.9991,1.83,1,0.9991,0,245,2025-11-24,10,14.16666666,0.07058823532733564,3,3,0,0,0,0,75,10,0,0,0,0
+22-04-033,"Tapon galvanizado 3/8""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,0.3422,0.57,22,7.5284,0,20,2025-08-15,10,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-035,"Tee reducida galvanizada 3"" x 1 1/2""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,10.89,17.66,15,163.35,0,30,2023-08-05,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-036,"Tee reducida galvanizada 3"" x 2""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,15.466,19.19,20,309.32,0,20,2025-08-15,10,0,,0,0,0,0,0,0,0,0,0,0,0,0
+22-04-039,"Anillo reducido galvanizado 3"" x 2 1/2""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,8.09,13.94,18,145.62,0,72,2025-07-22,10,2.83333333,6.352941183944637,0,0,0,0,0,0,0,0,9,0,4,4
+22-04-041,"Tee reducida galvanizada 2"" x 1""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,5.2708,9.14,8,42.1664,0,48,2024-09-25,10,0.66666666,12.000000120000001,0,0,0,0,0,0,2,0,0,2,0,0
+22-04-042,"Codo reducido galvanizado 2 1/2"" x 1""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,4.41,6.76,16,70.56,0,50,2023-08-05,0,1,16,0,0,0,0,0,0,0,6,0,0,0,0
+22-64-060,Acople para canal de lluvia Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,20,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+17-42-017,Palustra galvanizada tipo rabo ratón CHL,CHL,G10,N,Herramientas manuales,Palustras,0,0,0,0,100,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+17-42-018,Palustra galvanizada tipo esquinera exterior CHL,CHL,G10,N,Herramientas manuales,Palustras,0,0,0,0,110,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+17-42-019,Palustra galvanizada tipo esquinera interior CHL,CHL,G10,N,Herramientas manuales,Palustras,0,0,0,0,100,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+17-42-020,Palustra galvanizada para bordes CHL,CHL,G10,N,Herramientas manuales,Palustras,0,0,0,0,120,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+16-40-008,Caja apilable plástica grande 30 x 20 x 15 cm negro,CHL,G10,N,Ferretería,Organización,0,0,0,0,260,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+22-07-359,"Codo 90° plástico 1"" Faplast",Faplast,G10,N,Plomería,Accesorios PVC agua fría,0,0,0,0,200,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+18-25-191,"Adaptador rápido hembra 75 mm con salida 2"" Faplast",Faplast,G10,N,Exteriores,Conexiones,0,0,0,0,20,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+30-22-046,Guante de cuero petrolero Zumake Produsca,Produsca,G10,N,Seguridad,Guantes,0,0,0,0,60,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+01-01-033,"Tirrap blanco 2,50 x 100 mm 100 unidades Gdeseo",Gdeseo,G10,K,Electricidad,Accesorios para lámparas,0.54,0.86,5,2.7,1700,50,2026-10-06,20,40,0.125,0,0,0,0,0,0,54,6,30,12,48,90
+01-01-034,"Tirrap blanco 4,60 x 200 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,2.41,3.82,45,108.45,0,20,2026-10-06,20,15.33333333,2.934782609333648,0,0,0,0,0,0,38,2,12,14,16,10
+01-01-035,"Tirrap blanco 4,60 x 250 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,2.66,4.63,0,0,30,40,2026-07-07,20,17,0,0,0,0,21,30,21,38,4,20,40,0,0
+01-01-037,"Tirrap blanco 4,80 x 400 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,4.68,7.93,23,107.64,0,10,2026-10-06,20,9.66666666,2.3793103464684897,0,0,0,0,0,0,15,3,18,5,6,11
+01-01-038,"Tirrap blanco 7,00 x 500 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,11.42,18.42,1,11.42,50,10,2026-10-06,20,10.66666666,0.09375000005859375,30,30,6,0,0,0,16,0,0,7,6,35
+01-01-039,"Tirrap negro 2,50 x 100 mm 100 unidades Gdeseo",Gdeseo,G10,K,Electricidad,Accesorios para lámparas,0.54,0.86,84,45.36,0,20,2026-10-21,20,35,2.4,0,0,0,0,2,5,42,0,42,18,72,36
+01-01-040,"Tirrap negro 4,60 x 200 mm 100 uniddaes Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,2.41,3.84,74,178.34,100,60,2026-10-21,20,36,2.0555555555555554,0,0,0,0,0,0,38,24,22,44,36,52
+01-01-041,"Tirrap negro 4,60 x 250 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,2.66,4.3,60,159.6,0,20,2026-10-21,20,26,2.3076923076923075,0,0,0,21,0,0,10,12,26,48,42,18
+01-01-042,"Tirrap negro 4,80 x 400 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,4.68,7.69,40,187.2,0,30,2026-10-21,20,20,2,0,0,0,0,0,0,21,10,17,13,35,24
+01-01-043,"Tirrap negro 7,00 x 500 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,11.42,18.15,82,936.44,0,100,2026-09-01,20,17.66666666,4.641509435713777,0,0,0,4,0,0,22,19,13,34,15,3
+02-19-052,Bombillo LED recargable portátil 30W Gdeseo,Gdeseo,G10,Z,Iluminación,Bombillos LED,3.7,5.79,1,3.7,0,50,2024-10-18,7,64.66666666,0.015463917527367414,0,0,0,0,0,0,114,46,126,102,0,0
+02-19-057,Bombillo led recargable bulbo 12W Gdeseo,Gdeseo,G10,H,Iluminación,Bombillos LED,2.298,3.66,4,9.192,200,100,2026-09-01,20,69.16666666,0.057831325306778925,0,0,0,0,0,0,200,115,0,0,100,0
+20-04-007,Calentador eléctrico 200 litros 220 V Record,Record,G10,P,Baños,Calentadores eléctricos de acumulación,314.7007,577.94,0,0,0,4,2026-07-02,0,1,0,23,23,31,31,30,21,0,0,6,0,0,0
+22-04-062,"Codo galvanizado 45° 3/4""",Conexiones Galv,G10,E,Plomería,Accesorios galvanizados,1.3824,2.03,1,1.3824,0,720,2024-03-16,10,20.33333333,0.04918032787691481,0,0,0,0,0,0,20,10,20,20,52,0
+03-37-018,Cautin soldador tipo pluma 30 W Vinko,Uyustools,G10,E,Herramientas eléctricas,Maquinas de soldar - sopletes,2.7659,5.11,121,334.6739,0,50,2025-09-26,7,0,,0,0,0,0,0,0,0,0,0,0,0,0
+16-10-033,Juego de oring surtidos 225 unidades Vinko,Uyustools,G10,E,Ferretería,"Cadenas, guayas y accesorios",4.1947,9.25,16,67.1152,0,30,2025-11-04,7,6,2.6666666666666665,0,0,0,0,0,0,6,0,10,8,8,4
+37-16-119,Limpiador de contacto electronico 180 cc SQ,SQ,G10,F,Automotriz,Limpieza de autos,5.9476,9.98,407,2420.6732,24,408,2026-09-30,15,198.83333333,2.046940486203637,0,0,0,18,4,0,220,199,182,195,244,153
+01-10-050,Enchufe con abrazadera y tierra 15 A 125 V Tania Wiring,Tania Wiring,G10,E,Electricidad,Enchufes  y conectores,1.69,2.32,525,887.25,0,1500,2025-09-19,15,115,4.565217391304348,0,0,0,0,0,0,100,100,150,90,170,80
+01-10-052,Enchufe blindado tripolar 20 A 250 V amarillo Tania Wiring,Tania Wiring,G10,E,Electricidad,Enchufes  y conectores,2.66,3.66,764,2032.24,0,1000,2025-09-19,15,21,36.38095238095238,0,0,0,0,0,0,40,-14,20,60,10,10
+01-28-239,Tomacorriente hembra amarillo polarizado 15 A 125 V Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,1.9,2.61,156,296.4,0,400,2025-09-19,15,11.66666666,13.371428579069388,0,0,0,0,0,0,10,20,10,10,20,0
+01-01-059,"Receptaculo de bakelita 4"" blanco Tania Wiring",Tania Wiring,G10,E,Electricidad,Accesorios para lámparas,1.94,2.67,379,735.26,0,1500,2025-09-19,15,132,2.871212121212121,0,0,0,0,0,0,18,30,42,630,30,42
+01-01-060,"Receptaculo de bakelita 4"" marfil Tania Wiring",Tania Wiring,G10,E,Electricidad,Accesorios para lámparas,1.94,2.65,432,838.08,0,750,2025-09-19,15,19,22.736842105263158,0,0,0,0,0,0,30,12,6,18,0,48
+30-34-042,Careta de protección facial con soporte. Zeta,Saga,G10,H,Seguridad,Protección ocular y facial,4.493,7.65,4,17.972,200,40,2026-08-07,15,32.66666666,0.12244897961682633,11,11,7,0,0,0,50,45,41,60,0,0
+01-28-248,Tomacorriente sencillo con tierra 20 A 250 V blanco Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,3.13,4.31,474,1483.62,0,700,2025-09-19,15,15,31.6,0,0,0,0,0,0,0,10,20,10,20,30
+13-88-027,Tumba pintura 70-4 400 cc SQ,SQ,G10,H,Pintura,Spray uso especial,4.2259,7.07,0,0,216,36,2026-06-24,15,22.33333333,0,0,0,0,0,13,21,18,68,24,12,12,0
+01-28-249,Tomacorriente sencillo con tierra 20 A 125/250 V blanco Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,2.16,2.97,387,835.92,0,700,2025-09-19,15,33.33333333,11.610000001161,0,0,0,0,0,0,40,30,50,50,30,0
+01-28-251,Tomacorriente doble con tierra y proteccion TR 15 A 125 V blanco Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,1.05,1.44,604,634.2,0,2500,2025-09-19,15,100,6.04,0,0,0,0,0,0,30,70,200,110,160,30
+01-28-252,Tomacorriente doble con tierra 15 A 125 V conexión a presión blanco Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,0.98,1.35,51,49.98,0,2500,2025-09-19,15,140,0.36428571428571427,0,0,0,0,0,0,160,260,150,110,100,60
+01-28-257,Tapa plástica para tomacorriente sencillo marfil Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,0.64,0.89,75,48,0,500,2025-09-19,15,66.66666666,1.1250000001125,0,0,0,0,0,0,50,150,75,25,75,25
+01-28-263,Toma doble 270 marfil. Saco,Saco,G10,E,Electricidad,Tomas e interruptores,0.4,0.52,11957,4782.8,0,18000,2025-09-17,0,498.33333333,23.99397993327086,0,0,0,0,0,0,360,850,500,450,540,290
+30-22-045,Guante tipo ingeniero Intools,Intools,G10,N,Seguridad,Guantes,2.14,3.97,120,256.8,0,60,2026-09-14,15,0,,0,0,0,8,13,0,0,0,0,0,0,0
+20-04-008,Calentador eléctrico 100 litros 110 V Record,Record,G10,P,Baños,Calentadores eléctricos de acumulación,202.0701,383.4,0,0,0,2,2026-02-02,0,0,,30,30,31,31,30,21,0,0,0,0,0,0
+20-04-012,Calentador eléctrico Startjet Tronic 12KW 220 V Startjet,Startjet,G10,N,Baños,Calentadores eléctricos de acumulación,123.0721,211.37,9,1107.6489,0,12,2026-09-28,15,2.5,3.6,0,0,18,19,0,0,0,0,0,0,13,2
+20-04-014,Kit Instalación N.2 Startjet,Startjet,G10,N,Baños,Calentadores eléctricos de acumulación,23.5535,37.74,35,824.3725,0,30,2026-09-28,15,3.16666666,11.052631602216067,0,0,18,19,0,0,0,0,0,3,16,0
+17-21-017,Kit espátulas plásticas 3 unidades,CHL,G10,H,Herramientas manuales,Espátulas,0.89,1.63,86,76.54,0,24,2026-10-09,7,90,0.9555555555555556,0,0,0,0,0,0,72,48,120,132,96,72
+18-49-000,Anzuelo para pesca N° 8 Gdeseo,Gdeseo,G10,Z,Exteriores,Pesca,4.86,7.7,0,0,0,10,2026-07-15,15,1.66666666,0,30,30,14,13,30,21,0,0,0,10,0,0
+18-49-001,Anzuelo para pesca N° 9 Gdeseo,Gdeseo,G10,Z,Exteriores,Pesca,3.65,5.74,0,0,0,10,2026-07-15,15,1.66666666,0,30,30,14,6,30,21,0,0,0,10,0,0
+18-49-002,Anzuelo para pesca N° 10 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,3.05,4.91,98,298.9,0,100,2026-10-06,20,8,12.25,24,24,6,0,0,0,16,0,4,12,12,4
+18-49-003,Anzuelo para pesca N° 11 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,2.18,3.49,98,213.64,0,100,2026-10-06,20,7.33333333,13.363636369710743,24,24,6,0,0,0,12,0,0,8,12,12
+18-49-004,Anzuelo para pesca N° 12 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.88,3.05,110,206.8,0,100,2026-10-06,20,8.66666666,12.692307702071005,24,24,6,0,0,0,12,0,4,12,20,4
+18-49-005,Anzuelo para pesca N° 13 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.58,2.54,105,165.9,0,100,2026-10-06,20,9.16666666,11.454545462876034,24,24,6,0,0,0,10,0,0,15,20,10
+18-49-006,Anzuelo para pesca N° 14 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.39,2.21,100,139,0,100,2026-10-06,20,8,12.5,24,24,6,0,0,0,18,0,6,6,12,6
+18-49-007,Anzuelo para pesca N° 15 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.26,2.03,102,128.52,0,100,2026-10-06,20,5.83333333,17.48571429570612,24,24,6,0,0,0,7,0,0,0,21,7
+18-49-008,Anzuelo para pesca N° 16 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.26,2.03,110,138.6,0,100,2026-10-06,20,13.33333333,8.2500000020625,24,24,6,0,0,0,30,0,0,0,30,20
+18-49-009,Anzuelo para pesca N° 17 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.2599,2.03,48,60.4752,0,80,2026-03-21,20,4.66666666,10.285714300408163,0,0,0,0,0,0,14,0,0,0,7,7
+18-49-010,Anzuelo para pesca N° 18 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.2599,1.97,131,165.0469,0,100,2026-10-06,20,4,32.75,0,0,0,0,0,0,6,0,0,0,12,6
+18-49-011,Anzuelo para pesca N° 20 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.26,2.03,126,158.76,0,100,2026-10-06,20,11,11.454545454545455,12,12,6,0,0,0,24,18,0,6,12,6
+18-49-012,Plomo para pesca 1 g Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,0.72,1.14,118,84.96,0,100,2026-10-06,20,14.66666666,8.04545454911157,24,24,8,6,0,0,6,0,40,18,18,6
+18-49-013,Plomo para pesca 5 g Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.34,2.18,96,128.64,0,100,2026-10-06,20,23.33333333,4.1142857148734695,0,0,0,0,9,5,12,40,16,24,44,4
+18-49-014,Plomo para pesca 4 g Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.03,1.66,82,84.46,0,100,2026-10-06,20,38,2.1578947368421053,0,0,0,0,0,0,8,24,32,34,55,75
+18-49-015,Plomo para pesca 3 g Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,0.9,1.47,75,67.5,0,100,2026-09-01,20,20,3.75,24,24,6,13,0,0,25,0,25,25,25,20
+18-49-016,Plomo para pesca 2 g Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.15,1.88,76,87.4,0,100,2026-09-01,20,24,3.1666666666666665,24,24,6,13,0,0,36,4,32,28,32,12
+18-49-017,"Plomo para pesca 0,8 g Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,0.55,0.9,88,48.4,0,100,2026-09-01,20,24,3.6666666666666665,24,24,6,0,0,0,32,0,40,16,24,32
+22-43-012,"Teflón profesional 1/2"" x 10 m Semilic",Semilic,G10,H,Plomería,Pegamentos y teflones,0.25,0.44,1420,355,100,1400,2026-10-21,20,351.66666666,4.037914692019676,6,6,11,6,0,5,400,70,560,80,880,120
+37-16-105,Desmanchador para carros 400cc Sq,SQ,G10,K,Automotriz,Limpieza de autos,3.3357,5.6,19,63.3783,0,12,2026-09-30,15,4.66666666,4.071428577244898,0,0,0,0,0,0,0,0,0,14,14,0
+37-16-106,Fórmula mecánica 354cc 70-6 Sq,SQ,G10,F,Automotriz,Limpieza de autos,3.4207,5.34,4,13.6828,240,1464,2026-10-15,15,1191.33333333,0.0033575825405801835,2,2,0,0,13,14,1024,1212,856,1540,1056,1460
+23-22-016,Sanitizante limpiador germenex 1l brisa marina Sq,SQ,G10,K,Limpieza,Productos químicos,3.2459,5.39,14,45.4426,0,12,2026-09-30,15,4.66666666,3.0000000042857144,0,0,0,0,0,0,0,0,4,12,8,4
+37-16-108,Lustrador abrillantador 120cc fresh Sq,SQ,G10,K,Automotriz,Limpieza de autos,3.032,5.08,51,154.632,24,24,2026-09-30,15,6,8.5,0,0,0,0,0,0,0,0,12,6,12,6
+37-16-109,Limpiador de micas y cromos 120cc Sq,SQ,G10,K,Automotriz,Limpieza de autos,2.2844,3.77,1,2.2844,24,1,2026-09-21,15,0.33333333,3.0000000300000003,21,21,31,31,20,0,0,2,0,0,0,0
+37-16-110,Lustrador abrillantador 120cc uva Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.0475,4.92,52,158.47,0,24,2026-09-30,15,11.33333333,4.588235295467128,0,0,0,0,0,0,20,12,8,12,8,8
+37-16-111,Limpia carburador 400cc Sq,SQ,G10,H,Automotriz,Limpieza de autos,5.0919,8.07,2,10.1838,120,96,2026-07-18,15,59.66666666,0.0335195530763709,0,0,0,0,0,0,75,132,111,39,1,0
+01-01-032,"Tirrap blanco 4,60 x 350 mm 100 unidades Gdeseo",Gdeseo,G10,H,Electricidad,Accesorios para lámparas,3.9792,6.2,87,346.1904,0,100,2026-07-22,20,15.33333333,5.67391304471172,0,0,0,0,0,0,30,10,12,6,22,12
+01-16-046,Regleta con tierra 6 tomas Semilic,Semilic,G10,H,Electricidad,Multitomas y protectores,3.7,5.49,59,218.3,0,30,2026-10-21,20,20,2.95,0,0,0,0,0,0,12,16,16,26,34,16
+08-19-005,"Extractor de aire 4"" Fp",FP,G10,M,Electrodomésticos,Ventiladores portátiles,16.9898,27.83,36,611.6328,0,35,2026-09-30,15,2.33333333,15.428571450612244,17,17,0,0,0,0,0,0,4,0,8,2
+08-19-006,"Extractor de aire 6"" Fp",FP,G10,M,Electrodomésticos,Ventiladores portátiles,21.19,36.03,29,614.51,0,35,2026-09-30,15,3,9.666666666666666,0,0,0,6,14,0,0,0,1,6,5,6
+01-01-021,Socate plástico E27 blanco Semilic,Semilic,G10,H,Electricidad,Accesorios para lámparas,0.56,1.08,1177,659.12,0,792,2026-10-21,20,436.66666666,2.6954198473693958,0,0,0,0,0,0,280,300,540,480,640,380
+01-01-063,Sócate para tubo LED T8 y tubo fluorescente Gdeseo,Gdeseo,G10,N,Electricidad,Accesorios para lámparas,0.78,1.22,0,0,1000,60,2026-10-06,20,316.66666666,0,30,30,8,5,0,9,120,180,440,540,160,460
+01-01-026,Socate de porcelana rosca E40 modelo 20 amperios Semilic,Semilic,G10,E,Electricidad,Accesorios para lámparas,0.82,1.04,2,1.64,0,3,2023-08-05,0,0.33333333,6.0000000600000005,0,0,0,0,0,0,0,0,0,2,0,0
+01-10-015,Adaptador universal multiuso europeo a americano Semilic,Semilic,G10,K,Electricidad,Enchufes  y conectores,0.38,0.74,440,167.2,0,230,2026-10-06,20,120,3.6666666666666665,0,0,0,0,12,0,100,160,60,200,180,20
+01-28-081,Interruptor 602 26 Amperios Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,5.1077,9.1,33,168.5541,0,50,2026-02-12,20,7.66666666,4.304347829829868,0,0,0,0,0,0,6,0,14,6,16,4
+01-28-088,Tomacorriente amarillo ojo chino Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,1.1299,2.17,35,39.5465,0,20,2026-10-06,20,36.66666666,0.9545454547190083,0,0,0,0,0,0,20,30,60,40,30,40
+01-28-089,Tomacorriente doble para empotrar con tierra Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,2.366,4.83,2,4.732,0,10,2026-10-06,20,10,0.2,0,0,0,0,0,0,5,0,15,10,10,20
+01-28-092,Tomacorriente amarillo con tierra Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,1.02,1.92,224,228.48,0,200,2026-10-06,20,118.33333333,1.892957746532196,0,0,0,0,0,0,100,140,80,70,170,150
+01-28-095,Tomacorriente para empotrar pata gallina Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,1.62,3.14,111,179.82,0,100,2026-10-21,20,28.33333333,3.917647059284429,0,0,0,0,0,0,25,15,20,10,45,55
+01-28-096,Tomacorriente para empotrar con tierra Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,1.13,2.17,0,0,0,10,2026-10-06,20,33.33333333,0,19,19,6,0,0,1,10,60,0,10,40,80
+01-28-097,Tomacorriente para empotrar tipo chino Semilic,Semilic,G10,F,Electricidad,Tomas e interruptores,0.98,1.76,279,273.42,200,400,2026-10-06,20,422.5,0.6603550295857988,0,0,0,0,0,0,570,270,420,460,340,475
+01-13-006,"Extensión doméstica blanca 2,5 m Gdeseo",Gdeseo,G10,E,Electricidad,Extensiones,1.8203,3.02,1,1.8203,0,20,2025-09-15,7,5,0.2,0,0,0,0,0,0,10,10,10,0,0,0
+01-13-007,Extensión doméstica blanca 5 m Gdeseo,Gdeseo,G10,K,Electricidad,Extensiones,2.74,4.42,12,32.88,0,10,2026-10-21,20,9.83333333,1.2203389834645217,0,0,0,0,0,0,10,5,10,4,10,20
+01-28-098,Tomacorriente tipo panela con tierra Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,1.13,2.01,570,644.1,40,200,2026-10-21,20,285.16666666,1.9988310929748412,0,0,0,0,5,0,310,160,420,200,361,260
+01-28-100,Tomacorriente trifásico industrial para empotrar Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,3.9499,6.95,52,205.3948,10,50,2026-10-06,20,15,3.466666666666667,0,0,0,0,0,0,10,20,10,5,30,15
+01-28-101,Interruptor 602 32 Amperios Semilic,Semilic,G10,E,Electricidad,Tomas e interruptores,5.0181,8.7,1,5.0181,0,50,2025-09-15,7,6.33333333,0.15789473692520775,0,0,0,0,0,0,0,6,4,2,26,0
+01-19-011,Splitter plata 1 entrada y 3 salidas Semilic,Semilic,G10,E,Electricidad,Organización de cables,1.2377,2.34,4,4.9508,0,20,2025-04-09,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+01-19-013,Adaptador para teléfono 1 x 2 Semilic,Semilic,G10,E,Electricidad,Organización de cables,0.2562,0.52,32,8.1984,0,10,2025-04-09,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+01-19-014,Cajetin para teléfono 4 líneas Semilic,Semilic,G10,E,Electricidad,Organización de cables,0.24,0.45,14,3.36,0,1000,2024-10-23,7,20.83333333,0.67200000010752,0,0,0,0,0,0,25,25,75,0,0,0
+01-19-016,Splitter plata 1 entrada y 2 salidas Semilic,Semilic,G10,E,Electricidad,Organización de cables,0.9967,2.09,45,44.8515,0,20,2025-08-09,7,2.5,18,0,0,0,0,0,0,5,0,0,10,0,0
+22-49-001,Manilla pomo para lavamano y ducha cromada con azul Fp,FP,G10,K,Plomería,Repuestos grifería,4.27,7.26,20,85.4,0,20,2026-09-30,15,3,6.666666666666667,0,0,0,28,29,0,6,2,2,8,0,0
+22-49-002,Manilla pomo para lavamano y ducha cromada con roja Fp.,FP,G10,Z,Plomería,Repuestos grifería,10.89,16.21,2,21.78,0,10,2025-12-06,15,1.33333333,1.50000000375,0,0,0,0,0,0,0,2,0,0,6,0
+22-19-000,"Goma reductora 2 x 1 1/2""",CHL,G10,F,Plomería,Complementos inodoros,0.46,0.81,848,390.08,0,200,2026-10-09,7,1463.33333333,0.579498861049156,0,0,0,0,0,0,680,1140,1620,2020,2220,1100
+22-19-001,"Goma reductora 2 x 1 1/4""",CHL,G10,F,Plomería,Complementos inodoros,0.49,0.84,37,18.13,2660,300,2026-09-16,7,1210,0.030578512396694214,0,0,0,0,5,21,700,1100,1940,1660,1860,0
+22-19-006,Uña hierro pequeña para lavamanos HA,Herrajes Alfa,G10,K,Plomería,Complementos inodoros,0.7306,1.38,154,112.5124,200,3000,2026-03-27,15,343.33333333,0.44854368932474314,0,0,0,0,0,0,130,130,480,270,650,400
+22-19-007,Uña hierro grande para lavamanos HA,Herrajes Alfa,G10,K,Plomería,Complementos inodoros,2.0318,3.95,0,0,100,100,2026-08-26,15,33.33333333,0,0,0,0,0,0,7,40,0,40,10,60,50
+22-19-005,Tornillo cobre para tanque para WC Fp,FP,G10,E,Plomería,Complementos inodoros,12.96,19.03,16,207.36,0,5,2024-08-13,15,0,,0,0,0,0,0,0,0,0,0,0,0,0
+07-13-004,"Flange con empacadura bronce 1 1/2"" Fp",FP,G10,E,Cocina,Grifería de cocina individual,22.57,33.3,1,22.57,0,9,2023-08-05,0,0.66666666,1.5000000150000001,0,0,0,0,0,0,0,0,3,-3,4,0
+22-19-003,Uña hierro grande para lavamanos,CHL,G10,E,Plomería,Complementos inodoros,1.79,3.43,1,1.79,0,120,2026-08-03,7,43.33333333,0.023076923078698224,0,0,0,0,0,0,24,36,78,66,56,0
+20-22-000,"Válvula para urinario push button 1/2"" Gdeseo",Gdeseo,G10,H,Baños,Grifería sanitaria,8.46,13.8,63,532.98,10,30,2026-10-21,20,35,1.8,0,0,1,5,0,0,14,36,55,49,36,20
+22-28-004,"Llave de chorro PVC blanca con pico 1/2"" Gdeseo",Gdeseo,G10,K,Plomería,Llaves de chorro,1.22,1.94,15,18.3,0,20,2026-10-06,20,10.83333333,1.38461538504142,24,24,6,0,0,0,0,0,10,15,15,25
+20-16-000,Grupo de lavamanos cross cromado Fp,FP,G10,E,Baños,"Grifería de lavamanos 4""",85.88,113.56,4,343.52,0,15,2023-08-05,0,1,4,0,0,0,0,0,0,2,0,2,1,1,0
+22-31-000,"Llave de arresto 1/2 x 1/2"" doble Fp",FP,G10,Z,Plomería,Llaves de control,8.95,11.29,0,0,0,20,2026-08-25,15,6.83333333,0,6,6,0,4,14,21,0,6,0,15,20,0
+22-31-002,"Llave de arresto 1/2 x 1/2"" Fp",FP,G10,H,Plomería,Llaves de control,11.6742,10.53,0,0,0,526,2026-02-10,15,163.16666666,0,0,0,0,0,9,21,266,54,45,287,327,0
+22-31-003,"Llave de arresto 1/2 x 3/8"" Fp",FP,G10,E,Plomería,Llaves de control,21.13,15.96,6,126.78,0,10,2025-06-03,15,1.16666666,5.142857172244898,0,0,0,0,0,0,0,0,0,0,7,0
+22-28-001,"Llave para manguera bronce 1/2 x 3/4"" Fp",FP,G10,Z,Plomería,Llaves de chorro,13.0507,20.01,46,600.3322,0,526,2025-06-03,15,37.66666666,1.221238938269246,0,0,0,0,0,0,110,35,11,22,36,12
+22-07-006,"Junta dresser PVC 1/2"" Faplast",Faplast,G10,F,Plomería,Accesorios PVC agua fría,0.4544,1.12,3002,1364.1088,1800,1650,2026-10-16,20,1879.16666666,1.597516629717419,0,0,0,0,0,0,1900,1650,2675,2375,1425,1250
+22-07-007,"Junta dresser PVC 3/4"" Faplast",Faplast,G10,F,Plomería,Accesorios PVC agua fría,0.6008,1.32,1520,913.216,1200,900,2026-10-16,20,956.66666666,1.5888501742271,0,0,0,0,0,0,790,990,970,1400,880,710
+22-07-008,"Junta dresser PVC 1"" Faplast",Faplast,G10,H,Plomería,Accesorios PVC agua fría,0.85,2.48,103,87.55,200,100,2026-10-16,20,106.66666666,0.9656250000603516,0,0,0,0,0,0,140,130,50,100,90,130
+22-07-009,"Anillo plástico 1/2"" Faplast",Faplast,G10,H,Plomería,Accesorios PVC agua fría,0.12,0.26,3230,387.6,3000,2000,2026-10-16,20,2241.66666666,1.4408921933128354,0,0,0,0,0,0,2650,1500,2500,2450,3200,1150
+22-07-010,"Anillo plástico 3/4"" Faplast",Faplast,G10,H,Plomería,Accesorios PVC agua fría,0.2,0.45,1039,207.8,500,500,2026-10-05,20,541.66666666,1.918153846177454,0,0,0,0,0,0,600,250,975,575,350,500
+22-07-011,"Codo 90° plástico 1/2"" Faplast",Faplast,G10,F,Plomería,Accesorios PVC agua fría,0.15,0.33,9076,1361.4,4000,5000,2026-10-16,20,3138.16666666,2.892134473424807,0,0,0,0,0,0,4429,2000,2750,3500,3700,2450
+22-07-012,"Codo 90° plástico 3/4"" Faplast",Faplast,G10,H,Plomería,Accesorios PVC agua fría,0.21,0.48,1575,330.75,1250,1000,2026-10-16,20,779.16666666,2.021390374348846,0,0,0,0,0,0,250,1075,825,1000,625,900
+22-07-013,"Tapa roscada plástica 1/2"" Faplast",Faplast,G10,H,Plomería,Accesorios PVC agua fría,0.0689,0.17,5957,410.4373,0,2000,2026-10-16,20,1483.33333333,4.0159550561888,0,0,0,0,0,0,2200,1100,2000,1600,1100,900
+18-25-068,"Tapón plástico 1/2"" Faplast",Faplast,G10,K,Exteriores,Conexiones,0.03,0.07,3589,107.67,2000,1000,2026-09-10,20,1266.66666666,2.8334210526464916,10,10,0,0,0,0,2000,400,2800,2000,200,200
+22-07-014,"Tapón plástico 3/4"" Faplast",Faplast,G10,K,Plomería,Accesorios PVC agua fría,0.0501,0.14,389,19.4889,500,500,2026-10-05,20,216.66666666,1.795384615439858,0,0,0,0,0,0,100,300,200,200,300,200
+22-07-015,"Tee plástica 1/2"" Faplast",Faplast,G10,H,Plomería,Accesorios PVC agua fría,0.17,0.38,3318,564.06,1200,1600,2026-10-16,20,994.16666666,3.3374685666611064,4,4,0,0,0,0,485,800,1280,920,1640,840
+22-07-016,"Tee plástica 3/4"" Faplast",Faplast,G10,K,Plomería,Accesorios PVC agua fría,0.27,0.54,25,6.75,500,250,2026-09-10,20,245.83333333,0.1016949152556162,0,0,0,0,0,0,300,300,225,225,25,400
+22-07-017,"Anillo reducción plástico 3/4 x 1/2"" Faplast",Faplast,G10,H,Plomería,Accesorios PVC agua fría,0.13,0.28,2065,268.45,500,500,2026-10-16,20,1016.66666666,2.0311475409969257,0,0,0,0,0,0,800,800,1700,1000,1200,600
+22-34-000,"Niple plástico 1/2"" x 2"" Faplast",Faplast,G10,H,Plomería,Niples,0.0505,0.15,1047,52.8735,3500,500,2026-10-05,20,2564.5,0.4082667186586079,2,2,0,0,0,0,3400,1900,3300,3400,1600,1787
+22-34-001,"Niple plástico 3/4"" x 2"" Faplast",Faplast,G10,H,Plomería,Niples,0.09,0.2,758,68.22,300,900,2026-06-22,20,608.33333333,1.2460273972671014,0,0,0,0,0,0,1250,350,700,500,300,550
+30-22-040,Guante de carnaza tipo pistola Intools,Intools,G10,F,Seguridad,Guantes,1.8,3.06,5070,9126,0,10000,2026-07-21,15,2051.66666666,2.4711616571973067,2,2,16,0,0,0,240,6540,440,2530,1840,720
+30-22-041,Guante tejido con puntos de pvc Intools,Intools,G10,F,Seguridad,Guantes,0.2001,0.41,72,14.4072,12000,7800,2026-09-14,15,6238,0.011542160949022122,1,1,0,5,2,2,4848,9300,3960,9792,8256,1272
+30-37-019,Protector auditivo con cordón Intools,Intools,G10,K,Seguridad,Protección respiratoria y auditiva,0.13,0.22,0,0,400,500,2026-05-12,15,98.66666666,0,0,0,0,0,3,21,70,90,70,90,272,0
+33-07-105,Estante mostrador Gdeseo,Gdeseo,G10,S,Material POP,Exhibidores,2,1.03,4,8,0,12,2023-12-26,0,0.83333333,4.8000000192,0,0,0,0,0,0,1,2,0,1,0,1
+33-07-106,Plancha mostrador Gdeseo,Gdeseo,G10,S,Material POP,Exhibidores,1,0.52,1,1,0,40,2023-12-26,0,0.83333333,1.2000000048,0,0,0,0,0,0,1,1,1,1,0,1
+33-07-107,Ganchos para mostrador Gdeseo,Gdeseo,G10,S,Material POP,Exhibidores,0.1,0.05,102,10.2,0,520,2023-12-26,0,23.33333333,4.371428572053061,0,0,0,0,0,0,30,30,30,30,0,20
+16-64-012,"Tuerca mariposa galvanizado 1/2""",Conexiones Galv,G10,E,Ferretería,Tuercas,0.01,7.36,90,0.9,0,0,,0,0.16666666,540.0000216000009,0,0,0,0,0,0,0,0,0,0,1,0
+01-28-197,Regulador multitoma 6 tomas 2500 W 120 V,Uyustools,G10,E,Electricidad,Tomas e interruptores,8.81,10.3,83,731.23,0,120,2024-09-23,0,2.83333333,29.29411768152249,0,0,0,0,0,0,4,0,2,2,6,3
+30-16-147,Bota de seguridad negra con puntera talla 46 Saga,Saga,G10,K,Seguridad,Calzado de seguridad,15.5,24.94,27,418.5,0,25,2026-04-14,15,1.33333333,20.250000050625,0,0,0,0,0,0,0,4,0,1,2,1
+20-04-009,Calentador eléctrico 120 litros 110 V Record,Record,G10,P,Baños,Calentadores eléctricos de acumulación,231.3976,424.96,0,0,0,2,2026-07-02,15,0.33333333,0,22,22,31,31,30,21,0,0,2,0,0,0
+22-31-044,Kit ferretero febeca FP,FP,G10,N,Plomería,Llaves de control,66.12,90.46,227,15009.24,0,260,2026-09-07,15,5.5,41.27272727272727,0,0,0,5,6,0,0,0,0,0,22,11
+22-31-045,Kit ferretero febeca BM,FP,G10,N,Plomería,Llaves de control,74.63,102.08,141,10522.83,0,160,2026-09-09,15,3.16666666,44.5263158832133,0,0,0,5,8,0,0,0,0,0,14,5
+20-04-011,Calentador eléctrico Startjet Tronic 8 KW 220 V Startjet,Startjet,G10,N,Baños,Calentadores eléctricos de acumulación,106.7099,182.58,27,2881.1673,0,24,2026-09-28,15,2.5,10.8,0,0,18,19,11,0,0,0,0,1,11,3
+20-04-013,Kit Instalación N.1 Startjet,Startjet,G10,N,Baños,Calentadores eléctricos de acumulación,26.272,41.82,33,866.976,0,24,2026-09-28,15,2.5,13.2,0,0,18,19,0,0,0,0,0,0,15,0
+20-04-010,Calentador eléctrico Startjet Plus 10.9 KW 220 V Startjet,Startjet,G10,N,Baños,Calentadores eléctricos de acumulación,161.2584,278.46,18,2902.6512,0,12,2026-09-28,15,1,18,0,0,18,19,0,0,0,0,0,4,2,0
+22-64-059,Curva esquinero para canal de lluvia Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,40,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+22-07-356,"Bushing con Rosca PVC Agua Fria 3/4"" x 1/2"" Gdeseo",Gdeseo,G10,N,Plomería,Accesorios PVC agua fría,0.09,0.15,2150,193.5,0,2000,2026-10-21,20,341.66666666,6.292682926952052,0,0,0,22,0,0,0,0,0,0,950,1100
+22-07-357,"Bushing con Rosca PVC Agua Fria 1"" x 1/2"" Gdeseo",Gdeseo,G10,N,Plomería,Accesorios PVC agua fría,0.19,0.42,2000,380,0,2000,2026-10-21,20,216.66666666,9.230769231053255,0,0,0,22,3,20,0,0,0,0,1300,0
+22-07-358,"Bushing con Rosca PVC Agua Fria 1"" x 3/4"" Gdeseo",Gdeseo,G10,N,Plomería,Accesorios PVC agua fría,0.14,0.23,2000,280,0,2000,2026-10-21,20,208.33333333,9.6000000001536,0,0,0,22,0,19,0,0,0,0,1100,150
+30-34-050,Lentes de seguridad supervisor oscuros Intools,Intools,G10,N,Seguridad,Protección ocular y facial,0.5,0.93,40,20,150,300,2026-09-14,15,43.33333333,0.923076923147929,0,0,0,7,13,0,0,0,0,0,68,192
+30-34-049,Lentes de seguridad supervisor claros Intools,Intools,G10,N,Seguridad,Protección ocular y facial,0.5,0.93,6,3,300,150,2026-09-14,15,74,0.08108108108108109,0,0,0,7,13,0,0,0,0,0,192,252
+18-25-000,Codo rápido 32 mm Faplast,Faplast,G10,H,Exteriores,Conexiones,1.13,2.21,124,140.12,300,250,2026-10-05,20,166.66666666,0.74400000002976,0,0,0,0,0,0,160,120,150,195,175,200
+18-25-001,"Unión rápida plástica 16 mm con salida 3/8"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.3,0.53,615,184.5,600,600,2026-10-16,20,570,1.0789473684210527,0,0,0,0,0,0,1380,100,440,400,440,660
+18-25-002,"Unión rápida plástica 20 mm con salida 1/2"" Faplast",Faplast,G10,F,Exteriores,Conexiones,0.46,0.84,2026,931.96,1410,1400,2026-10-16,20,1263,1.604117181314331,0,0,0,0,0,0,1140,1238,1140,1620,1440,1000
+18-25-003,"Unión rápida plástica 25 mm con salida 3/4"" Faplast",Faplast,G10,F,Exteriores,Conexiones,0.7,1.27,1050,735,1200,800,2026-10-05,20,650,1.6153846153846154,0,0,0,0,0,0,530,700,710,750,710,500
+18-25-004,"Unión rápida plástica 32 mm con salida 1"" Faplast",Faplast,G10,F,Exteriores,Conexiones,1.06,2.12,914,968.84,1500,650,2026-10-05,20,710,1.287323943661972,0,0,0,0,0,0,670,790,710,810,760,520
+18-25-005,"Union rápida plástica 50 mm con salida 1 1/2"" Faplast",Faplast,G10,F,Exteriores,Conexiones,2.6204,4.89,246,644.6184,540,90,2026-10-05,20,217.5,1.1310344827586207,0,0,0,0,0,0,180,165,255,200,265,240
+18-25-006,"Unión rápida plástica 63 mm con salida 2"" Faplast",Faplast,G10,F,Exteriores,Conexiones,4.41,8.78,92,405.72,375,195,2026-10-16,20,153.5,0.5993485342019544,0,0,0,0,0,0,180,189,114,105,210,123
+18-25-007,"Unión rápida plástica 75 mm con salida 2 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,6.92,12.8,60,415.2,120,60,2026-10-16,20,54,1.1111111111111112,0,0,0,0,3,7,64,28,62,44,102,24
+18-25-008,"Unión rápida plástica 90 mm con salida 3"" Faplast",Faplast,G10,H,Exteriores,Conexiones,10.04,19.26,85,853.4,16,24,2026-10-16,20,18.5,4.594594594594595,0,0,0,0,1,0,12,21,23,35,18,2
+18-25-009,"Unión rápida plástica 110 mm con salida 4"" Faplast",Faplast,G10,F,Exteriores,Conexiones,13.84,27.86,101,1397.84,72,42,2026-10-16,20,22.33333333,4.522388060376476,0,0,0,0,0,0,23,42,8,20,31,10
+18-25-010,"Abrazadera plástica 20 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.36,0.72,600,216,600,600,2026-10-16,20,390,1.5384615384615385,0,0,0,0,1,12,560,480,500,480,280,40
+18-25-011,"Abrazadera plástica 25 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.45,0.91,578,260.1,1000,1000,2026-09-10,20,528.5,1.0936613055818354,0,0,12,0,0,0,551,700,300,1000,440,180
+18-25-012,"Abrazadera plástica 25 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.45,0.88,450,202.5,200,400,2026-10-16,20,193.33333333,2.3275862069366826,0,0,0,0,0,0,160,100,300,220,280,100
+18-25-013,"Abrazadera plástica 32 mm con salida 1/2"" Faplast",Faplast,G10,F,Exteriores,Conexiones,0.8579,1.64,843,723.2097,1200,200,2026-10-05,20,511.66666666,1.6475570032787956,0,0,0,0,0,0,750,430,400,610,490,390
+18-25-014,"Abrazadera plástica 32 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.85,1.76,10,8.5,600,400,2026-07-23,20,324.83333333,0.03078501795824305,0,0,0,0,0,0,560,370,340,290,370,19
+18-25-015,"Abrazadera plástica 40 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.23,2.19,120,147.6,100,100,2026-10-05,20,73.33333333,1.6363636364380165,0,0,0,0,0,0,60,60,40,190,50,40
+18-25-016,"Abrazadera plástica 40 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.2299,2.36,113,138.9787,100,200,2026-06-11,20,40.83333333,2.767346939001416,0,0,0,0,0,0,45,35,25,55,50,35
+18-25-017,"Abrazadera plástica 50 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.8929,4.06,145,274.4705,300,150,2026-10-16,20,153.33333333,0.9456521739336011,0,0,0,0,0,0,165,180,65,90,235,185
+18-25-018,"Abrazadera plástica 40 mm con salida 1"" Faplast",Faplast,G10,K,Exteriores,Conexiones,1.2298,2.16,170,209.066,100,100,2026-03-31,20,46.66666666,3.642857143377551,0,0,0,0,0,0,50,30,0,45,130,25
+18-25-019,"Abrazadera plástica 50 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.8906,4.07,137,259.0122,250,50,2026-10-16,20,102.5,1.3365853658536586,0,0,0,0,0,0,105,105,95,100,95,115
+18-25-020,"Abrazadera plástica 50 mm con salida 1"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.8902,4.07,199,376.1498,200,200,2026-10-16,20,111.66666666,1.7820895523451994,0,0,0,0,0,0,70,95,125,55,170,155
+18-25-021,"Abrazadera plástica 63 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.1904,4.82,124,271.6096,250,100,2026-10-16,20,195.83333333,0.6331914893724798,0,0,0,0,0,0,295,165,260,80,155,220
+18-25-022,"Abrazadera plástica 63 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.1914,4.83,295,646.463,100,150,2026-10-16,20,116.66666666,2.5285714287159182,0,0,0,0,0,0,55,210,125,125,100,85
+18-25-023,"Abrazadera plástica 63 mm con salida 1"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.2045,4.83,226,498.217,200,100,2026-10-16,20,101.66666666,2.2229508198178984,0,0,0,0,0,0,35,140,110,80,160,85
+18-25-024,"Abrazadera plástica 63 mm con salida 1 1/2"" - Faplast",Faplast,G10,H,Exteriores,Conexiones,2.2515,4.83,123,276.9345,50,50,2026-10-16,20,27.5,4.472727272727273,0,0,0,0,0,0,5,10,65,15,30,40
+18-25-025,"Abrazadera plástica 63 mm con salida 2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.19,4.83,135,295.65,0,100,2026-10-16,20,30,4.5,0,0,0,0,3,4,45,10,10,5,95,15
+18-25-026,"Abrazadera plástica 90 mm con salida 1/2"" - Faplast",Faplast,G10,H,Exteriores,Conexiones,3.49,6.66,70,244.3,50,25,2026-10-16,20,50.16666666,1.3953488373947307,0,0,0,6,0,0,25,85,50,96,25,20
+18-25-027,"Abrazadera plástica 90 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,3.49,6.17,101,352.49,50,25,2026-10-16,20,49.16666666,2.054237288414134,0,0,0,0,0,0,40,70,50,100,15,20
+18-25-028,"Abrazadera plástica 90 mm con salida 1"" Faplast",Faplast,G10,H,Exteriores,Conexiones,3.49,6.62,71,247.79,100,50,2026-10-16,20,31.66666666,2.242105263629917,0,0,0,0,0,0,50,40,15,10,65,10
+18-25-029,"Abrazadera plástica 90 mm con salida 1 1/2"" Faplast",Faplast,G10,K,Exteriores,Conexiones,3.4151,6.17,5,17.0755,25,50,2025-10-30,20,5.83333333,0.8571428576326531,0,0,0,0,0,0,10,0,0,5,20,0
+18-25-030,"Abrazadera plástica 90 mm con salida 2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,3.49,6.17,20,69.8,60,20,2026-10-05,20,14.16666666,1.4117647065467127,0,0,0,0,0,0,20,5,5,5,45,5
+18-25-031,"Abrazadera plástica 110 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,3.78,6.88,100,378,125,100,2026-10-16,20,100,1,6,6,12,0,0,1,150,150,45,85,90,80
+18-25-032,"Abrazadera plástica 110 mm con salida 3/4"" Faplast",Faplast,G10,F,Exteriores,Conexiones,3.78,6.88,286,1081.08,125,150,2026-10-16,20,145,1.9724137931034482,0,0,0,0,0,0,230,185,135,120,120,80
+18-25-033,"Abrazadera plástica 110 mm con salida 1"" Faplast",Faplast,G10,H,Exteriores,Conexiones,3.78,6.88,67,253.26,150,100,2026-08-20,20,79.16666666,0.8463157895449529,0,0,0,0,0,0,65,65,110,60,110,65
+18-25-034,"Abrazadera plástica 110 mm con salida 2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,3.78,6.88,78,294.84,60,100,2026-08-20,20,42.5,1.8352941176470587,0,0,0,0,0,0,45,15,70,40,50,35
+18-25-035,"Abrazadera plástica 75 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.8001,5.83,118,330.4118,100,25,2026-10-16,20,101.66666666,1.1606557377810267,0,0,0,0,0,0,125,45,145,95,130,70
+18-25-036,"Abrazadera plástica 75 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.8,5.83,180,504,50,100,2026-09-10,20,70,2.5714285714285716,10,10,0,8,0,0,75,30,160,50,60,45
+18-25-037,"Abrazadera plástica 75 mm con salida 1"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.8222,5.4,85,239.887,75,100,2026-09-10,20,50,1.7,0,0,0,0,0,0,70,30,60,50,50,40
+18-25-038,"Abrazadera plástica 75 mm con salida 1 1/2"" Faplast",Faplast,G10,Z,Exteriores,Conexiones,2.7633,5.4,0,0,0,10,2024-11-27,0,0,,30,30,31,31,30,21,0,0,0,0,0,0
+18-25-039,"Abrazadera plástica 75 mm con salida 2"" - Faplast",Faplast,G10,K,Exteriores,Conexiones,2.8,5.83,40,112,0,25,2026-10-16,20,22.66666666,1.7647058828719724,0,0,0,0,2,4,21,10,10,15,70,10
+18-25-040,"Adaptador rápido macho 16 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.21,0.41,928,194.88,2600,1000,2026-10-05,20,1095.83333333,0.8468441064664542,0,0,0,0,0,0,675,1050,725,2150,1000,975
+18-25-041,"Adaptador rápido macho 16 mm con salida 3/4"" Faplast",Faplast,G10,K,Exteriores,Conexiones,0.21,0.41,391,82.11,1000,400,2026-10-05,20,283.33333333,1.3800000000162354,0,0,0,0,0,0,575,125,325,175,200,300
+18-25-042,"Adaptador rápido macho 20 mm con salida 1/2"" Faplast",Faplast,G10,F,Exteriores,Conexiones,0.2799,0.47,4700,1315.53,4400,2200,2026-10-16,20,2320.83333333,2.025134649913142,0,0,0,0,0,0,1625,2100,3425,2525,2500,1750
+18-25-043,"Adaptador rápido macho 20 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.28,0.51,200,56,600,200,2026-10-16,20,383.33333333,0.5217391304393195,0,0,0,0,0,0,350,225,150,350,650,575
+18-25-044,"Adaptador rápido macho 25 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.42,0.72,0,0,1400,1000,2026-09-10,20,498.5,0,0,0,0,0,6,16,475,550,275,650,191,850
+18-25-045,"Adaptador rápido macho 25 mm con salida 3/4"" Faplast",Faplast,G10,F,Exteriores,Conexiones,0.4176,0.72,211,88.1136,4400,1000,2026-10-05,20,1395.83333333,0.1511641791048386,0,0,0,0,0,0,1200,900,1400,1600,1975,1300
+18-25-046,"Adaptador rápido macho 32 mm con salida 1"" Faplast",Faplast,G10,F,Exteriores,Conexiones,0.6,1.11,38,22.8,2300,100,2026-10-16,20,923.66666666,0.04114038253367839,0,0,0,0,0,0,580,1240,880,1030,1410,402
+18-25-047,"Adaptador rápido macho 50 mm con salida 1 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.7,3.2,1,1.7,400,200,2026-09-10,20,175,0.005714285714285714,0,0,0,0,0,0,170,90,250,190,205,145
+18-25-048,"Adaptador rápido macho 50 mm con salida 2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,1.7,3.04,110,187,50,100,2026-10-16,20,146.83333333,0.74914869468216,0,0,0,0,9,4,185,105,160,175,166,90
+18-25-049,"Adaptador rápido macho 63 mm con salida 2"" Faplast",Faplast,G10,F,Exteriores,Conexiones,2.44,4.74,358,873.52,520,360,2026-10-16,20,222,1.6126126126126126,0,0,0,0,0,0,195,175,170,145,522,125
+18-25-050,"Adaptador rápido macho 90 mm con salida 3"" Faplast",Faplast,G10,K,Exteriores,Conexiones,5.07,9.2,20,101.4,100,20,2026-10-16,20,30,0.6666666666666666,0,0,8,10,13,13,30,12,68,18,22,30
+18-25-051,"Adaptador rápido macho 110 mm con salida 4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,7.39,13.45,59,436.01,12,24,2026-10-16,20,23.33333333,2.528571428932653,0,0,0,0,0,0,38,2,39,40,13,8
+18-25-052,"Adaptador rápido hembra 20 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.26,0.45,1,0.26,1800,1000,2026-09-10,20,633.16666666,0.001579362990277224,14,14,8,1,0,0,380,300,800,940,739,640
+18-25-053,"Adaptador rápido hembra 25 mm con salida 1/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.4,0.75,377,150.8,600,400,2026-10-05,20,240,1.5708333333333333,0,0,0,0,0,0,600,40,220,280,260,40
+18-25-054,"Adaptador rápido hembra 32 mm con salida 3/4"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.62,1.2,240,148.8,400,300,2026-10-05,20,193.66666666,1.2392426850684766,0,0,0,0,7,4,190,160,230,230,292,60
+18-25-055,"Adaptador rápido hembra 63 mm con salida 1"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.44,4.42,46,112.24,0,40,2026-10-16,20,17.5,2.6285714285714286,0,0,0,0,0,0,20,15,5,40,10,15
+18-25-056,"Adaptador rápido hembra 63 mm con salida 11/2"" Faplast",Faplast,G10,H,Exteriores,Conexiones,2.44,4.42,66,161.04,0,40,2026-10-05,20,25.83333333,2.554838710007076,0,0,0,0,0,0,40,50,10,15,35,5
+18-25-057,"Adaptador rápido hembra 110 mm con salida 2"" Faplast",Faplast,G10,K,Exteriores,Conexiones,7.64,14.99,16,122.24,0,12,2026-09-10,20,5.83333333,2.7428571444244896,4,4,0,0,0,0,10,5,7,4,5,4
+18-25-058,"Adaptador rápido hembra 110 mm con salida 2 1/2"" Faplast",Faplast,G10,K,Exteriores,Conexiones,7.64,13.88,13,99.32,0,24,2026-03-02,20,1.33333333,9.750000024375,0,0,0,0,0,0,0,0,3,0,5,0
+18-25-059,"Adaptador rápido hembra 110 mm con salida 3"" Faplast",Faplast,G10,P,Exteriores,Conexiones,6.7116,13.88,0,0,0,12,2024-11-27,0,0,,30,30,31,31,30,21,0,0,0,0,0,0
+18-25-060,"Tee rápido plástica 16 mm con salida 3/8"" Faplast",Faplast,G10,H,Exteriores,Conexiones,0.47,0.98,100,47,300,100,2026-09-10,20,170,0.5882352941176471,0,0,0,0,0,4,220,180,240,120,180,80
+18-25-061,"Tee rápida plástica 20 mm con salida 1/2"" Faplast",Faplast,G10,F,Exteriores,Conexiones,0.9899,1.64,457,452.3843,1800,300,2026-10-05,20,605,0.7553719008264462,0,0,0,0,0,0,570,460,540,810,670,580
+18-49-052,"Nylon color azul 0,40 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,0.72,1.15,184,132.48,0,100,2026-09-01,20,33.33333333,5.520000000552,0,0,0,0,0,0,20,10,60,90,20,0
+18-49-053,"Nylon color azul 0,50 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,0.78,1.24,190,148.2,0,100,2026-10-21,20,53.33333333,3.562500000222656,0,0,14,0,0,0,60,60,40,60,80,20
+18-49-054,"Nylon color azul 0,60 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,0.9,1.45,280,252,0,100,2026-10-21,20,58.33333333,4.800000000274285,0,0,0,2,0,0,20,60,50,70,100,50
+18-49-055,"Nylon color azul 0,70 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,1.17,1.86,200,234,0,100,2026-10-21,20,43.33333333,4.615384615739645,0,0,10,6,8,5,20,30,60,70,80,0
+18-49-056,"Nylon color azul 0,80 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,1.37,2.21,0,0,300,50,2026-09-01,20,48.33333333,0,0,0,13,0,0,21,40,40,30,70,100,10
+18-49-057,"Nylon color azul 0,90 mm 100 m Gdeseo",Gdeseo,G10,H,Exteriores,Pesca,1.56,2.48,260,405.6,50,150,2026-10-21,20,66,3.9393939393939394,0,0,0,0,4,0,20,50,50,60,186,30
+18-49-058,Nylon color azul 1 mm 100 m Gdeseo,Gdeseo,G10,H,Exteriores,Pesca,1.88,3.04,90,169.2,250,50,2026-10-21,20,78.33333333,1.148936170261657,0,0,2,6,14,5,60,10,140,60,140,60
+18-49-059,"Nylon color azul 1,10 mm 100 m Gdeseo",Gdeseo,G10,H,Exteriores,Pesca,2.18,3.54,320,697.6,0,200,2026-10-21,20,55,5.818181818181818,0,0,0,0,0,0,10,50,70,60,100,40
+18-49-062,"Nylon transparente 0,60 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,0.84,1.36,330,277.2,0,200,2026-09-01,20,60,5.5,0,0,0,17,0,0,50,80,30,130,40,30
+18-49-063,"Nylon transparente 0,70 mm 100 m Gdeseo",Gdeseo,G10,K,Exteriores,Pesca,1.1,1.77,180,198,0,100,2026-09-22,20,26.66666666,6.7500000016875,0,0,0,20,0,0,60,20,40,20,20,0
+18-49-064,"Nylon transparente 0,80 mm 100 m Gdeseo",Gdeseo,G10,Z,Exteriores,Pesca,1.2597,2.04,3,3.7791,0,60,2026-02-26,15,10,0.3,0,0,0,0,0,0,0,0,30,30,0,0
+18-49-065,"Nylon transparente 0,90 mm 100 m Gdeseo",Gdeseo,G10,H,Exteriores,Pesca,1.46,2.36,140,204.4,70,30,2026-10-21,20,66.66666666,2.10000000021,3,3,0,3,0,0,100,50,60,100,70,20
+18-49-066,Nylon transparente 1 mm 100 m Gdeseo,Gdeseo,G10,H,Exteriores,Pesca,1.76,2.86,260,457.6,0,300,2026-09-01,20,66.66666666,3.90000000039,0,0,0,0,0,0,0,30,50,190,90,40
+18-49-067,"Nylon transparente 1,10 mm 100 m Gdeseo",Gdeseo,G10,H,Exteriores,Pesca,2.06,3.32,100,206,0,100,2026-10-21,20,23.33333333,4.285714286326531,30,30,20,6,0,2,0,0,40,30,40,30
+18-49-068,Anzuelo para pescar N° 3 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.8,2.85,120,216,0,100,2026-10-06,20,17,7.0588235294117645,0,0,0,0,0,0,18,24,24,12,6,18
+18-49-069,Anzuelo para pescar N° 4 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,1.45,2.3,112,162.4,0,100,2026-09-22,20,19,5.894736842105263,0,0,0,0,0,0,54,0,24,6,18,12
+18-49-071,Anzuelo para pescar N° 6 Gdeseo,Gdeseo,G10,K,Exteriores,Pesca,8.5,13.49,53,450.5,0,40,2026-10-06,20,2.66666666,19.8750000496875,24,24,14,0,0,0,4,0,2,4,4,2
+37-16-064,Agarre antideslizante 235cm3 70-12 Sq,SQ,G10,K,Automotriz,Limpieza de autos,2.6734,4.35,2,5.3468,24,24,2025-09-09,15,0.5,4,0,0,0,0,0,0,3,0,0,0,0,0
+18-67-017,Grifo para termo PVC blanco con rojo Gdeseo,Gdeseo,G10,K,Exteriores,Termos,0.7,1.12,10,7,0,10,2026-10-06,20,36.66666666,0.2727272727768595,3,3,0,0,0,0,30,20,40,30,60,40
+18-67-018,Grifo para termo PVC blanco con azul Gdeseo,Gdeseo,G10,K,Exteriores,Termos,0.7,1.14,28,19.6,0,50,2026-10-06,20,33.33333333,0.840000000084,0,0,0,0,0,0,30,20,30,40,40,40
+16-01-014,"Abrazadera de acero inoxidable 1/4 x 1/2"" Gdeseo",Gdeseo,G10,H,Ferretería,Abrazaderas,0.2,0.32,1600,320,100,200,2026-10-21,20,775,2.064516129032258,8,8,5,0,0,0,800,600,900,1050,850,450
+16-01-015,"Abrazadera de acero inoxidable 5/16 x 5/8"" Gdeseo",Gdeseo,G10,H,Ferretería,Abrazaderas,0.2,0.32,830,166,0,500,2026-10-06,20,295,2.8135593220338984,24,24,6,0,0,0,250,150,120,800,350,100
+16-01-016,"Abrazadera de acero inoxidable 7/16 x 3/4"" Gdeseo",Gdeseo,G10,H,Ferretería,Abrazaderas,0.22,0.36,950,209,0,600,2026-10-21,20,433.33333333,2.1923076923245564,23,23,6,1,0,0,300,650,450,550,600,50
+16-01-017,"Abrazadera de acero inoxidable 15/32 x 1"" Gdeseo",Gdeseo,G10,K,Ferretería,Abrazaderas,0.22,0.35,613,134.86,0,200,2026-10-21,20,216.66666666,2.8292307693178227,0,0,0,0,0,0,300,100,250,250,300,100
+16-01-018,"Abrazadera de hierro 1/4 x 1/2"" Gdeseo",Gdeseo,G10,H,Ferretería,Abrazaderas,0.09,0.14,2450,220.5,100,1200,2026-10-21,20,933.33333333,2.625000000009375,0,0,0,0,0,0,400,900,1100,1400,1400,400
+16-01-019,"Abrazadera de hierro 5/16 x 5/8"" Gdeseo",Gdeseo,G10,K,Ferretería,Abrazaderas,0.1,0.16,1500,150,0,900,2026-10-21,20,466.66666666,3.214285714331633,13,13,6,0,2,5,400,500,200,900,800,0
+23-01-001,Saco para escombros 55 x 97 cm 50 kg Gdeseo,Gdeseo,G10,F,Limpieza,Bolsas para basura,0.53,0.84,3100,1643,0,2000,2026-10-06,20,1300,2.3846153846153846,14,14,0,0,0,0,0,1300,2400,2700,500,900
+04-19-000,Cable para teléfono 5m 4 líneas Gdeseo,Gdeseo,G10,K,Materiales eléctricos,Cable uso general cobre,0.79,1.25,62,48.98,0,40,2026-10-21,20,8,7.75,0,0,0,0,0,0,16,0,8,0,24,0
+01-28-104,"Tapa ciega con tornillo 4 x 2"" marfil Semilic",Semilic,G10,H,Electricidad,Tomas e interruptores,0.27,0.47,311,83.97,0,340,2026-10-06,20,250,1.244,0,0,0,0,0,0,100,200,400,350,50,400
+01-28-106,Tapa para tomacorriente sencillo con tornillo marfil Semilic,Semilic,G10,H,Electricidad,Tomas e interruptores,0.22,0.4,400,88,0,300,2026-10-21,20,383.33333333,1.043478260878639,14,14,0,0,7,1,700,150,350,100,450,550
+01-10-017,Enchufe amarillo pata gallina 220 voltios Semilic,Semilic,G10,H,Electricidad,Enchufes  y conectores,1.46,2.53,154,224.84,0,100,2026-10-21,20,76.16666666,2.0218818382513684,0,0,0,0,0,0,10,80,60,99,158,50
+01-10-019,Enchufe amarillo sin tierra Semilic,Semilic,G10,H,Electricidad,Enchufes  y conectores,0.7,1.2,304,212.8,200,300,2026-10-21,20,442.5,0.6870056497175141,0,0,0,0,0,0,165,330,600,420,480,660
+01-10-020,Convertidor tipo euro Semilic,Semilic,G10,H,Electricidad,Enchufes  y conectores,0.22,0.41,331,72.82,0,200,2026-10-06,20,220.83333333,1.4988679245509262,0,0,0,0,0,0,300,250,225,275,200,75
+01-10-021,Enchufe amarillo tipo chino Semilic,Semilic,G10,H,Electricidad,Enchufes  y conectores,0.94,1.72,162,152.28,0,130,2026-10-06,20,93.33333333,1.7357142857762755,0,0,0,0,0,0,150,100,40,150,10,110
+01-10-016,Enchufe trifásico 3 polos 50 A Semilic,Semilic,G10,H,Electricidad,Enchufes  y conectores,3.95,7.56,113,446.35,20,100,2026-10-21,20,20.66666666,5.467741937247658,0,0,0,0,0,0,6,6,42,12,50,8
+22-70-037,"Llave de bola de bronce 1/2 x 1/2"" Semilic",Semilic,G10,H,Plomería,Válvulas de bola,3.96,6.98,107,423.72,0,60,2026-10-21,20,42.66666666,2.5078125003918457,0,0,0,0,0,0,44,28,50,38,58,38
+22-31-006,"Llave de arresto acero inoxidable 1/2"" Gdeseo",Gdeseo,G10,F,Plomería,Llaves de control,2.9356,4.73,346,1015.7176,0,200,2026-10-06,20,136,2.5441176470588234,0,0,0,0,0,0,231,24,96,126,222,117
+22-31-015,"Llave de bola de hierro 3/4 x 3/4"" Semilic",Semilic,G10,H,Plomería,Válvulas de bola,3.42,6.71,32,109.44,0,30,2026-10-06,20,19.5,1.641025641025641,0,0,0,14,0,0,3,12,39,15,48,0
+22-28-015,"Llave para manguera PVC 1/2"" Semilic",Semilic,G10,K,Plomería,Llaves de chorro,0.9,1.73,41,36.9,0,40,2026-10-06,20,19,2.1578947368421053,0,0,0,0,0,0,10,10,10,74,10,0
+22-31-016,"Llave de bola de hierro 1/2 x 1/2"" Semilic",Semilic,G10,H,Plomería,Válvulas de bola,2.3793,4.39,96,228.4128,0,100,2026-10-06,20,30,3.2,0,0,0,0,0,0,50,25,5,55,5,40
+22-28-005,"Llave para manguera PVC paso rápido 1/2"" Gdeseo",Gdeseo,G10,H,Plomería,Llaves de chorro,0.9,1.55,858,772.2,500,400,2026-10-21,20,414.83333333,2.0683005223147313,0,0,0,0,0,0,230,180,569,460,720,330
+22-76-006,"Válvula PVC flotante vertical 1"" Gdeseo",Gdeseo,G10,E,Plomería,Válvulas reguladoras,6.3924,10.33,16,102.2784,0,10,2026-02-26,7,0.66666666,24.000000240000002,0,0,0,0,0,0,2,2,0,0,0,0
+22-28-006,"Llave para manguera PVC 1/2"" Gdeseo",Gdeseo,G10,H,Plomería,Llaves de chorro,0.92,1.47,124,114.08,100,50,2026-10-21,20,78.33333333,1.5829787234716162,0,0,0,0,0,0,80,60,110,20,170,30
+22-28-007,"Llave de chorro plástico cuerpo blanco 1/2"" Gdeseo",Gdeseo,G10,H,Plomería,Llaves de chorro,1.17,1.87,40,46.8,100,20,2026-10-21,20,64,0.625,14,14,0,4,0,0,104,0,90,30,80,80
+22-28-016,"Llave para manguera bronce 1/2"" Semilic",Semilic,G10,H,Plomería,Llaves de chorro,2.5693,4.54,78,200.4054,0,80,2026-10-06,20,46.66666666,1.671428571667347,0,0,0,0,0,0,16,64,32,48,64,56
+16-25-025,"Llave paso para gas bronce rosca macho 1/2 x 1/2"" Semilic",Semilic,G10,K,Ferretería,Gas,4.2338,7.55,20,84.676,0,20,2026-08-27,20,4.66666666,4.285714291836735,0,0,0,0,0,0,12,0,10,0,2,4
+16-25-026,"Llave paso para gas bronce rosca hembra 1/2 x 1/2"" Semilic",Semilic,G10,K,Ferretería,Gas,4.87,9.25,4,19.48,10,10,2026-10-06,20,9.66666666,0.4137931037336504,0,0,21,5,21,0,4,6,12,20,0,16
+22-28-003,"Llave para manguera 1/2 x 3/4"" full port satinada Fp",FP,G10,F,Plomería,Llaves de chorro,13.22,19.33,228,3014.16,0,350,2026-09-07,15,65,3.5076923076923077,0,0,0,6,6,0,28,22,48,170,81,41
+22-70-001,"Llave de bola 1/2"" full port Fp",FP,G10,F,Plomería,Válvulas de bola,10.33,16.26,151,1559.83,0,235,2026-09-30,15,82.16666666,1.8377281948752722,0,0,0,0,4,0,26,45,134,141,63,84
+22-70-002,"Llave de bola 3/4"" full port Fp",FP,G10,H,Plomería,Válvulas de bola,13.3808,19.52,162,2167.6896,0,180,2026-09-30,15,38,4.2631578947368425,0,0,0,0,0,0,12,16,71,39,71,19
+22-70-003,"Llave de bola 1"" full port Fp",FP,G10,E,Plomería,Válvulas de bola,18.65,28.33,46,857.9,0,550,2025-02-26,15,34.5,1.3333333333333333,0,0,0,0,0,0,10,17,79,10,68,23
+20-13-005,Grupo de ducha individual pomo Fp,FP,G10,E,Baños,Grifería de ducha,40.34,59.39,1,40.34,0,10,2025-06-03,15,0.33333333,3.0000000300000003,0,0,0,0,0,0,0,0,0,0,2,0
+20-19-008,Llave lavamano individual cross Fp,FP,G10,E,Baños,Grifería de lavamanos individual,65.21,80.41,9,586.89,0,10,2025-08-07,15,0.16666666,54.000002160000086,0,0,0,0,0,0,0,0,1,0,0,0
+22-70-008,"Llave de bola liviana paso completo 2"" Fp",FP,G10,H,Plomería,Válvulas de bola,58.2217,88.79,1,58.2217,0,10,2026-08-25,15,2.66666666,0.3750000009375,0,0,0,0,0,0,0,0,1,8,2,5
+22-73-000,"Llave compuerta paso completo 1/2"" Fp",FP,G10,Z,Plomería,Válvulas de compuerta,13.28,17,0,0,0,4,2026-02-10,15,0.33333333,0,0,0,23,31,30,21,0,0,2,0,0,0
+22-73-001,"Llave compuerta paso completo 3/4"" Fp",FP,G10,Z,Plomería,Válvulas de compuerta,28.9333,25.21,0,0,0,5,2025-08-05,15,0.83333333,0,0,0,0,0,24,21,0,0,3,0,2,0
+22-73-002,"Llave compuerta paso completo 1"" Fp",FP,G10,Z,Plomería,Válvulas de compuerta,23.02,40.11,0,0,0,5,2026-06-18,15,1.16666666,0,17,17,0,0,24,21,2,0,0,2,3,0
+22-73-003,"Llave compuerta paso completo 1 1/4"" Fp",FP,G10,E,Plomería,Válvulas de compuerta,21.12,31.64,13,274.56,0,21,2023-08-05,0,0.5,26,0,0,0,0,0,0,2,0,0,0,1,0
+22-70-011,"Llave de paso de bronce 1/2"" Fp",FP,G10,Z,Plomería,Válvulas de bola,9.2267,14.87,0,0,0,5,2026-08-25,15,1.83333333,0,0,0,0,0,0,20,0,0,3,2,4,2
+22-13-005,"Canilla flexible tejida acero inoxidable 1/2 x 3/8"" x 60 cm Semilic",Gdeseo,G10,H,Plomería,Canillas,1.94,3.12,93,180.42,20,20,2026-10-21,20,56.66666666,1.6411764707813148,0,0,0,0,0,0,30,50,70,90,60,40
+20-13-009,"Manguera para ducha teléfono 1/2 x 1/2"" Gdeseo",Semilic,G10,E,Baños,Grifería de ducha,3.8043,6.33,1,3.8043,0,10,2026-03-21,7,3.66666666,0.2727272732231405,0,0,0,0,0,0,6,2,4,0,10,0
+22-13-011,"Canilla flexible tejida acero inoxidable 1/2 x 1/2"" 40 cm Gdeseo",Semilic,G10,E,Plomería,Canillas,1.5166,2.96,2,3.0332,0,50,2025-09-15,7,21.66666666,0.09230769233609468,0,0,0,0,0,0,25,35,5,0,65,0
+22-13-003,"Canilla flexible acero inoxidable 1/2 x 1/2"" Fp",FP,G10,H,Plomería,Canillas,9.8149,10.62,194,1904.0906,0,526,2025-12-06,15,55.33333333,3.5060240965967484,0,0,0,0,0,0,35,47,100,41,70,39
+22-13-004,"Canilla flexible acero inoxidable 1/2 x 5/8"" Fp",FP,G10,H,Plomería,Canillas,11.4653,12,281,3221.7493,0,526,2025-12-06,15,33.33333333,8.430000000843,0,0,0,0,0,0,12,28,17,46,72,25
+20-40-010,"Regadera plástica 2"" blanca Splaca",Splaca,G10,H,Baños,Regaderas,1.2845,2.43,190,244.055,0,700,2026-07-14,15,158.33333333,1.200000000025263,2,2,13,0,0,0,90,350,60,140,60,250
+07-07-006,Fregadero Acero inoxidable 1 ponchera 45x53 Fanainox.,Fanainox,G10,N,Cocina,Fregaderos sobreponer,21.4275,36.13,22,471.405,0,52,2026-08-20,15,5,4.4,0,0,20,19,0,0,0,0,0,5,13,12
+37-16-118,Fórmula marina 354cc 70-5 Sq,SQ,G10,H,Automotriz,Limpieza de autos,3.2494,5.05,0,0,408,216,2026-09-09,15,185.83333333,0,0,0,0,25,2,3,168,258,215,18,340,116
+22-04-051,"Anillo PVC agua fría para roscar 1/2"" Gdeseo",Gdeseo,G10,F,Plomería,Accesorios galvanizados,0.1894,0.3,6725,1273.715,0,4200,2026-10-06,20,3008.33333333,2.2354570637143882,0,0,0,0,0,0,2175,3000,3450,3975,2850,2600
+16-25-104,Regulador de gas autogas punta gruesa Gdeseo,Gdeseo,G10,H,Ferretería,Gas,4.71,6.24,201,946.71,0,100,2026-10-06,20,53,3.792452830188679,0,0,0,0,0,0,82,24,82,46,58,26
+22-04-052,"Anillo PVC agua fría para roscar 3/4"" Gdeseo",Gdeseo,G10,H,Plomería,Accesorios galvanizados,0.27,0.48,556,150.12,0,650,2026-10-06,20,679.16666666,0.8186503067565021,0,0,0,0,0,0,500,525,800,625,650,975
+16-25-105,Regulador para gas tipo mariposa azul Vinko,Uyustools,G10,E,Ferretería,Gas,3.23,6.02,105,339.15,0,700,2025-11-29,7,54.16666666,1.9384615387001183,0,0,0,0,0,0,105,15,65,55,35,50
+22-70-160,"Llave de bola de bronce con manilla de hierro 1 x 1"" Semilic",Semilic,G10,E,Plomería,Válvulas de bola,7.72,13.91,24,185.28,0,5,2025-03-19,0,0,,0,0,0,0,0,0,0,0,0,0,0,0
+03-22-010,Rociador plastico tipo pistola Vinko,Uyustools,G10,E,Herramientas eléctricas,Equipos aplicación de pinturas,1.5299,2.76,25,38.2475,0,20,2025-11-04,7,0,,0,0,0,0,0,0,0,0,0,0,0,0
+03-22-011,"Rociador pistola 1/2 x 9"" de 9 funciones Santul",Uyustools,G10,E,Herramientas eléctricas,Equipos aplicación de pinturas,2.3411,5.18,58,135.7838,0,60,2024-09-19,7,1.33333333,43.50000010875,0,0,0,0,0,0,0,0,0,8,0,0
+03-42-059,"Mecha para concreto 3/16""",Uyustools,G10,E,Herramientas eléctricas,Mechas para concreto,0.11,0.13,3444,378.84,0,6750,2024-08-29,0,63.33333333,54.378947371283104,0,0,0,0,0,0,30,60,50,140,30,70
+03-22-009,Pistola para pintar baja presión Vinko,Uyustools,G10,E,Herramientas eléctricas,Equipos aplicación de pinturas,9.99,16.48,75,749.25,0,200,2024-08-29,7,4,18.75,0,0,0,0,0,0,1,2,1,7,6,7
+37-04-023,Bornes para carro (par) Vinko,Uyustools,G10,E,Automotriz,Acumuladores,1.2871,2.4,9,11.5839,0,100,2025-11-29,7,23.33333333,0.38571428576938777,0,0,0,0,0,0,40,10,30,40,20,0
+01-28-271,Toma aerea bipolar + tierra  2 x 15a 125v c/abrazadera. Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,1.298,2.18,90,116.82,0,200,2026-04-15,0,16.66666666,5.40000000216,0,0,0,0,0,0,10,30,30,10,20,0
+01-28-273,Toma bipolar con tierra 15amp 125v blanco. Tania Wiring,Tania Wiring,G10,E,Electricidad,Tomas e interruptores,1.276,2.16,110,140.36,0,200,2026-04-15,0,15,7.333333333333333,0,0,0,0,0,0,10,10,20,30,0,20
+37-16-120,Limpiador de contacto electronico 40 cc SQ,SQ,G10,N,Automotriz,Limpieza de autos,3.288,5.52,1,3.288,96,36,2026-09-09,15,47.5,0.021052631578947368,0,0,9,0,0,0,29,66,47,105,38,0
+18-49-075,"Nylon transparente 0,20 mm 100 m Gdeseo",Gdeseo,G10,N,Exteriores,Pesca,0.55,0.89,130,71.5,0,100,2026-10-06,20,16.66666666,7.80000000312,14,14,0,0,0,0,40,20,0,30,0,10
+18-49-076,"Nylon transparente 0,30 mm 100 m Gdeseo",Gdeseo,G10,N,Exteriores,Pesca,0.61,0.99,360,219.6,0,200,2026-09-01,20,48.33333333,7.44827586258264,0,0,0,21,0,0,0,60,30,160,10,30
+18-25-186,"Buje de reducción 3/4"" con salida 1/2"" Faplast",Faplast,G10,N,Exteriores,Conexiones,0.1,0.18,364,36.4,24,204,2026-10-05,20,100,3.64,0,0,0,0,0,0,100,200,0,250,50,0
+18-25-187,"Adaptador rápido hembra 50 mm con salida 1"" Faplast",Faplast,G10,N,Exteriores,Conexiones,1.63,2.8,77,125.51,144,48,2026-10-05,20,35.83333333,2.1488372095022172,10,10,0,0,0,0,40,5,50,35,65,20
+18-25-188,Codo rápido 50 mm Faplast,Faplast,G10,N,Exteriores,Conexiones,2.3,3.95,0,0,504,108,2026-10-05,20,48,0,17,17,12,0,6,14,0,24,6,81,45,132
+18-25-189,Codo rápido 63 mm Faplast,Faplast,G10,N,Exteriores,Conexiones,4.15,7.13,54,224.1,36,60,2026-10-05,20,17,3.176470588235294,10,10,0,0,0,4,0,6,10,50,18,18
+22-64-055,Canal de lluvia blanco 3 m Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,2500,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+22-64-056,Canal con bajante blanco Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,350,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
+22-64-057,Tapa para canal de lluvia blanco Flex,Flex,G10,N,Plomería,Tubería PVC residual,0,0,0,0,640,0,,15,0,,0,0,0,0,6,21,0,0,0,0,0,0
 18-25-069,"Conexión doble PVC para manguera 1/2"" Femoi",Femoi,G03,H,Exteriores,Conexiones,0.382,0.71,1393,532.13,0,500,2026-09-14,15,610.0,2.28,0,0,0,0,0,0,780,360,320,900,780,520
 18-43-017,"Manguera culebra 1/2"" x 50 m Femoi",Femoi,G03,H,Exteriores,Mangueras y accesorios para jardín,22.9948,55.85,24,551.88,0,20,2026-10-09,15,9.0,2.67,0,0,0,0,0,0,11,5,9,10,7,12
 18-43-018,"Manguera de jardin con conexión 1/2"" x 20 m Femoi",Femoi,G03,Z,Exteriores,Mangueras y accesorios para jardín,11.1038,16.44,957,10626.34,0,1000,2024-05-03,15,18.33,52.2,0,0,0,0,0,0,30,3,15,27,28,7
