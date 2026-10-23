@@ -20,6 +20,7 @@
     mensual: 'data/mensual.csv',
     presupuesto: 'data/presupuesto.csv',
     acciones: 'data/acciones.csv',
+    clientes_codigos: 'data/clientes_codigos.csv',
   };
 
   // ---------- lector de CSV (con comillas) ----------
@@ -84,7 +85,7 @@
       .finally(notify);
   }
   // los más pequeños primero, para que la página aparezca antes
-  ['pesos', 'acciones', 'mensual', 'presupuesto', 'semanal', 'inventario', 'clientes', 'ventas', 'clientes_ventas', 'tubrica'].forEach(cargar);
+  ['pesos', 'acciones', 'mensual', 'presupuesto', 'semanal', 'inventario', 'clientes', 'ventas', 'clientes_ventas', 'tubrica', 'clientes_codigos'].forEach(cargar);
 
   function vacio(status, message) { return { status, data: [], rows: [], columns: [], meta: [], refreshing: false, message: message || '' }; }
 

@@ -246,6 +246,7 @@
       if (tipo === 'tubrica') {
         const ik = idx('Marca'), ia = idx('Articulo');
         const r = marcasConPeso(datos.map((x) => ({ marca: String(x[ik] ?? '').trim(), codigo: codigoDe(x[ia]) })), null);
+        if (col(enc, 'Cliente') >= 0) check('Trae la columna Cliente: también se actualizan los clientes por línea.'); else check('Sin columna Cliente: los clientes por línea quedan como estaban. Agrégala si quieres contarlos por línea.', 'cg-w');
         if (r) check('Marcas con peso: ' + (r.con.join(', ') || 'ninguna') + '.' + (r.sin.length ? ' Se omiten las que no tienen códigos en la tabla de peso: ' + r.sin.slice(0, 5).join(', ') + (r.sin.length > 5 ? '…' : '') + '.' : ''), r.con.length ? (r.sin.length ? 'cg-w' : '') : 'cg-x');
       }
     }
@@ -288,7 +289,7 @@
       return;
     }
     const items = [];
-    for (const k of ['ventas', 'peso', 'tubrica', 'infocompras', 'clientes']) {
+    for (const k of ['ventas', 'peso', 'clientes', 'tubrica', 'infocompras']) {
       const T = TIPOS[k];
       const hoja = hojas.find((x) => buscarEncabezado(x.filas, T.req) >= 0);
       if (!hoja) { check(T.nombre + ': no está en el archivo, se conserva lo actual.', 'cg-w'); continue; }
@@ -405,7 +406,28 @@
       const rows = mp ? todas.filter((r) => mp.set.has(r.marca)) : todas;
       const g = agrupar(rows, ['mes', 'region', 'estado', 'supervisor', 'asesor', 'marca', 'codigo'], ['venta_usd', 'unidades']);
       const nota = mp ? 'Marcas con peso: ' + (mp.con.join(', ') || 'ninguna') + '.' + (mp.sin.length ? ' Sin códigos en la tabla de peso (no se usan): ' + mp.sin.length + ' marcas.' : '') : '';
-      return [{ id: 'tubrica', nombre: 'ventas_por_codigo_' + hoyTxt() + '.csv', csv: aCsvObj(['mes', 'region', 'estado', 'supervisor', 'asesor', 'marca', 'codigo', 'venta_usd', 'unidades'], g), filas: g.length, nota }];
+      const salida = [{ id: 'tubrica', nombre: 'ventas_por_codigo_' + hoyTxt() + '.csv', csv: aCsvObj(['mes', 'region', 'estado', 'supervisor', 'asesor', 'marca', 'codigo', 'venta_usd', 'unidades'], g), filas: g.length, nota }];
+      // con la columna Cliente: también los clientes por código (para contar clientes por línea)
+      const icl = col(E, 'Cliente');
+      if (icl >= 0) {
+        const prevC = dash.data('clientes');
+        const cliBase = a.clientesNuevos || (prevC.status === 'ok' ? prevC.data : []);
+        const idDe = new Map(cliBase.map((c) => [norm(c.cliente), String(c.id)]));
+        const sinId = new Set();
+        const fc = [];
+        R.forEach((r, i) => {
+          const cli = String(r[icl] ?? '').trim();
+          const mes = mesIso(r[ix.Mes]), codigo = codigoDe(r[ix.Articulo]), marca = String(r[ix.Marca] ?? '').trim();
+          if (!cli || !mes || !codigo || (mp && !mp.set.has(marca))) return;
+          const id = idDe.get(norm(cli));
+          if (!id) { sinId.add(cli); return; }
+          fc.push({ id, marca, codigo, mes, venta_usd: n0(r[ix['Venta Neta Dólares']]) * 1000 });
+        });
+        const gc = agrupar(fc, ['id', 'marca', 'codigo', 'mes'], ['venta_usd']).filter((r) => r.venta_usd !== 0);
+        const notaC = 'Clientes por código: ' + nEnt.format(new Set(gc.map((r) => r.id)).size) + ' clientes.' + (sinId.size ? ' ' + nEnt.format(sinId.size) + ' clientes no están en el reporte de Clientes y no se cuentan por línea hasta que lo actualices.' : '');
+        salida.push({ id: 'clientes_codigos', nombre: 'clientes_por_codigo_' + hoyTxt() + '.csv', csv: aCsvObj(['id', 'marca', 'codigo', 'mes', 'venta_usd'], gc), filas: gc.length || 1, nota: notaC });
+      }
+      return salida;
     }
     if (a.tipo === 'peso') {
       const ix = Object.fromEntries(['Codigo', 'Línea', 'Categoria', 'Nombre', 'Kg', 'Ton'].map((c) => [c, col(E, c)]));
@@ -477,7 +499,7 @@
       const vtot = filas.reduce((s, f) => s + f.v, 0);
       const nota = 'Se usaron ' + nEnt.format(filas.length) + ' filas de Febeca (venta ' + usd(vtot) + ') y se dejaron fuera ' + nEnt.format(fuera) + ' filas de otras marcas o supervisores.';
       return [
-        { id: 'clientes', nombre: 'clientes_' + hoyTxt() + '.csv', csv: aCsvObj(['id', 'cliente', 'region', 'estado', 'supervisor', 'asesor'], dim), filas: dim.length, nota },
+        { id: 'clientes', nombre: 'clientes_' + hoyTxt() + '.csv', csv: aCsvObj(['id', 'cliente', 'region', 'estado', 'supervisor', 'asesor'], dim), filas: dim.length, nota, rows: dim },
         { id: 'clientes_ventas', nombre: 'clientes_ventas_' + hoyTxt() + '.csv', csv: aCsvObj(['id', 'marca', 'mes', 'venta_usd'], g), filas: g.length },
       ];
     }
@@ -541,7 +563,7 @@
     const quien = u && u.id ? await u.id().catch(() => null) : null;
     const nombre = u && u.name ? await u.name().catch(() => '') : '';
     const ok = [], mal = [], pendientes = [];
-    let ventasNuevas = null, pesosNuevos = null;
+    let ventasNuevas = null, pesosNuevos = null, clientesNuevos = null;
     try {
       for (let j = 0; j < lista.length; j++) {
         const it = lista[j], nomT = TIPOS[it.tipo].nombre;
@@ -550,7 +572,7 @@
         const rechazo = async (nota) => { try { await db.collection('cargas').add({ tipo: it.tipo, tipo_nombre: nomT, archivo: it.archivo, filas: it.datos.length, venta_usd: it.venta, subido_por: quien, fecha: new Date().toISOString(), estado: 'Rechazado', nota }); } catch (e2) { /* sin registro */ } };
         setMsg(msg, pre + 'Preparando ' + nomT + '…');
         let salidas;
-        try { if (it.tipo === 'clientes' && ventasNuevas) it.ventasNuevas = ventasNuevas; if (it.tipo === 'tubrica' && pesosNuevos) it.pesosNuevos = pesosNuevos; salidas = transformar(it); } catch (e) { salidas = null; }
+        try { if (it.tipo === 'clientes' && ventasNuevas) it.ventasNuevas = ventasNuevas; if (it.tipo === 'tubrica' && pesosNuevos) it.pesosNuevos = pesosNuevos; if (it.tipo === 'tubrica' && clientesNuevos) it.clientesNuevos = clientesNuevos; salidas = transformar(it); } catch (e) { salidas = null; }
         if (!salidas || !salidas.length || salidas.some((s) => !s.filas)) {
           mal.push(nomT + ': no se pudieron leer filas válidas debajo del encabezado');
           pendientes.push(it);
@@ -580,6 +602,7 @@
           ok.push(nomT);
           if (it.tipo === 'ventas') ventasNuevas = salidas[0].rows;
           if (it.tipo === 'peso') pesosNuevos = salidas[0].rows;
+          if (it.tipo === 'clientes') clientesNuevos = salidas[0].rows;
         } catch (e) {
           const c = e && e.code;
           mal.push(nomT + ': ' + motivo(c));

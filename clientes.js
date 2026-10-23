@@ -20,7 +20,7 @@
   // ---------- índice ----------
   let SRC = null, IDX = null, memo = new Map();
   function indice() {
-    const a = dash.data('clientes'), b = dash.data('clientes_ventas');
+    const a = dash.data('clientes'), b = window.fbCliFuente ? window.fbCliFuente() : dash.data('clientes_ventas');
     if (a.status !== 'ok' || b.status !== 'ok') return null;
     if (SRC && SRC[0] === a.data && SRC[1] === b.data) return IDX;
     const cli = new Map(a.data.map((r) => [String(r.id), r]));
@@ -151,7 +151,7 @@
     const pag = $('#pag-clientes');
     if (!pag) return;
     const vacio = $('#cl-estado');
-    if (!X) { vacio.hidden = false; vacio.textContent = 'Cargando clientes…'; $('#cl-contenido').hidden = true; return; }
+    if (!X) { const fu = window.fbCliFuente ? window.fbCliFuente() : null; vacio.hidden = false; vacio.textContent = fu && fu.status === 'sin_linea' ? 'Para ver los clientes de una línea hace falta subir la venta por código con la columna Cliente (Cargar datos). Mientras tanto, elige «Todas las líneas».' : 'Cargando clientes…'; $('#cl-contenido').hidden = true; return; }
     vacio.hidden = true; $('#cl-contenido').hidden = false;
     const { sel, meses } = ctx;
     const mes = sel.mes, region = sel.region, slot = sel.slot;

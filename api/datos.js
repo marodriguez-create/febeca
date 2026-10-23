@@ -39,6 +39,7 @@ export async function GET(request) {
       const { cols, data } = await leer(id); return resp(aCsv(cols, data.filter((r) => cods.has(r.codigo))));
     }
     if (id === 'clientes_ventas') { const { cols, data } = await leer(id); return resp(aCsv(cols, data.filter(deSus).map((r) => ({ ...r, venta_usd: Number(r.venta_usd) > 0 ? '1' : '-1' })))); }
+    if (id === 'clientes_codigos') { const { cols, data } = await leer(id); return resp(aCsv(cols, data.filter(deSus).map((r) => ({ ...r, venta_usd: Number(r.venta_usd) > 0 ? '1' : '-0.001' })))); } // sin montos: cuenta si compró algún código
     if (id === 'clientes') {
       const cv = await leer('clientes_ventas'); const ids = new Set(cv.data.filter(deSus).map((r) => r.id));
       const { cols, data } = await leer(id); return resp(aCsv(cols, data.filter((r) => ids.has(r.id)).map((r) => ({ ...r, cliente: 'Cliente ' + r.id }))));

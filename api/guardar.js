@@ -3,7 +3,7 @@ import { gunzipSync } from 'node:zlib';
 import { cookieDe, leerToken } from '../lib/auth.js';
 import { configGithub, crearBlob } from '../lib/github.js';
 
-const PERMITIDOS = ['ventas', 'tubrica', 'pesos', 'inventario', 'clientes', 'clientes_ventas', 'semanal', 'mensual', 'presupuesto', 'acciones'];
+const PERMITIDOS = ['ventas', 'tubrica', 'pesos', 'inventario', 'clientes', 'clientes_ventas', 'semanal', 'mensual', 'presupuesto', 'acciones', 'clientes_codigos'];
 const json = (o, status = 200) => new Response(JSON.stringify(o), { status, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
 
 export async function POST(request) {

@@ -255,8 +255,10 @@
       <label class="fb-field" for="f-region">Región<select id="f-region"></select></label>
       <label class="fb-field" for="f-grupo">Grupo compra<select id="f-grupo"></select></label>
       <label class="fb-field" for="f-marca">Marca<select id="f-marca"></select></label>
+      <label class="fb-field" id="f-linea-box" for="f-linea" hidden>Línea<select id="f-linea"></select></label>
       <button class="fb-btn" id="f-reset" type="button">Restablecer</button>
     </div>
+    <p class="fb-note" id="n-linea" hidden style="margin-top:var(--cds-gap-xs)"></p>
   </header>
 
   <nav class="fb-tabs" id="fb-tabs" data-modo="mensual" aria-label="Páginas">
@@ -650,7 +652,8 @@
 <script src="ve_mapa.js"></script>
 <script src="clientes.js"></script>
 <script>
-dash.calc('cubo', {
+window.FB_CALC = window.FB_CALC || {};
+dash.calc('cubo', FB_CALC.cubo = {
   title: 'Ventas por corte y mes',
   description: 'Suma venta, unidades y clientes por mes, región y marca (o grupo de compra) para cada corte (total, marca, grupo, región, estado, supervisor, asesor y BDF), con el mes anterior, la variación, la participación y el acumulado del año.',
   inputs: ['ventas'],
@@ -721,7 +724,7 @@ dash.calc('cubo', {
   },
 });
 
-dash.calc('toneladas', {
+dash.calc('toneladas', FB_CALC.toneladas = {
   title: 'Toneladas de las marcas con peso',
   description: 'Multiplica las unidades de cada código por su columna Ton de la tabla de peso (si un código se repite, usa su primera fila) y suma toneladas y venta por mes, región y marca (o grupo de compra) para cada corte, con la variación y los dólares por tonelada. Solo cuentan las marcas con códigos en la tabla de peso.',
   inputs: ['tubrica', 'pesos', 'ventas'],
@@ -809,7 +812,7 @@ dash.calc('pesos_revision', {
   },
 });
 
-dash.calc('inv_resumen', {
+dash.calc('inv_resumen', FB_CALC.inv_resumen = {
   title: 'Inventario por marca y categoría',
   description: 'Suma el inventario valorizado (inventario × costo promedio), las unidades en tránsito y cuenta los artículos activos con poca cobertura (menos de 1 mes, incluye los que están en cero) o sin inventario, por marca, categoría y total; para todo, cada grupo de compra y cada marca. Activo: BDF distinto de E y Z, con venta promedio mayor a cero. Cobertura en meses = inventario activo a costo / venta promedio mensual a costo.',
   inputs: ['inventario'],
@@ -851,7 +854,7 @@ dash.calc('inv_resumen', {
   },
 });
 
-dash.calc('inv_quiebres', {
+dash.calc('inv_quiebres', FB_CALC.inv_quiebres = {
   title: 'Quiebres de inventario por mes',
   description: 'Para los artículos activos (BDF distinto de E y Z, con venta promedio mayor a cero), cuenta cada mes los que tuvieron días sin inventario y estima la venta perdida: venta promedio mensual / 30 × días sin inventario, en unidades y en dólares a precio mayoreo. Por mes y en total, para todo, cada grupo de compra y cada marca.',
   inputs: ['inventario'],
@@ -949,6 +952,102 @@ dash.calc('inv_quiebres', {
 
   // ---------- estado de filtros ----------
   let sel = { mes: null, region: TODAS, marca: TODAS, grupo: TODAS, slot: TODAS };
+
+  // ---------- filtro por línea (columna Línea de la tabla de peso) ----------
+  // Con una línea elegida se recalculan ventas, toneladas e inventario solo con los códigos de esa línea.
+  // Las ventas salen de la venta por código con peso (el reporte de Ventas no trae artículo).
+  const nrmL = (x) => String(x || '').normalize('NFD').replace(/[̀-ͯ]/g, '').trim().toLowerCase();
+  let LCACHE = { pesos: null, L: { de: new Map(), nombre: new Map(), lista: [] } };
+  function lineas() {
+    const p = dash.data('pesos');
+    if (p.status !== 'ok') return LCACHE.L;
+    if (LCACHE.pesos === p.data) return LCACHE.L;
+    const cuenta = new Map(), de = new Map();
+    for (const r of p.data.slice().sort((a, z) => (Number(a.orden) || 0) - (Number(z.orden) || 0))) {
+      const k = nrmL(r.linea);
+      if (!k) continue;
+      const cod = String(r.codigo || '').trim();
+      if (!de.has(cod)) de.set(cod, k);
+      const t = String(r.linea).trim().replace(/\s+/g, ' ');
+      const m = cuenta.get(k) || new Map();
+      m.set(t, (m.get(t) || 0) + 1);
+      cuenta.set(k, m);
+    }
+    const bonito = (x) => (x.length > 3 && x === x.toUpperCase() ? x[0] + x.slice(1).toLowerCase() : x[0].toUpperCase() + x.slice(1));
+    const nombre = new Map([...cuenta].map(([k, m]) => [k, bonito([...m].sort((a, z) => z[1] - a[1])[0][0])]));
+    LCACHE = { pesos: p.data, L: { de, nombre, lista: [...nombre].sort((a, z) => a[1].localeCompare(z[1], 'es')) } };
+    return LCACHE.L;
+  }
+  const lineaSel = () => { const v = dash.params().linea; return v && lineas().nombre.has(v) ? v : TODAS; };
+  const LDS = ['cubo', 'toneladas', 'inv_resumen', 'inv_quiebres', 'inventario'];
+  let LOUT = { key: null, src: [], out: {} };
+  function D(id) {
+    const ln = lineaSel();
+    if (ln === TODAS || !LDS.includes(id)) return dash.data(id);
+    const ds = ['tubrica', 'pesos', 'ventas', 'inventario'].map((x) => dash.data(x));
+    if (ds.some((d) => d.status === 'error')) return { status: 'error' };
+    if (ds.some((d) => d.status !== 'ok')) return { status: 'loading' };
+    const [tb, ps, ve, iv] = ds;
+    if (LOUT.key !== ln || LOUT.src.some((d, i) => d !== ds[i].data)) LOUT = { key: ln, src: ds.map((d) => d.data), out: {} };
+    const o = LOUT.out;
+    if (!(id in o)) {
+      const L = lineas();
+      const enL = (c) => L.de.get(String(c || '').trim()) === ln;
+      const conL = (rows) => rows.map((r) => ({ ...r, linea: ln }));
+      if (!o._tub) o._tub = tb.data.filter((r) => enL(r.codigo));
+      if (id === 'cubo') {
+        const prov = document.documentElement.classList.contains('fb-prov');
+        const grupoDe = new Map();
+        for (const v of ve.data) if (!grupoDe.has(v.marca)) grupoDe.set(v.marca, v.grupo);
+        const bdfDe = new Map(iv.data.map((r) => [String(r.articulo || '').trim(), r.bdf]));
+        const filas = o._tub.map((r) => {
+          const mk = r.marca || 'Tubrica';
+          return { mes: r.mes, region: r.region, estado: r.estado, supervisor: r.supervisor, asesor: r.asesor, bdf: bdfDe.get(String(r.codigo || '').trim()) || 'Sin dato', grupo: grupoDe.get(mk) || 'Sin grupo', marca: mk, venta_usd: prov ? r.unidades : r.venta_usd, unidades: r.unidades, clientes: 0 };
+        });
+        o.cubo = conL(FB_CALC.cubo.fn(filas));
+      } else if (id === 'toneladas') o.toneladas = conL(FB_CALC.toneladas.fn(o._tub, ps.data, ve.data));
+      else if (id === 'inventario') o.inventario = iv.data.filter((r) => enL(r.articulo));
+      else if (id === 'inv_resumen') o.inv_resumen = conL(FB_CALC.inv_resumen.fn(D('inventario').data));
+      else if (id === 'inv_quiebres') o.inv_quiebres = conL(FB_CALC.inv_quiebres.fn(D('inventario').data));
+    }
+    return { status: 'ok', data: o[id] };
+  }
+  // clientes de la línea: reporte «Clientes por código» filtrado por los códigos de la línea
+  let LCLI = { key: null };
+  window.fbCliFuente = () => {
+    const ln = lineaSel();
+    if (ln === TODAS) return dash.data('clientes_ventas');
+    const cc = dash.data('clientes_codigos'), iv = dash.data('inventario');
+    if (cc.status === 'loading' || iv.status === 'loading') return { status: 'loading' };
+    if (cc.status !== 'ok' || !cc.data.length) return { status: 'sin_linea' };
+    if (LCLI.key !== ln || LCLI.cc !== cc.data || LCLI.iv !== iv.data) {
+      const L = lineas();
+      const marcaDe = new Map((iv.data || []).map((r) => [String(r.articulo || '').trim(), r.marca]));
+      const acc = new Map();
+      for (const r of cc.data) {
+        const cod = String(r.codigo || '').trim();
+        if (L.de.get(cod) !== ln) continue;
+        const mk = r.marca || marcaDe.get(cod) || 'Tubrica';
+        const k = r.id + '|' + mk + '|' + r.mes;
+        const o = acc.get(k) || { id: r.id, marca: mk, mes: r.mes, venta_usd: 0 };
+        o.venta_usd += Number(r.venta_usd) || 0;
+        acc.set(k, o);
+      }
+      LCLI = { key: ln, cc: cc.data, iv: iv.data, data: [...acc.values()] };
+    }
+    return { status: 'ok', data: LCLI.data };
+  };
+  const hayCliLinea = () => { const f = window.fbCliFuente(); return f.status !== 'sin_linea'; };
+  function notaLinea(ln, L, I) {
+    const n = $('#n-linea');
+    if (ln === TODAS || pagina === 'carga') { n.hidden = true; return; }
+    const semanal = ['presupuesto', 'kpi', 'region'].includes(pagina);
+    n.hidden = false;
+    n.textContent = semanal
+      ? 'La línea no aplica a la vista Semanal: sus reportes vienen por marca, sin artículo.'
+      : hayCliLinea() ? '' : 'Los clientes por línea salen «—» hasta que subas la venta por código con la columna Cliente.';
+    n.hidden = !n.textContent;
+  }
   function readParams(I) {
     const p = dash.params();
     const cerrados = I.meses.filter((m) => !enCurso(m));
@@ -966,6 +1065,7 @@ dash.calc('inv_quiebres', {
   $('#f-region').addEventListener('change', (e) => dash.setParams({ region: e.target.value }));
   $('#f-marca').addEventListener('change', (e) => dash.setParams({ marca: e.target.value }));
   $('#f-grupo').addEventListener('change', (e) => dash.setParams({ grupo: e.target.value, marca: TODAS }));
+  $('#f-linea').addEventListener('change', (e) => dash.setParams({ linea: e.target.value === TODAS ? '' : e.target.value }));
   $('#f-reset').addEventListener('click', () => dash.resetParams());
 
   function fillSelect(el, opts, value) {
@@ -1327,9 +1427,9 @@ dash.calc('inv_quiebres', {
   // marca: el corte elegido arriba (Todas, «Grupo G03» o una marca); las toneladas siguen el mismo filtro
   const tget = (T, dim, item, mes, region, marca = sel.slot) => T.by.get([dim, item, mes, region, marca].join('|'));
   const tgroup = (T, dim, mes, region, marca = sel.slot) => T.grp.get([dim, mes, region, marca].join('|')) || [];
-  const tieneToneladas = (slot) => { const tb = dash.data('toneladas'); if (tb.status !== 'ok') return null; const T = tindex(tb.data); for (const k of T.grp.keys()) if (k.startsWith('total|') && k.endsWith('|Todas|' + slot)) return true; return false; };
+  const tieneToneladas = (slot) => { const tb = D('toneladas'); if (tb.status !== 'ok') return null; const T = tindex(tb.data); for (const k of T.grp.keys()) if (k.startsWith('total|') && k.endsWith('|Todas|' + slot)) return true; return false; };
   function toneladas(I) {
-    const tb = dash.data('toneladas');
+    const tb = D('toneladas');
     const boxes = ['#c-ton-mes', '#c-ton-precio', '#c-ton-region', '#c-ton-estado', '#c-ton-sup', '#c-ton-asesor'].map($);
     const big = document.createElement('div'), bigD = document.createElement('div');
     if (tb.status !== 'ok') {
@@ -1451,7 +1551,7 @@ dash.calc('inv_quiebres', {
   const fechaF = (s) => (s ? s.slice(8, 10) + '/' + s.slice(5, 7) + '/' + s.slice(2, 4) : '—');
   const mesesF = (v) => (v == null || isNaN(v) ? '—' : new Intl.NumberFormat('es-VE', { maximumFractionDigits: 1 }).format(v) + ' m');
   function inventarioPagina(I) {
-    const res = dash.data('inv_resumen'), qb = dash.data('inv_quiebres'), inv = dash.data('inventario');
+    const res = D('inv_resumen'), qb = D('inv_quiebres'), inv = D('inventario');
     const charts = ['#c-q-art', '#c-q-usd', '#c-inv-cat'].map($);
     const bigs = ['#ki-valor', '#ki-poca', '#ki-cero', '#ki-perdida', '#ki-acum'].map($);
     const resumen = document.createElement('p');
@@ -1886,7 +1986,7 @@ dash.calc('inv_quiebres', {
 
   // ---------- indicadores ----------
   function markEl(el, r, field, src) {
-    if (!r) { el.removeAttribute('data-source'); el.removeAttribute('data-field'); el.removeAttribute('data-where'); return; }
+    if (!r || r.linea !== undefined) { el.removeAttribute('data-source'); el.removeAttribute('data-field'); el.removeAttribute('data-where'); return; }
     el.setAttribute('data-source', src || (r.marca === undefined || r.ton !== undefined ? 'toneladas' : 'cubo'));
     el.setAttribute('data-field', field);
     el.setAttribute('data-where', whereOf(r));
@@ -1906,7 +2006,7 @@ dash.calc('inv_quiebres', {
   }
 
   function render() {
-    const c = dash.data('cubo');
+    const c = D('cubo');
     const boxes = ['#c-tendencia', '#c-grupos', '#c-minis', '#c-mapa', '#c-region', '#c-bdf', '#c-estado', '#c-asesor'].map($);
     const bigs = ['#k-venta', '#k-cli', '#k-ytd'].map($);
     if (c.status !== 'ok') {
@@ -1925,6 +2025,7 @@ dash.calc('inv_quiebres', {
     fillSelect($('#f-region'), [[TODAS, 'Todas las regiones'], ...I.regiones.map((r) => [r, r])], sel.region);
     fillSelect($('#f-grupo'), [[TODAS, 'Todos'], ...I.grupos.map((g) => [g, g])], sel.grupo);
     fillSelect($('#f-marca'), [[TODAS, sel.grupo === TODAS ? 'Todas las marcas' : 'Todas las de ' + sel.grupo], ...I.marcas.filter((m) => sel.grupo === TODAS || I.grupoDe.get(m) === sel.grupo).map((m) => [m, m])], sel.marca);
+    { const L = lineas(), ln = lineaSel(); fillSelect($('#f-linea'), [[TODAS, 'Todas las líneas'], ...L.lista], ln); $('#f-linea-box').hidden = !L.lista.length; notaLinea(ln, L, I); }
 
     // toneladas solo aplica cuando el filtro incluye alguna marca con peso
     const tt = tieneToneladas(sel.slot);
