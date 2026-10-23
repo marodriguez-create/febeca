@@ -1,4 +1,4 @@
-import { usuarios, claveCorrecta, crearToken, volverSeguro, COOKIE, HORAS } from '../lib/auth.js';
+import { usuarios, proveedores, claveCorrecta, crearToken, volverSeguro, COOKIE, HORAS } from '../lib/auth.js';
 
 const ir = (location, cookie) => new Response(null, { status: 303, headers: { Location: location, ...(cookie ? { 'Set-Cookie': cookie } : {}) } });
 
@@ -13,7 +13,8 @@ export async function POST(request) {
   if (!secret || !process.env.DASH_USERS) return ir(q({ error: 'config' }));
   const editores = usuarios(process.env.DASH_USERS), lectores = usuarios(process.env.DASH_LECTORES);
   const rol = (await claveCorrecta(secret, clave, editores.get(usuario))) ? 'editor'
-    : (await claveCorrecta(secret, clave, lectores.get(usuario))) ? 'lector' : null;
+    : (await claveCorrecta(secret, clave, lectores.get(usuario))) ? 'lector'
+    : (await claveCorrecta(secret, clave, (proveedores(process.env.DASH_PROVEEDORES).get(usuario) || {}).clave)) ? 'proveedor' : null;
   if (!rol) {
     await new Promise((r) => setTimeout(r, 700)); // frena los intentos repetidos
     return ir(q({ error: '1', u: usuario }));

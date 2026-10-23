@@ -9,6 +9,13 @@ export const config = {
 
 export default async function middleware(request) {
   const usuario = await leerToken(cookieDe(request), process.env.DASH_SECRET);
+  const url0 = new URL(request.url);
+  // proveedor: los datos le llegan filtrados (solo sus marcas, sin dólares de venta ni nombres de clientes)
+  if (usuario && usuario.rol === 'proveedor') {
+    const m = url0.pathname.match(/^\/data\/([a-z_]+)\.csv$/);
+    if (m) return new Response(null, { headers: { 'x-middleware-rewrite': new URL('/api/datos?id=' + m[1], request.url).toString() } });
+    if (url0.pathname.startsWith('/data/')) return new Response('No disponible.', { status: 403 });
+  }
   if (usuario || esPublico(process.env.DASH_PUBLICO)) return new Response(null, { headers: { 'x-middleware-next': '1' } });
   const url = new URL(request.url);
   if (url.pathname.startsWith('/data/') || url.pathname.startsWith('/api/')) {

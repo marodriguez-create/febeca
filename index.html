@@ -7,8 +7,12 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="stylesheet" href="tokens.css">
 <link rel="stylesheet" href="base.css">
-<style>.fb-solo-ver #tab-carga, .fb-solo-ver #pag-carga { display: none !important; }</style>
-<script>document.documentElement.classList.add('fb-solo-ver');</script>
+<style>.fb-solo-ver #tab-carga, .fb-solo-ver #pag-carga { display: none !important; }
+.fb-prov #tab-clientes, .fb-prov #pag-clientes, .fb-prov #modo-semanal, .fb-prov #ton-precio, .fb-prov #tab-carga, .fb-prov #pag-carga { display: none !important; }
+.fb-prov #tubrica-toneladas .fb-grid:first-of-type { grid-template-columns: 1fr; }.fb-prov #t-marcas tr > :nth-child(6) { display: none; }
+.fb-espera #dash-root { visibility: hidden; }
+</style>
+<script>document.documentElement.classList.add('fb-solo-ver', 'fb-espera');</script>
 <script src="vendor/d3.min.js"></script>
 <script src="dash-shim.js"></script>
 </head>
@@ -904,8 +908,8 @@ dash.calc('inv_quiebres', {
   const nPct = new Intl.NumberFormat('es-VE', { style: 'percent', maximumFractionDigits: 1 });
   const nTon = new Intl.NumberFormat('es-VE', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
   const tonF = (v) => (v == null || isNaN(v) ? '—' : nTon.format(v) + ' t');
-  const usd = (v) => (v == null || isNaN(v) ? '—' : (v < 0 ? '-$' : '$') + nEntero.format(Math.abs(v)));
-  const usdC = (v) => (v == null || isNaN(v) ? '—' : (v < 0 ? '-$' : '$') + nCompacto.format(Math.abs(v)));
+  const usd = (v) => (v == null || isNaN(v) ? '—' : window.fbUnid ? nEntero.format(v) + ' und.' : (v < 0 ? '-$' : '$') + nEntero.format(Math.abs(v)));
+  const usdC = (v) => (v == null || isNaN(v) ? '—' : window.fbUnid ? nCompacto.format(v) + ' und.' : (v < 0 ? '-$' : '$') + nCompacto.format(Math.abs(v)));
   const ent = (v) => (v == null || isNaN(v) ? '—' : nEntero.format(v));
   const pct = (v) => (v == null || isNaN(v) ? '—' : nPct.format(v));
   const spct = (v) => (v == null || isNaN(v) ? '—' : (v > 0 ? '+' : '') + nPct.format(v));
@@ -1133,7 +1137,7 @@ dash.calc('inv_quiebres', {
     const pts = I.meses.map((m) => { const r = get(I, 'total', TODAS, m, sel.region, sel.slot); return { mes: m, r, v: r ? r.venta_usd : null }; });
     monthChart(box, I, pts, {
       axis: usdC, label: usdC, extremos: true,
-      tip: (r) => ['Venta ' + usd(r.venta_usd), 'Vs. mes anterior ' + spct(r.var), 'Unidades ' + ent(r.unidades)],
+      tip: (r) => [(window.fbUnid ? 'Unidades ' : 'Venta ') + usd(r.venta_usd), 'Vs. mes anterior ' + spct(r.var), ...(window.fbUnid ? [] : ['Unidades ' + ent(r.unidades)])],
     });
   }
 
@@ -1194,7 +1198,7 @@ dash.calc('inv_quiebres', {
         }
         svg.append('rect').attr('class', 'fb-hit').attr('x', xx).attr('y', yy).attr('width', cw).attr('height', cellH)
           .on('mousemove', (e) => showTip(e, it + ' · ' + largo(m) + (enCurso(m) ? ' (en curso)' : ''), c ? [
-            'Venta ' + usd(c.venta_usd), 'Vs. mes anterior ' + spct(c.var), 'Participación ' + pct(c.share),
+            (window.fbUnid ? 'Unidades ' : 'Venta ') + usd(c.venta_usd), 'Vs. mes anterior ' + spct(c.var), 'Participación ' + pct(c.share),
             ...(j === jMax ? ['Mejor mes del año'] : j === jMin ? ['Mes más bajo del año'] : []),
           ] : ['Sin ventas']))
           .on('mouseleave', hideTip)
@@ -1296,7 +1300,7 @@ dash.calc('inv_quiebres', {
         .text((p) => corto(p.mes).charAt(0).toUpperCase());
       g.append('rect').attr('class', 'fb-hit').attr('x', (p) => x(p.mes)).attr('width', x.bandwidth()).attr('y', 0).attr('height', H)
         .on('mousemove', (e, p) => showTip(e, d.marca + ' · ' + largo(p.mes) + (enCurso(p.mes) ? ' (en curso)' : ''), p.r ? [
-          'Venta ' + usd(p.r.venta_usd), 'Vs. mes anterior ' + spct(p.r.var), 'Unidades ' + ent(p.r.unidades), 'Clientes ' + ent(cliU(p.r)),
+          (window.fbUnid ? 'Unidades ' : 'Venta ') + usd(p.r.venta_usd), 'Vs. mes anterior ' + spct(p.r.var), ...(window.fbUnid ? [] : ['Unidades ' + ent(p.r.unidades)]), 'Clientes ' + ent(cliU(p.r)),
         ] : ['Sin ventas']))
         .on('mouseleave', hideTip);
       });
@@ -1342,12 +1346,14 @@ dash.calc('inv_quiebres', {
     markEl(big, t, 'ton', 'toneladas');
     delta(bigD, t && t.var_ton, prevMes, sel.mes);
     const pts = I.meses.map((m) => { const r = tget(T, 'total', TODAS, m, sel.region); return { mes: m, r, v: r ? r.ton : null }; });
-    const tipT = (r) => ['Toneladas ' + tonF(r.ton), 'Vs. mes anterior ' + spct(r.var_ton), 'Venta ' + usd(r.venta_usd), 'Dólares por tonelada ' + usd(r.usd_por_ton)];
+    // proveedor: sin dólares por tonelada en ningún recuadro
+    const sinPrecio = (f) => (document.documentElement.classList.contains('fb-prov') ? (r) => f(r).filter((l) => !/^(Dólares por tonelada|Venta )/.test(String(l))) : f);
+    const tipT = sinPrecio((r) => ['Toneladas ' + tonF(r.ton), 'Vs. mes anterior ' + spct(r.var_ton), (window.fbUnid ? 'Unidades ' : 'Venta ') + usd(r.venta_usd), 'Dólares por tonelada ' + usd(r.usd_por_ton)]);
     monthChart($('#c-ton-mes'), I, pts, { axis: (v) => nCompacto.format(v) + ' t', label: tonF, tip: tipT, extremos: true });
     const ptsP = I.meses.map((m) => { const r = tget(T, 'total', TODAS, m, sel.region); return { mes: m, r, v: r ? r.usd_por_ton : null }; });
     monthChart($('#c-ton-precio'), I, ptsP, { line: true, axis: usdC, label: usd, tip: (r) => ['Dólares por tonelada ' + usd(r.usd_por_ton), 'Vs. mes anterior ' + spct(r.var_precio), 'Toneladas ' + tonF(r.ton)] });
     const byTon = (a, z) => z.ton - a.ton;
-    const tipC = (r) => ['Toneladas ' + tonF(r.ton), 'Mes anterior ' + tonF(r.ton_prev), 'Variación ' + spct(r.var_ton) + (enCurso(r.mes) ? ' (parcial)' : ''), 'Participación ' + pct(r.share_ton), 'Dólares por tonelada ' + usd(r.usd_por_ton)];
+    const tipC = sinPrecio((r) => ['Toneladas ' + tonF(r.ton), 'Mes anterior ' + tonF(r.ton_prev), 'Variación ' + spct(r.var_ton) + (enCurso(r.mes) ? ' (parcial)' : ''), 'Participación ' + pct(r.share_ton), 'Dólares por tonelada ' + usd(r.usd_por_ton)]);
     const opt = { field: 'ton', value: (r) => tonF(r.ton), side: (r) => spct(r.var_ton), varField: 'var_ton', tip: tipC };
     const oTon = { fld: 'ton', varF: 'var_ton', shareF: 'share_ton', fmt: tonF, fmtC: tonF, nombre: 'Toneladas', src: 'toneladas' };
     mapaRegiones($('#c-ton-region'), I, tgroup(T, 'region', sel.mes, TODAS).slice().sort(byTon), tipC, { ...oTon, estados: tgroup(T, 'estado', sel.mes, TODAS) });
@@ -1408,6 +1414,7 @@ dash.calc('inv_quiebres', {
     mostrarPagina(); dash.setLink(pagina); hideTip(); redraw();
   }));
   function mostrarPagina() {
+    if (document.documentElement.classList.contains('fb-prov') && (SEMANALES.includes(pagina) || pagina === 'clientes' || pagina === 'carga')) pagina = 'resumen';
     if (pagina !== 'carga') modo = SEMANALES.includes(pagina) ? 'semanal' : 'mensual';
     ajustarMedida();
     $('#fb-tabs').dataset.modo = modo;
@@ -1760,7 +1767,7 @@ dash.calc('inv_quiebres', {
       n.textContent = 'Grupo ' + r.item;
       const sh = document.createElement('span');
       sh.className = 'fb-mini-v';
-      sh.textContent = pct(r.share) + ' de la venta';
+      sh.textContent = pct(r.share) + (window.fbUnid ? ' de las unidades' : ' de la venta');
       markEl(sh, r, 'share');
       head.append(n, sh);
       const big = document.createElement('div');
@@ -1805,7 +1812,7 @@ dash.calc('inv_quiebres', {
         .attr('style', (p) => (p.mes === sel.mes ? 'fill: var(--color-fg)' : null)).text((p) => corto(p.mes));
       g.append('rect').attr('class', 'fb-hit').attr('x', (p) => x(p.mes)).attr('width', x.bandwidth()).attr('y', 0).attr('height', H)
         .on('mousemove', (e, p) => showTip(e, 'Grupo ' + r.item + ' · ' + largo(p.mes) + (enCurso(p.mes) ? ' (en curso)' : ''), p.r ? [
-          'Venta ' + usd(p.r.venta_usd), 'Vs. mes anterior ' + spct(p.r.var), 'Participación ' + pct(p.r.share), 'Clientes ' + ent(cliU(p.r)),
+          (window.fbUnid ? 'Unidades ' : 'Venta ') + usd(p.r.venta_usd), 'Vs. mes anterior ' + spct(p.r.var), 'Participación ' + pct(p.r.share), 'Clientes ' + ent(cliU(p.r)),
         ] : ['Sin ventas']))
         .on('mouseleave', hideTip);
       });
@@ -1925,6 +1932,7 @@ dash.calc('inv_quiebres', {
     $('#ton-vacio').hidden = conTubrica;
     $('#tubrica-toneladas').hidden = !conTubrica;
 
+    window.fbUnid = document.documentElement.classList.contains('fb-prov') && ['resumen', 'marcas', 'territorio'].includes(pagina);
     if (window.fbClientes) window.fbClientes.setContexto(I.grupoDe, new Set(group(I, 'marca', I.meses[0], TODAS, TODAS).map((r) => r.item).filter((x) => x !== 'Otras')));
     if (pagina === 'carga' || ['presupuesto', 'kpi', 'region'].includes(pagina)) return;
     if (pagina === 'clientes') {
@@ -1967,7 +1975,7 @@ dash.calc('inv_quiebres', {
     $('#k-ytd-l').textContent = 'ene a ' + corto(sel.mes) + ' ' + sel.mes.slice(0, 4);
     delta($('#k-venta-d'), t && t.var, prevMes, sel.mes);
     { const p = prevMes && t ? cliU({ ...t, mes: prevMes }) : null; delta($('#k-cli-d'), cliAhora != null && p ? cliAhora / p - 1 : null, prevMes, sel.mes); }
-    $('#k-ytd-d').textContent = sel.region === TODAS && sel.slot === TODAS ? 'Venta neta en dólares' : [sel.slot !== TODAS ? sel.slot.replace('Grupo ', '') : '', sel.region !== TODAS ? sel.region : ''].filter(Boolean).join(' · ');
+    $('#k-ytd-d').textContent = sel.region === TODAS && sel.slot === TODAS ? (window.fbUnid ? 'Unidades vendidas' : 'Venta neta en dólares') : [sel.slot !== TODAS ? sel.slot.replace('Grupo ', '') : '', sel.region !== TODAS ? sel.region : ''].filter(Boolean).join(' · ');
 
     // resumen
     const res = document.createElement('p');
@@ -1981,7 +1989,7 @@ dash.calc('inv_quiebres', {
       res.append(txt(sel.marca + ' vendió '), b(usd(t.venta_usd), t, 'venta_usd'), txt(lugar + ' en ' + largo(sel.mes)));
       if (enCurso(sel.mes)) res.append(txt(' (mes en curso, datos hasta hoy)'));
       else if (t.var != null) res.append(txt(', '), b(spct(t.var), t, 'var'), txt(' frente a ' + MES_L[+prevMes.slice(5, 7) - 1]));
-      res.append(txt('. Es '), b(pct(t.share_marca), t, 'share_marca'), txt(' de la venta total' + (sel.region === TODAS ? '' : ' en ' + sel.region) + '.'));
+      res.append(txt('. Es '), b(pct(t.share_marca), t, 'share_marca'), txt(window.fbUnid ? ' de las unidades totales' : ' de la venta total' + (sel.region === TODAS ? '' : ' en ' + sel.region) + '.'));
     } else {
       const lider = group(I, 'marca', sel.mes, sel.region, sel.slot).filter((r) => r.item !== 'Otras').sort((a, z) => z.venta_usd - a.venta_usd)[0];
       if (enCurso(sel.mes)) {
@@ -1995,7 +2003,7 @@ dash.calc('inv_quiebres', {
     }
 
     // gráficos: solo se dibuja la pestaña visible, para no recargar el navegador
-    const tipLines = (r) => ['Venta ' + usd(r.venta_usd), 'Mes anterior ' + usd(r.venta_prev), 'Variación ' + spct(r.var) + (enCurso(r.mes) ? ' (parcial)' : ''), 'Participación ' + pct(r.share), 'Clientes ' + ent(cliU(r))];
+    const tipLines = (r) => [(window.fbUnid ? 'Unidades ' : 'Venta ') + usd(r.venta_usd), 'Mes anterior ' + usd(r.venta_prev), 'Variación ' + spct(r.var) + (enCurso(r.mes) ? ' (parcial)' : ''), 'Participación ' + pct(r.share), 'Clientes ' + ent(cliU(r))];
     const byVenta = (a, z) => z.venta_usd - a.venta_usd;
     if (pagina === 'resumen') {
       trend($('#c-tendencia'), I);
@@ -2008,7 +2016,7 @@ dash.calc('inv_quiebres', {
 
     const marcaRows = group(I, 'marca', sel.mes, sel.region, sel.slot);
     $('#n-marcas').textContent = sel.marca === TODAS
-      ? 'Las 12 marcas con más venta en el año, y el resto agrupado en Otras. Toca una marca para filtrar todo el tablero.'
+      ? (window.fbUnid ? 'Las 12 marcas con más unidades en el año,' : 'Las 12 marcas con más venta en el año,') + ' y el resto agrupado en Otras. Toca una marca para filtrar todo el tablero.'
       : 'Filtrado por ' + sel.marca + '. Toca la fila otra vez, o Restablecer, para ver todas las marcas.';
     table($('#t-marcas'), marcaRows.map((r) => ({ ...r, clientes: cliU(r) })), [
       { field: 'item', fmt: (v) => v },
@@ -2030,18 +2038,30 @@ dash.calc('inv_quiebres', {
     });
     }
     if (pagina === 'territorio') {
-    mapaRegiones($('#c-region'), I, group(I, 'region', sel.mes, TODAS, sel.slot).slice().sort(byVenta), tipLines);
-    mapaEstados($('#c-estado'), I, group(I, 'estado', sel.mes, sel.region, sel.slot).slice().sort(byVenta), tipLines);
+    // proveedor: el territorio se muestra en unidades, no en dólares
+    const enU = document.documentElement.classList.contains('fb-prov');
+    const enUnid = (rows) => { if (!enU) return rows; const t = d3.sum(rows, (r) => Math.max(0, r.unidades || 0)); return rows.map((r) => ({ ...r, venta_usd: r.unidades, venta_prev: null, var: r.var_unidades, share: t > 0 ? r.unidades / t : null })); };
+    const fV = enU ? (v) => ent(v) + ' und.' : usd, fVC = enU ? (v) => nCompacto.format(v) + ' und.' : usdC;
+    const tipT = enU ? (r) => ['Unidades ' + ent(r.venta_usd), 'Variación ' + spct(r.var) + (enCurso(r.mes) ? ' (parcial)' : ''), 'Participación ' + pct(r.share)] : tipLines;
+    const oT = enU ? { fmt: fV, fmtC: fVC, nombre: 'Unidades' } : {};
+    if (enU) {
+      document.querySelector('#t-sup th[data-field="venta_usd"] .fb-th').textContent = 'Unidades';
+      const hA = document.querySelector('#c-asesor').closest('.fb-card').querySelector('.fb-h2'); if (hA) hA.textContent = 'Asesores con más unidades';
+      document.querySelectorAll('#pag-territorio .fb-note').forEach((n) => { n.textContent = n.textContent.replace(/Venta/g, 'Unidades').replace(/venta/g, 'unidades'); });
+    }
+    mapaRegiones($('#c-region'), I, enUnid(group(I, 'region', sel.mes, TODAS, sel.slot)).sort(byVenta), tipT, oT);
+    mapaEstados($('#c-estado'), I, enUnid(group(I, 'estado', sel.mes, sel.region, sel.slot)).sort(byVenta), tipT, oT);
     const aseTodos = $('#f-ase-top').value === 'todos';
-    const ases = group(I, 'asesor', sel.mes, sel.region, sel.slot).slice().sort(byVenta);
+    const ases = enUnid(group(I, 'asesor', sel.mes, sel.region, sel.slot)).sort(byVenta);
     $('#n-asesores').textContent = aseTodos ? 'Los ' + ent(ases.length) + ' asesores del mes, con su variación contra el mes anterior.' : 'Los 10 primeros del mes, con su variación contra el mes anterior.';
     $('#c-asesor').classList.toggle('fb-scroll', aseTodos);
     hbars($('#c-asesor'), aseTodos ? ases : ases.slice(0, 10), {
-      field: 'venta_usd', value: (r) => usdC(r.venta_usd), side: (r) => spct(r.var), tip: tipLines,
+      field: 'venta_usd', value: (r) => fVC(r.venta_usd), side: (r) => spct(r.var), tip: tipT,
     });
-    table($('#t-sup'), (($('#f-sup-top').value === 'todos') ? group(I, 'supervisor', sel.mes, sel.region, sel.slot) : group(I, 'supervisor', sel.mes, sel.region, sel.slot).slice().sort((a, z) => z.venta_usd - a.venta_usd).slice(0, 10)).map((r) => ({ ...r, clientes: cliU(r) })), [
+    const sups = enUnid(group(I, 'supervisor', sel.mes, sel.region, sel.slot));
+    table($('#t-sup'), (($('#f-sup-top').value === 'todos') ? sups : sups.slice().sort((a, z) => z.venta_usd - a.venta_usd).slice(0, 10)), [
       { field: 'item', fmt: (v) => v },
-      { field: 'venta_usd', fmt: usd },
+      { field: 'venta_usd', fmt: fV },
       { field: 'var', fmt: (v, r) => (enCurso(r.mes) && v != null ? spct(v) + ' parcial' : spct(v)) },
       { field: 'share' },
       { field: 'clientes', fmt: ent, hide: true },
