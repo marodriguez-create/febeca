@@ -6,7 +6,7 @@ export async function GET(request) {
   let cuerpo = { publico: esPublico(process.env.DASH_PUBLICO) };
   if (s) {
     cuerpo = { usuario: s.usuario, rol: s.rol };
-    if (s.rol === 'proveedor') cuerpo.marcas = (proveedores(process.env.DASH_PROVEEDORES).get(s.usuario) || { marcas: [] }).marcas;
+    if (s.rol === 'proveedor') { const p = proveedores(process.env.DASH_PROVEEDORES).get(s.usuario) || { marcas: [], ocultar: [] }; cuerpo.marcas = p.marcas; cuerpo.ocultar = p.ocultar; }
   }
   return new Response(JSON.stringify(cuerpo), { status: 200, headers: { 'Content-Type': 'application/json', 'Cache-Control': 'no-store' } });
 }

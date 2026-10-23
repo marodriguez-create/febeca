@@ -19,7 +19,7 @@ En Vercel: **Project → Settings → Environment Variables**, agrega estas dos 
 | `DASH_SECRET` | Un texto largo y secreto para firmar las sesiones (mínimo 32 caracteres, solo letras y números) | `k3Jd9...` |
 | `DASH_PUBLICO` (opcional) | `si` para que cualquiera vea el dashboard **sin usuario**, en solo lectura (sin la pestaña Cargar datos). Sin esta variable, todos deben ingresar. | `si` |
 | `DASH_LECTORES` (opcional) | Usuarios que solo ven el dashboard (sin Cargar datos), mismo formato que `DASH_USERS`. | `invitado:Clave123` |
-| `DASH_PROVEEDORES` (opcional) | Proveedores: ven solo sus marcas, con las ventas en unidades (dólares solo en Compras e inventario), sin Clientes, sin vista Semanal y sin dólares por tonelada. Formato `usuario:clave:Marca1\|Marca2`, separados por coma. El nombre de la marca debe ser exacto. | `tubrica:Clave123:Tubrica` |
+| `DASH_PROVEEDORES` (opcional) | Proveedores: ven solo sus marcas, con las ventas en unidades (dólares solo en Compras e inventario), sin Clientes, sin vista Semanal y sin dólares por tonelada. Formato `usuario:clave:Marca1\|Marca2`, separados por coma. El nombre de la marca debe ser exacto. Cuarta parte opcional: subcategorías que ese proveedor no ve en «Artículos con poca cobertura» (separadas por `\|`). | `tubrica:Clave123:Tubrica:Pegamentos y teflones` |
 
 - Para **agregar o quitar un usuario**, o cambiar una clave: edita `DASH_USERS` y haz *Redeploy*.
 - Si cambias `DASH_SECRET`, todas las sesiones abiertas se cierran.

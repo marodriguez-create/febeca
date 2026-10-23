@@ -1533,7 +1533,9 @@ dash.calc('inv_quiebres', {
     // alertas
     const num = (x) => Number(x) || 0;
     const marcaOk = (r) => (sel.marca !== TODAS ? r.marca === sel.marca : sel.grupo !== TODAS ? r.grupo === sel.grupo : true);
-    const base = inv.data.filter((r) => marcaOk(r) && !['E', 'Z'].includes(r.bdf) && num(r.venta_prom_mes) > 0 && num(r.cobertura) < 1);
+    // proveedor: subcategorías que no le corresponden no salen en esta tabla
+    const sinSub = (r) => !(window.fbOcultarSub || []).includes(String(r.subcategoria || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase());
+    const base = inv.data.filter((r) => marcaOk(r) && sinSub(r) && !['E', 'Z'].includes(r.bdf) && num(r.venta_prom_mes) > 0 && num(r.cobertura) < 1);
     afil.marca = opciones($('#f-amarca'), 'Todas', base.map((r) => r.marca), afil.marca);
     const porMarca = base.filter((r) => !afil.marca || r.marca === afil.marca);
     afil.cat = opciones($('#f-acat'), 'Todas', porMarca.map((r) => r.categoria), afil.cat);

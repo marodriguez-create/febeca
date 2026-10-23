@@ -31,6 +31,7 @@
     cambiar('.fb-leyenda span', 'Venta mes más bajo', 'Mes más bajo');
     cambiar('#n-minis', 'Venta neta mensual de cada marca', 'Unidades por mes de cada marca');
     cambiar('#t-marcas th .fb-th', 'Venta', 'Unidades');
+    const bUsd = document.querySelector('.fb-med-b[data-medida="usd"]'); if (bUsd) bUsd.textContent = 'Venta Unidades';
     document.querySelectorAll('#pag-marcas .fb-note').forEach((n) => { n.textContent = n.textContent.replace('la venta del mes elegido', 'las unidades del mes elegido'); });
     if (['presupuesto', 'kpi', 'region', 'clientes', 'carga'].includes(window.fbPagina)) irA('modo-mensual');
     if (['clientes', 'carga'].includes(window.fbPagina)) irA('tab-resumen');
@@ -44,7 +45,12 @@
       if (d.usuario) {
         window.fbUsuario = d.usuario;
         if (d.rol === 'editor') root.classList.remove('fb-solo-ver');
-        else if (d.rol === 'proveedor') modoProveedor();
+        else if (d.rol === 'proveedor') {
+          // subcategorías que el proveedor no ve en «Artículos con poca cobertura»
+          const nrm = (x) => String(x || '').normalize('NFD').replace(/[\u0300-\u036f]/g, '').trim().toLowerCase();
+          window.fbOcultarSub = (d.ocultar || []).map(nrm);
+          modoProveedor();
+        }
         else soloVer();
         const etiqueta = d.rol === 'editor' ? '' : d.rol === 'proveedor' ? ' · proveedor' + (d.marcas && d.marcas.length ? ' (' + d.marcas.join(', ') + ')' : '') : ' · solo lectura';
         fila([txt(d.usuario + etiqueta), link('Salir', '/api/logout')]);
