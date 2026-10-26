@@ -188,12 +188,14 @@
     clearTimeout(avisoT);
     avisoT = setTimeout(() => mostrar('El dashboard ya muestra los datos nuevos en este navegador. Para que los vean todos, sube estos archivos descargados a la carpeta data/ del repositorio en GitHub (reemplazando los anteriores). Para que se guarde solo, configura GITHUB_TOKEN y GITHUB_REPO en Vercel.', descargados.join(', '), true), 300);
   }
+  const SESION_VENCIDA = 'tu sesión venció (dura 12 horas). Pulsa Salir, vuelve a ingresar con tu usuario y sube el archivo otra vez.';
   const MSG_ERR = { token: 'GitHub rechazó el token: revisa GITHUB_TOKEN (permiso Contents: Read and write sobre el repositorio) y GITHUB_REPO.', github: 'GitHub no respondió bien. Inténtalo de nuevo en unos minutos.' };
   async function subirGithub(id, txt) {
     const gz = await new Response(new Blob([txt]).stream().pipeThrough(new CompressionStream('gzip'))).arrayBuffer();
     const r = await fetch('/api/guardar?id=' + encodeURIComponent(id), { method: 'POST', headers: { 'Content-Type': 'application/octet-stream' }, body: gz });
     const d = await r.json().catch(() => ({}));
     if (r.status === 501 || r.status === 404) return 'sin_github';
+    if (r.status === 401) throw new Error(SESION_VENCIDA);
     if (!r.ok) throw new Error(MSG_ERR[d.error] || d.error || ('Error ' + r.status));
     return d;
   }
@@ -205,7 +207,8 @@
       try {
         const r = await fetch('/api/confirmar', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ archivos: lote }) });
         const d = await r.json().catch(() => ({}));
-        if (!r.ok) throw new Error(MSG_ERR[d.error] || d.error || ('Error ' + r.status));
+        if (r.status === 401) throw new Error(SESION_VENCIDA);
+    if (!r.ok) throw new Error(MSG_ERR[d.error] || d.error || ('Error ' + r.status));
         mostrar('Listo: los datos quedaron guardados. En 1 a 2 minutos todos los verán al abrir el dashboard (Vercel lo publica solo).', lote.map((a) => a.ruta.slice(5)).join(', '), true);
       } catch (e) {
         mostrar('No se pudieron guardar en GitHub: ' + e.message + ' En este navegador ya se ven los datos nuevos.', '', true);
