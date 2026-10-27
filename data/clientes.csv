@@ -1220,6 +1220,7 @@ id,cliente,region,estado,supervisor,asesor
 1266,"DISTRIBUIDORA TUBOS PVC BOLEITA, C.A",Capital,Miranda,Jose Estrella,Julimer Jaen
 1267,DISTRIBUIDORA UCHI HIERRO CA,Oriente,Anzoátegui,Luis Landaeta,Richard Salazar
 1268,DISTRIBUIDORA V Y R 2014 C.A.,Oriente,Bolívar,Elias Jimenez,Jesus Aponte
+5631,"DISTRIBUIDORA WANDACOR 2009, C.A. (DIST. WANDACOR)",Oriente,Bolívar,Elias Jimenez,Eduardo Cordova
 1270,DISTRIBUIDORA Y COMERCIALIZADORA EL POLEN C.A.,Occidente,Barinas,Geraldine Castellano,Abraham Mercado
 1273,DISTRIBUIDORA Y COMERCIALIZADORA LUYPAT DE PATRICIA TRINIDAD LUZARD DAVILA,Occidente,Mérida,Charly Bello,Franklin Mendez
 1274,DISTRIBUIDORA Y COMERCIALIZADORA VILOGRA C.A,Centro,Carabobo,Geraldine Castellano,Wuinder Fuentes
@@ -1573,6 +1574,7 @@ id,cliente,region,estado,supervisor,asesor
 1612,"FERRE EXPRESS RG 2023, C.A.",Occidente,Zulia,Alejandro Prieto,Larry Villarreal
 1613,"FERRE FACIL HOME, C.A",Occidente,Zulia,Alejandro Prieto,Jose Rincon
 1614,"FERRE FERREIRA 001, C.A",Centro,Carabobo,Geraldine Castellano,Wuinder Fuentes
+5632,"FERRE FRANK 2010, C.A.",Centro,Lara,Carlos Guanipa,Franklin J Sanchez
 1615,"FERRE FRIO DUACA 2023, C.A.",Occidente,Zulia,Alejandro Prieto,Carlos Parilli
 1616,"FERRE FRIO HERMANOS LA JUNCAL, C.A",Oriente,Monagas,Luis Landaeta,Wilfredo Disalvo
 1617,"FERRE GO 1, C.A",Occidente,Zulia,Alejandro Prieto,Yamine Suarez
@@ -4491,6 +4493,7 @@ id,cliente,region,estado,supervisor,asesor
 4603,MI FORTUNA C.A.,Occidente,Zulia,Alejandro Prieto,Homeirys Garcia
 4604,"MI MAYOR, C.A",Centro,Carabobo,Geraldine Castellano,Juan Sanchez
 4605,MI POTRILLA,Occidente,Zulia,Alejandro Prieto,Alexander Castillo
+5633,"MI PUNTO SOLDADOR, C.A",Oriente,Sucre,Luis Landaeta,Franny Indriago
 4606,"MI TIENDA VENEZUELA, C.A",Occidente,Barinas,No clasificado,Charly Bello
 4607,"MI TIENDA VENEZUELA, C.A (ARAURE)",Occidente,Portuguesa,No clasificado,Charly Bello
 4608,"MICAS LIDICE, C.A.",Centro,Lara,Carlos Guanipa,Nehomar Chirinos
@@ -5242,6 +5245,7 @@ id,cliente,region,estado,supervisor,asesor
 5389,TRILLADORA MONTILLA,Occidente,Trujillo,Carlos Guanipa,Jose Molina
 5390,"TU CABLE Y FERRETERIA, C.A.",Occidente,Táchira,Lizmar Marrero,Jesus Galviz
 5391,"TU FERRE HOGAR, C.A",Oriente,Bolívar,Elias Jimenez,Jesus Aponte
+5634,TU FERREAGRO JR ACOSTA,Occidente,Falcón,Geraldine Castellano,Helvis Quevedo
 5392,"TU FERREAGRO JR ACOSTA DE JOSE RAMON ACOSTA DIAZ, F.P (YARACAL)",Occidente,Falcón,Geraldine Castellano,Helvis Quevedo
 5393,"TU FERREHOGAR 77,C.A.",Oriente,Anzoátegui,Luis Landaeta,Richard Salazar
 5394,"TU FERRETERIA EL COSMO, C.A",Centro,Carabobo,Carlos Lagares,Oscar Riera
