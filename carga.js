@@ -245,7 +245,7 @@
       { const act = totalDataset(tipo === 'tubrica' ? 'tubrica' : 'ventas', 'venta_usd'); if (act != null) check(tipo === 'clientes' ? 'Las ventas del dashboard suman ' + usd(act) + '. Solo se usarán las filas que coincidan con ellas (empresa Febeca).' : 'Hoy el dashboard tiene ' + usd(act) + '. Al actualizar se reemplaza por completo.', 'cg-w'); }
       if (tipo === 'tubrica') {
         const ik = idx('Marca'), ia = idx('Articulo');
-        const r = marcasConPeso(datos.map((x) => ({ marca: String(x[ik] ?? '').trim(), codigo: codigoDe(x[ia]) })), null);
+        const reas = reasignador(null); const r = marcasConPeso(datos.map((x) => { const c = codigoDe(x[ia]); return { marca: reas(String(x[ik] ?? '').trim(), c), codigo: c }; }), null);
         if (col(enc, 'Cliente') >= 0) check('Trae la columna Cliente: también se actualizan los clientes por línea.'); else check('Sin columna Cliente: los clientes por línea quedan como estaban. Agrégala si quieres contarlos por línea.', 'cg-w');
         if (r) check('Marcas con peso: ' + (r.con.join(', ') || 'ninguna') + '.' + (r.sin.length ? ' Se omiten las que no tienen códigos en la tabla de peso: ' + r.sin.slice(0, 5).join(', ') + (r.sin.length > 5 ? '…' : '') + '.' : ''), r.con.length ? (r.sin.length ? 'cg-w' : '') : 'cg-x');
       }
@@ -382,6 +382,13 @@
   // código del artículo: el primer bloque del texto «22-10-029 Codo 90°…» → «22-10-029»
   const codigoDe = (v) => (String(v ?? '').trim().match(/^([A-Za-z0-9][\w.\-/]*)/) || [])[1] || '';
   // marcas que tienen al menos un código con peso (Ton > 0) en la tabla: esas son las que suman toneladas
+  // códigos con peso que el sistema reporta con otra marca: se suman a la marca dueña de la tabla de peso
+  const REASIGNAR = { maxell: 'Tubrica' };
+  function reasignador(pesosNuevos) {
+    const pd = pesosNuevos || (dash.data('pesos').status === 'ok' ? dash.data('pesos').data : []);
+    const conPeso = new Set(pd.filter((p) => Number(p.ton) > 0).map((p) => String(p.codigo).trim()));
+    return (marca, codigo) => { const dest = REASIGNAR[norm(marca)]; return dest && conPeso.has(codigo) ? dest : marca; };
+  }
   function marcasConPeso(filas, pesosNuevos) {
     const pd = pesosNuevos || (dash.data('pesos').status === 'ok' ? dash.data('pesos').data : null);
     if (!pd) return null;
@@ -400,7 +407,9 @@
     }
     if (a.tipo === 'tubrica') {
       const ix = Object.fromEntries(['Región', 'Estado', 'Supervisor', 'Asesor', 'Marca', 'Articulo', 'Mes', 'Venta Neta Dólares', 'Venta Neta Cantidad'].map((c) => [c, col(E, c)]));
+      const reas = reasignador(a.pesosNuevos);
       const todas = R.map((r) => ({ mes: mesIso(r[ix.Mes]), region: region(r[ix['Región']]), estado: titulo(r[ix.Estado]), supervisor: titulo(r[ix.Supervisor]), asesor: titulo(r[ix.Asesor]), marca: String(r[ix.Marca] ?? '').trim(), codigo: codigoDe(r[ix.Articulo]), venta_usd: n0(r[ix['Venta Neta Dólares']]) * 1000, unidades: n0(r[ix['Venta Neta Cantidad']]) })).filter((r) => r.mes && r.codigo);
+      for (const r of todas) r.marca = reas(r.marca, r.codigo);
       // solo las marcas con códigos en la tabla de peso (si la tabla no está, quedan todas)
       const mp = marcasConPeso(todas, a.pesosNuevos);
       const rows = mp ? todas.filter((r) => mp.set.has(r.marca)) : todas;
@@ -417,7 +426,7 @@
         const fc = [];
         R.forEach((r, i) => {
           const cli = String(r[icl] ?? '').trim();
-          const mes = mesIso(r[ix.Mes]), codigo = codigoDe(r[ix.Articulo]), marca = String(r[ix.Marca] ?? '').trim();
+          const mes = mesIso(r[ix.Mes]), codigo = codigoDe(r[ix.Articulo]), marca = reas(String(r[ix.Marca] ?? '').trim(), codigo);
           if (!cli || !mes || !codigo || (mp && !mp.set.has(marca))) return;
           const id = idDe.get(norm(cli));
           if (!id) { sinId.add(cli); return; }
