@@ -84,6 +84,7 @@ id,cliente,region,estado,supervisor,asesor
 87,"AGRO-FERRE SAN JOSE DE CANOABO, C.A",Centro,Carabobo,Geraldine Castellano,Gilberto Martinez
 5488,AGRO-FERRETERIA LOS ANDES PAPELON (AGRO FERPA),Occidente,Portuguesa,Carlos Guanipa,Hector Fernandez
 89,AGRO-FERRETERIA LUAL,Occidente,Trujillo,Carlos Guanipa,Jose Molina
+5635,AGRO-INVERSIONES J.D. C.A.,Oriente,Guárico,Jesus Muñoz,Jorge Andrade
 90,AGRO-MATERIALES FANTASIA C.A.,Oriente,Anzoátegui,Elias Jimenez,Alexis Suarez
 91,"AGRO-TIENDA LA ECONOMICA DE ORIENTE, C.A",Oriente,Anzoátegui,Luis Landaeta,Gilberto Mata
 92,"AGRO.FERRETERO THB, C.A",Centro,Aragua,Jesus Muñoz,Jose Saade
@@ -305,9 +306,9 @@ id,cliente,region,estado,supervisor,asesor
 326,"ARDA PROYECTOS & CONSTRUCCIONES, C.A",Oriente,Anzoátegui,Luis Landaeta,Richard Pineda
 327,"ARDRA, C.A",Centro,Carabobo,Daniela Maselli,Luis Jimenez
 328,"ARENAL'S MOTOR'S, C.A.",Oriente,Bolívar,Elias Jimenez,Jesus Granadillo
+5636,ARGENIS DE JESUS DA SILVA DE ASCENCAO,Capital,Distrito Capital,Nelly Patiño,Yineska Figueroa
 329,ARLEMAR DEL VALLE CEDEÑO AMUNDARAIN,Centro,Carabobo,Daniela Maselli,Gabriel Nuñez
 5494,ARMORINO C.A.,Centro,Carabobo,Geraldine Castellano,Jose Quevedo
-331,"ARQUIESPACIOS 2030, C.A.",Centro,Bolívar,Daniela Maselli,Luis Jimenez
 332,"ARTICULOS FERRESOL, C.A.",Capital,Distrito Capital,Nelly Patiño,Ana Plaza
 333,ARTURO MARQUEZ PEREIRA F.,Centro,Aragua,Jesus Muñoz,Jose Saade
 334,"ASERRADERO Y FERRETERIA EL EBANO,C.A.",Occidente,Zulia,Alejandro Prieto,Rafael Mora
@@ -661,6 +662,7 @@ id,cliente,region,estado,supervisor,asesor
 688,"COMERCIAL J.N., S.R.L",Oriente,Anzoátegui,Luis Landaeta,Richard Salazar
 689,"COMERCIAL JACKY WU, C.A",Centro,Aragua,Jesus Muñoz,Fernando Colmenares
 690,"COMERCIAL JALISCO,C.A.",Occidente,Zulia,Alejandro Prieto,Carlos Parilli
+5637,"COMERCIAL JD YAMY, C.A",Centro,Carabobo,Carlos Lagares,Oscar Riera
 691,"COMERCIAL KASANAK, C.A.",Capital,Miranda,Jose Estrella,Harold Pulido
 692,"COMERCIAL KATIUSKA NARVAEZ, F.P",Oriente,Nueva Esparta,Tabardo Villasmil,Asdrubal Ferrer
 693,"COMERCIAL KELLY 2021, C.A.",Occidente,Guárico,Jesus Muñoz,Henry Simoza
@@ -1142,6 +1144,7 @@ id,cliente,region,estado,supervisor,asesor
 1182,"DISTRIBUIDORA FERRELUX,C.A.",Oriente,Anzoátegui,Luis Landaeta,Richard Pineda
 1183,DISTRIBUIDORA FERREPOLAR C.A,Capital,Miranda,Jose Estrella,Harold Pulido
 1184,"DISTRIBUIDORA FERRESALTE, C.A.",Occidente,Falcón,Geraldine Castellano,Helvis Quevedo
+5638,"DISTRIBUIDORA FERRESOL, C.A.",Occidente,Guárico,Jesus Muñoz,Henry Simoza
 1185,"DISTRIBUIDORA FERREVELCA, C.A",Oriente,Nueva Esparta,Tabardo Villasmil,Wilfredo Gonzalez
 1186,DISTRIBUIDORA FERROAGRO SAN BARTOLO. C.A,Occidente,Táchira,Lizmar Marrero,Bernardo Hernandez
 1187,DISTRIBUIDORA FERROGIAN C.A.,Capital,Miranda,Nelly Patiño,Yineska Figueroa
@@ -1400,6 +1403,7 @@ id,cliente,region,estado,supervisor,asesor
 1450,EMPRENDIMIENTO ROYSBETH ESAA,Centro,Cojedes,Carlos Lagares,Hector Astudillo
 1451,EMPRENDIMIENTO RUBEN ARIAS,Occidente,Trujillo,Carlos Guanipa,Miguel Rivas
 1452,EMPRENDIMIENTO WUILSON ESCALONA,Oriente,Monagas,Luis Landaeta,Oscar Tapia
+5639,EMPRENDIMIENTO YENNALEX DALLA,Oriente,Anzoátegui,Luis Landaeta,Ali Dos Santos
 1453,EMPRENDIMIENTO YHACIELYS RAMIREZ,Occidente,Falcón,Geraldine Castellano,Helvis Quevedo
 1454,EMPRENDIMIENTO YOLEIDIS ALMEIDA,Oriente,Monagas,Elias Jimenez,Anand Panday
 1455,EMPRENDIMIENTO YOLIMAR TORRES 9,Occidente,Trujillo,Carlos Guanipa,Jose Molina
@@ -1551,6 +1555,7 @@ id,cliente,region,estado,supervisor,asesor
 1587,"FERRE CONSTRUCCIONES LOS ROBLES, C.A.",Occidente,Falcón,Alejandro Prieto,Wilman Lugo
 1588,"FERRE CONSTRUCCIONES LOS ROSALES, C.A.",Occidente,Trujillo,Carlos Guanipa,Miguel Rivas
 1591,FERRE CONSTRUCIONES 2222 C.A,Capital,Miranda,Jose Estrella,Maria Villegas
+5640,"FERRE CONSTRUCTORA AGUILA, C.A.",Centro,Bolívar,Daniela Maselli,Luis Jimenez
 1592,FERRE CONSTRULACER FERRECLA C.A.,Centro,Aragua,Jesus Muñoz,Jose Saade
 1593,"FERRE CONTACTO HERNANDEZ, C.A",Occidente,Táchira,Charly Bello,Eleaney Varela
 1594,FERRE CONTACTO SAN SIMON,Occidente,Mérida,Charly Bello,Eleaney Varela
@@ -3003,6 +3008,7 @@ id,cliente,region,estado,supervisor,asesor
 3053,FERRO MATERIALES LA OFERTA C.A,Oriente,Monagas,Luis Landaeta,Oscar Tapia
 3054,"FERRO MATERIALES, C.A.",Oriente,Monagas,Luis Landaeta,Wilfredo Disalvo
 3055,"FERRO NORTE HOME, COMPAÑIA ANONIMA",Occidente,Zulia,Alejandro Prieto,Jose Rincon
+5641,FERRO-MATERIALES PIAR CA,Oriente,Bolívar,Elias Jimenez,Jesus Granadillo
 3057,"FERRO-TOOL, C.A.",Capital,Miranda,Jose Estrella,Harold Pulido
 3058,FERROACERO ANDINO C.A.,Occidente,Táchira,Lizmar Marrero,Luis Jaimes
 3059,FERROAGRO NUESTRA SEÑORA DEL CARMEN,Occidente,Táchira,Lizmar Marrero,Ramon Estupiñan
@@ -3316,6 +3322,7 @@ id,cliente,region,estado,supervisor,asesor
 3381,"INMETCI VENEZOLANA,C.A",Centro,Aragua,Jesus Muñoz,Jesus Muñoz
 3382,"INMOBILIARIA LAUSIL, C.A",Occidente,Apure,Jesus Muñoz,Daniel Almeira
 3383,"INNOVA FERRETERIA DE ALFREDO QUINTANILLO, F.P",Occidente,Zulia,Alejandro Prieto,Rafael Mora
+5642,"INNOVACIONES KAVAL, C.A.",Centro,Yaracuy,Geraldine Castellano,Ismael Dominguez
 3384,"INNOVACIONES TECNOLOGICAS ACYTECH, C.A.",Centro,Carabobo,Geraldine Castellano,Helvis Quevedo
 3386,"INPIMA, C.A.",Oriente,Anzoátegui,Luis Landaeta,Carlos Dos Santos
 3387,"INPLOCA INVERSI0NES PALOMINO LOZADA, C.A.",Occidente,Zulia,Alejandro Prieto,Carlos Parilli
@@ -3755,6 +3762,7 @@ id,cliente,region,estado,supervisor,asesor
 3833,INVERSIONES MARIA CLARET,Occidente,Mérida,Charly Bello,Eleaney Varela
 3834,"INVERSIONES MARIANGEL 2016, C.A.",Centro,Carabobo,Carlos Lagares,Anthony Bermudez
 3835,INVERSIONES MARIANNA 2009 C.A,Centro,Lara,Carlos Guanipa,Franklin J Sanchez
+5643,INVERSIONES MARLIN 2007,Occidente,Barinas,Charly Bello,Jose Ruiz
 3836,"INVERSIONES MARROKAI, C.A.",Centro,Carabobo,Geraldine Castellano,Irvin Zapata
 3837,"INVERSIONES MARTILLO, C.A.",Oriente,Sucre,Luis Landaeta,Franny Indriago
 3838,"INVERSIONES MARY V.V,CA",Centro,Aragua,Jesus Muñoz,Mayterlink Leon
@@ -3963,6 +3971,7 @@ id,cliente,region,estado,supervisor,asesor
 4044,"INVERSIONES Y DISTRIBUIDORA ALPHA-KING, C.A",Centro,Carabobo,Carlos Lagares,Moises Linares
 4045,"INVERSIONES Y DISTRIBUIDORA EL REY DAVID 2019,C.A",Occidente,Zulia,Alejandro Prieto,Rafael Mora
 4046,"INVERSIONES Y DISTRIBUIDORA MENE MARKET I, ?.?.",Occidente,Zulia,Alejandro Prieto,Homeirys Garcia
+5644,"INVERSIONES Y DISTRIBUIDORA MULTIPRO, C.A.",Occidente,Portuguesa,Charly Bello,Ismael Moreno
 4047,INVERSIONES Y DISTRIBUIDORA PA QUE ANGEL C.A,Occidente,Zulia,Alejandro Prieto,Rafael Mora
 4048,"INVERSIONES Y DISTRIBUIDORA PORTILLO II, C. A",Occidente,Zulia,Alejandro Prieto,Jose Rincon
 4049,INVERSIONES Y DISTRIBUIDORA V.M.D.J C.A,Oriente,Sucre,Luis Landaeta,Jesus Jimenez
@@ -4188,6 +4197,8 @@ id,cliente,region,estado,supervisor,asesor
 4281,"LUBRITODO MM, C.A.",Oriente,Bolívar,Elias Jimenez,Jesus Granadillo
 4282,"LUCARELLI MOTOR S, C.A",Oriente,Bolívar,Elias Jimenez,Jesus Granadillo
 4283,LUCE COLOR C A,Oriente,Anzoátegui,Luis Landaeta,Ali Dos Santos
+5645,"LUFEL DISTRIBUCIONES, C.A.",Occidente,Falcón,Carlos Guanipa,Jose Jimenez
+5646,LUIS ASDRUBAL MARQUEZ RONDÓN,Occidente,Táchira,Lizmar Marrero,Bernardo Hernandez
 4286,LUNAMAR C.A.,Occidente,Táchira,Lizmar Marrero,Bernardo Hernandez
 4287,"LUZETE, C.A",Occidente,Zulia,Alejandro Prieto,Jose Rincon
 4288,"LV2016, C.A FACTURACIÓN",Centro,Cojedes,Daniela Maselli,Luis Jimenez
@@ -4195,6 +4206,7 @@ id,cliente,region,estado,supervisor,asesor
 4291,"MACKNOLFI, C.A.",Occidente,Trujillo,Carlos Guanipa,Marlon Santana
 4292,MACRO HIERRO MICHELENA C.A,Occidente,Táchira,Lizmar Marrero,Ramon Estupiñan
 4293,"MACRO PINTURAS, CA",Centro,Lara,Carlos Guanipa,Jesus Roman
+5647,"MADEBASU, C.A.",Oriente,Sucre,Luis Landaeta,Franny Indriago
 4294,"MADECO 2020, C.A",Centro,Cojedes,Carlos Lagares,Hector Astudillo
 4295,MADEFERCA C.A.,Centro,Aragua,Jesus Muñoz,Fernando Colmenares
 4296,MADEFERRA PTO ENCANTADO C.A.,Capital,Miranda,Nelly Patiño,Cesar Cortez
@@ -4454,6 +4466,7 @@ id,cliente,region,estado,supervisor,asesor
 4561,"MEGA INVERSIONES COMERCIALES, COMPAÑIA ANONIMA",Occidente,Zulia,Alejandro Prieto,Carlos Parilli
 4563,"MEGA REPUESTOS CARIBE 88, C.A",Oriente,Anzoátegui,Luis Landaeta,Ali Dos Santos
 4564,"MEGA REPUESTOS DIOS EL REY, C.A",Occidente,Zulia,Alejandro Prieto,Homeirys Garcia
+5648,"MEGA TODO 2026, C.A",Centro,Lara,Carlos Guanipa,Jose Jimenez
 4565,"MEGA VIVERO TAMPICO, C.A",Occidente,Zulia,Alejandro Prieto,Larry Villarreal
 4566,"MEGACEROS, C.A.",Oriente,Anzoátegui,Luis Landaeta,Carlos Dos Santos
 4567,"MEGAFERRE IRONMOS, C.A",Oriente,Bolívar,Elias Jimenez,Anand Panday
@@ -4729,6 +4742,7 @@ id,cliente,region,estado,supervisor,asesor
 4848,"PINTURAS LOS LLANOS, C.A",Occidente,Guárico,Tabardo Villasmil,Jose Natera
 4849,"PINTURAS MELY`S, C.A.",Centro,Carabobo,Geraldine Castellano,Ismael Dominguez
 4850,PINTURAS REGIONAL C.A.,Capital,Miranda,Nelly Patiño,Alexander Montes De Oca
+5649,"PINTURAS SOLCOLOR Y ALGO MAS, C.A",Capital,Miranda,Jose Estrella,Maria Villegas
 4851,PINTURAS UPATA C.A,Oriente,Bolívar,Elias Jimenez,Jesus Granadillo
 4852,"PINTURAS Y ABRASIVOS, C.A",Oriente,Bolívar,Elias Jimenez,Jesus Aponte
 4853,PINTURAS Y FERRETERIA M & L. C.A,Centro,Carabobo,Geraldine Castellano,Wuinder Fuentes
@@ -5012,6 +5026,7 @@ id,cliente,region,estado,supervisor,asesor
 5144,"SUMIGLO V & C, C.A.",Occidente,Zulia,Alejandro Prieto,Randy Paulillo
 5145,"SUMILARCA, CA.",Centro,Carabobo,Geraldine Castellano,Gustavo Baeta
 5146,"SUMINAGUA 2023, C.A",Centro,Carabobo,Geraldine Castellano,Ismael Dominguez
+5650,"SUMINISTRO AGRICOLAS DIAZ ALVAREZ, C.A.",Centro,Lara,Carlos Guanipa,Nehomar Chirinos
 5147,"SUMINISTRO DE MATERIALES Y SERVICIOS 4M, C.A.",Oriente,Anzoátegui,Luis Landaeta,Ali Dos Santos
 5148,"SUMINISTRO E INVERSIONES LA CARRETA DORADA, C.A.",Occidente,Barinas,Charly Bello,Ismael Moreno
 5149,"SUMINISTRO FERGROMAT, C.A",Oriente,Monagas,Luis Landaeta,Yasmin Santamaria
@@ -5096,6 +5111,7 @@ id,cliente,region,estado,supervisor,asesor
 5232,"SUPERMERCADO HIPER JUMBO, C.A.",Occidente,Guárico,Tabardo Villasmil,Jose Natera
 5233,"SUPERMERCADO KENYOLY, C.A.",Occidente,Barinas,Charly Bello,Jose Ruiz
 5234,"SUPERMERCADO LA CASA DE JULIAN, C.A.",Oriente,Bolívar,Elias Jimenez,Jesus Granadillo
+5651,SUPERMERCADO LA FORTUNA C.A.,Occidente,Guárico,Jesus Muñoz,Henry Simoza
 5236,SUPERMERCADO LA PARAGUA,Oriente,Bolívar,Elias Jimenez,Alexis Suarez
 5237,"SUPERMERCADO MING & MING, C.A",Occidente,Guárico,Jesus Muñoz,Henry Simoza
 5238,"SUPERMERCADO MUÑOZ & SOSA, C.A.",Oriente,Bolívar,Elias Jimenez,Juliane Cruz
